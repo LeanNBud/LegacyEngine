@@ -159,7 +159,7 @@ function Library:CreateWindow(title, color)
                 BracketV2.Enabled = not BracketV2.Enabled
             end
         else
-            if (input.KeyCode == Enum.KeyCode.RightControl) then
+            if (input.KeyCode == Enum.KeyCode.RightShift) then
                 BracketV2.Enabled = not BracketV2.Enabled
             end
         end
