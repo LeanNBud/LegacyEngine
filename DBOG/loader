@@ -5,11 +5,6 @@ local Space = 4195907096
 local MoonCity = 679737281
 local SuperDarts = 4914988106
 
-setclipboard(tostring("https://discord.gg/peB43Uxsbp"))
-game.StarterGui:SetCore("SendNotification",{
-    Title = "Discord Link:";
-    Text = "Copied to clipboard";
-})
 
 if game.PlaceId == Earth then
     loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/Earth', true))()
