@@ -2,9 +2,11 @@ local Earth = 4638110048
 local Namek = 4195906474
 local FutureEarth = 5832703855
 local Space = 4195907096
+local OtherWorld = 4195906883
+local Masters = 7953856623
+local Ranked = 7953779420
 local MoonCity = 679737281
 local SuperDarts = 4914988106
-
 
 if game.PlaceId == Earth then
     loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/Earth', true))()
@@ -14,6 +16,12 @@ if game.PlaceId == Earth then
     loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/FutureEarth', true))()
  elseif game.PlaceId == Space then
     loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/Space', true))()
+    elseif game.PlaceId == OtherWorld then
+       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/OtherWorld', true))()
+ elseif game.PlaceId == Masters then
+    loadstring(game:HttpGet('link', true))()
+ elseif game.PlaceId == Ranked then
+    loadstring(game:HttpGet('link', true))()
  elseif game.PlaceId == MoonCity then
     loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/MoonCity', true))()
     elseif game.PlaceId == SuperDarts then
