@@ -41,7 +41,7 @@ end
 
 function Library:CreateWindow(Config, Parent)
 	local WindowInit = {}
-	local Folder = game:GetObjects("rbxassetid://7141683860")[1]  -- game:GetService("CoreGui")
+	local Folder = game:GetObjects("rbxassetid://7141683860")[1]
 	local Screen = Folder.Bracket:Clone()
 	local Main = Screen.Main
 	local Holder = Main.Holder
@@ -130,10 +130,6 @@ function Library:CreateWindow(Config, Parent)
 	function WindowInit:Toggle(State)
 		Toggle(State)
 	end
-	
-	function WindowInit:DestroyUI(State)
-        	Screen:Destroy()
-    	end
 
 	function WindowInit:ChangeColor(Color)
 		ChangeColor(Color)
