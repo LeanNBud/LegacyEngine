@@ -1,5 +1,7 @@
 --Made by Jayy#6265
 
+print("Script Loaded")
+
 _88yJhkfayXdbzFBD, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
