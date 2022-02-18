@@ -5,15 +5,15 @@ local Space = 4195907096
 local OtherWorld = 4195906883
 
 if game.PlaceId == Earth then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/Earth', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/1Earth', true))()
    elseif game.PlaceId == Namek then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/Namek', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/2Namek', true))()
    elseif game.PlaceId == FutureEarth then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/Future', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/3Future', true))()
    elseif game.PlaceId == Space then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/Space', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/4Space', true))()
    elseif game.PlaceId == OtherWorld then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/OtherWorld', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/5OtherWorld', true))()
    elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/Others', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/6Others', true))()
  end
