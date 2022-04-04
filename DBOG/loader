@@ -1,4 +1,3 @@
-
 local Earth = 4638110048
 local Namek = 4195906474
 local FutureEarth = 5832703855
@@ -29,6 +28,8 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet('https://raw.githubusercontent.com/LeanNBud/LegacyEngine/main/Games/Lazardcuh.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Left2Die.lua', true))()
-   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or MoonCity or SuperDarts or bigPaintball or Lizardcuh or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
+   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/DBZ%5BDEMO%5D.lua', true))()
+   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or MoonCity or SuperDarts or bigPaintball or Lizardcuh or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/6Others', true))()
  end
