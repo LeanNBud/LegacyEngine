@@ -6,7 +6,7 @@ local OtherWorld = 4195906883
 local MoonCity = 679737281
 local SuperDarts = 4914988106
 local bigPaintball = 3527629287
-local Lizardcuh = 443406476
+local ProjectLazarus = 443406476
 
 if game.PlaceId == Earth then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/1Earth', true))()
@@ -24,8 +24,8 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/SuperDarts', true))()
    elseif game.PlaceId == bigPaintball then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/blob/main/Games/BigPaintball.lua', true))()
-   elseif game.PlaceId == Lizardcuh then
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/LeanNBud/LegacyEngine/main/Games/Lazardcuh.lua', true))()
+   elseif game.PlaceId == ProjectLazarus then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/ProjectLazarus.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Left2Die.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
