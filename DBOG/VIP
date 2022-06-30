@@ -18,6 +18,16 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/MoonCity.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "lazarus") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/ProjectLazarus.lua', true))()
+   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "super darts") then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/SuperDarts', true))()
+   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "big paintball") then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/blob/main/Games/BigPaintball.lua', true))()
+   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Left2Die.lua', true))()
+   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/DBZ%5BDEMO%5D.lua', true))()
+   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "avatar") then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Avatar-The-New-Awakening-2.lua', true))()
    elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/6Others', true))()
  end
