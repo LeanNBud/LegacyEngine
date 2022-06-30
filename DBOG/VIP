@@ -5,15 +5,15 @@ local Space = 4195907096
 local OtherWorld = 4195906883
 
 if game.PlaceId == Earth then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/1Earth', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/1Earth.lua', true))()
    elseif game.PlaceId == Namek then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/2Namek', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/2Namek.lua', true))()
    elseif game.PlaceId == FutureEarth then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/3Future', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/3Future.lua', true))()
    elseif game.PlaceId == Space then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/4Space', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/4Space.lua', true))()
    elseif game.PlaceId == OtherWorld then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/5OtherWorld', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/5OtherWorld.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "moon") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/MoonCity.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "lazarus") then
