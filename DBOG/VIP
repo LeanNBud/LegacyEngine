@@ -4,6 +4,8 @@ local FutureEarth = 5832703855
 local Space = 4195907096
 local OtherWorld = 4195906883
 local delta = 6116023427
+local dbxmtm = 4147411085
+local dbxmdc = 9725967657
 
 if game.PlaceId == Earth then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/1Earth.lua', true))()
@@ -29,6 +31,10 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/DBZ%5BDEMO%5D.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "avatar") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Avatar-The-New-Awakening-2.lua', true))()
+   elseif game.PlaceId == dbxmtm then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DBXM.lua', true))()
+   elseif game.PlaceId == dbxmdc then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DBXM.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbxm") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DBXM.lua', true))()
    elseif game.PlaceId == delta then
