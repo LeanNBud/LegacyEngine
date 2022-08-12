@@ -28,7 +28,7 @@ if game.PlaceId == Earth then
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Left2Die.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/DBZ%5BDEMO%5D.lua', true))()
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DBZdemo.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "avatar") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Avatar-The-New-Awakening-2.lua', true))()
    elseif game.PlaceId == dbxmtm then
