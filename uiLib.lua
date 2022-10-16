@@ -132,7 +132,7 @@ function Library:CreateWindow(Config, Parent)
 	end
 	
 	function WindowInit:Destroy()
-		Main.Parent:Destroy()
+		Main:Destroy()
 	end
 
 	function WindowInit:ChangeColor(Color)
