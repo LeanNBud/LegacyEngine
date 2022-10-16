@@ -1,3 +1,557 @@
--- This file was generated using Luraph Obfuscator v13.5.8
+local UIS = game:GetService("UserInputService");
+local dwRunservice = game:GetService("RunService");
+local dwLocalPlayer = game.Players.LocalPlayer;
+local dwMouse = dwLocalPlayer:GetMouse();
+local dwWorkspace = game:GetService("Workspace");
+local dwCamera = dwWorkspace.CurrentCamera;
 
-return(function(Hi,Ki,Ci,Gi,si,Vi,fi,Ei,Fi,ui,Ni,yi,wi,Bi,Qi,ki,li,pi,bi,ti,ai,Li,Ri,di,ji,Ti,Oi,zi,Ii,mi,Xi,e,...)local J,G=nil,(nil);local xi={};local Wi=0;local V=getfenv;local v=(select);while Wi<=0X00001 do if Wi~=0 then do G=0x1;end;Wi=0X2;else J=bi.byte;Wi=0X1;do continue;end;end;end;local g,Z,A,d,R=di,nil,nil,nil,(nil);local c=pcall;for rr=0,0x3 do if rr<=0X1 then if rr~=0 then A=string.char;else Z=string.sub;continue;end;else do if rr~=2 then R=Qi;continue;else d=Ki;end;end;end;end;local x,P,t=error,{1,Xi,2},(ti);local U,y,N,T,Yi=nil,nil,nil,nil,nil;do for av=0,0X4 do do if not(av<=0X1)then if av<=0X2 then do N=yi;end;continue;else if av~=3 then Yi=0X0001;else do T=0X100000000;end;end;end;elseif av~=0X0 then do y=Ni;end;do continue;end;else U=Bi;end;end;end;end;do Wi=0X4;end;local F,l,f,o,L=nil,nil,nil,nil,nil;while"\|a\053\Y\051\,\052R"do if not(Wi<=1)then if Wi<=2 then L={[0X0]=0X1};break;else if Wi==3 then o=Ri.lshift;Wi=0X2;else F=li;Wi=0;end;end;else do if Wi==0 then do l=ji;end;do Wi=1;end;else f=fi;Wi=3;continue;end;end;end;end;local w=setfenv;local b,i,C=nil,nil,nil;do for L6=0,3 do if L6<=0X1 then if L6==0 then b=wi;else do i=Vi;end;end;else if L6~=0X2 then continue;else C=V();continue;end;end;end;end;local m=nil;local K=(string.match);F=d(Z(F,5),Ci,function(zz)if J(zz,2)~=0X000048 then local TD,OD=0,nil;do while TD~=2 do if TD==0 then OD=A(U(zz,16));TD=1;else if m then local Jn=(b(OD,m));local fn=0X00001;while 0.5089772097093236 do if fn~=0X0000 then m=nil;do fn=0;end;else do return Jn;end;end;end;else do return OD;end;end;do TD=0X02;end;do continue;end;end;end;end;else local oH=0X0000;do while true do if oH~=0 then do return"";end;else do m=U(Z(zz,Gi,1));end;oH=1;do continue;end;end;end;end;end;end);local k,I,s,q,z,O,a,u,ei=nil,nil,nil,nil,nil,nil,nil,nil,(nil);do for PS=0,0x9 do if not(PS<=0x4)then if not(PS<=0X6)then if not(PS<=0X0007)then if PS~=0X8 then do local te,ve=0,nil;while te<0X0002 do if te==0 then ve=Fi;te=1;continue;else do for a3=1,31 do local q3=(0X00000);repeat if q3~=0x0 then ve=ve*2;do break;end;else(L)[a3]=ve;do q3=0X00001;end;end;until false;end;end;te=0x2;end;end;end;else do ei=function()local op,cp=0,0X0;while"\053\090~]9"do local HX=J(F,G,G);G=G+1;op=i(op,o(q(HX,0X7F),cp));if q(HX,128)~=0x00 then else return op;end;cp=cp+0X7;end;end;end;end;else do u=I-1;end;continue;end;else do if PS==5 then O=0x2^52;else do a=function()local T3,w3=R('<d',F,G);for WZ=0,1 do if WZ~=0 then do return T3;end;else G=w3;continue;end;end;end;end;end;end;end;else if PS<=1 then do if PS~=0 then I=0X80000000;else k=function()local vh=nil;local th=0X00;do while(true)do if not(th<=0X0)then if th~=1 then G=G+1;do th=0X00001;end;continue;else return vh;end;else vh=J(F,G,G);th=0x2;do continue;end;end;end;end;end;continue;end;end;else if PS<=0X002 then s=function()local tA=(1);local uA,sA=nil,(nil);repeat if tA<=0 then G=sA;tA=2;continue;else if tA==1 then uA,sA=R("<I4",F,G);tA=0X0;else return uA;end;end;until(false);end;continue;else if PS==0x3 then q=bit32.band;else z=function()local un,Sn=nil,(nil);for QY=0,2 do if QY<=0 then un,Sn=R("\<\i8",F,G);else if QY~=1 then return un;else G=Sn;end;end;end;end;end;end;end;end;end;end;local E,Q,W,B=function(rg,Rg,Dg)local vg,Hg=(rg/L[Rg])%L[Dg],(0x1);repeat do if Hg==0 then return vg;else vg=vg-vg%0X1;Hg=0X00000;end;end;until false;end,table.insert,bit32.bxor,rawget;do Wi=0X0000;end;local j,M,h=nil,nil,nil;while Wi~=0X3 do if not(Wi<=0)then if Wi~=1 then do M=mi;end;Wi=1;else do h=ki;end;Wi=0X3;end;else do j=pi;end;Wi=0X2;end;end;local D=(assert);do Wi=0;end;local r,S=nil,nil;repeat if Wi==0 then r=bit32.rshift;Wi=1;do continue;end;else S={[0X8]=0x1F4b9D35,[0X5]=si,[0]=9,[2]=0.11350439306489779,[0X4]=0X1,[1]=5,[0X2]=0X7,[0X00004]=-0X2047E2Ec,[7]=5,[0X4]=0X9,[0X5]=0X0002,[0X3]=4,[0X8]=1};do break;end;end;until false;local H=T-1;local Di=(function()local c7=nil;do for Mn=0,2 do if Mn<=0 then c7=ei();continue;else do if Mn==1 then if not(c7>u)then else return c7-T;end;else return c7;end;end;end;end;end;end);local vi=k();local Ui=(k());do Wi=0;end;local ci,gi=nil,(nil);while Wi<=0x001 do if Wi==0X0000 then do ci=function(K8)local n8,O8,g8,U8,h8,t8=0x005,nil,nil,nil,nil,nil;while true do if n8<=3 then if n8<=0X1 then if n8==0 then U8=W(O8[2],Ui);n8=1;do continue;end;else h8=W(O8[0x0003],Ui);do n8=0X02;end;end;else if n8~=0X2 then return t8*0X1000000+h8*Ii+U8*Ti+g8;else t8=W(O8[4],Ui);do n8=0X0007;end;continue;end;end;else do if not(n8<=5)then if n8~=0X06 then Ui=(0x61*Ui+K8)%0x0000100;n8=0X04;else g8=W(O8[0X1],Ui);do n8=0;end;continue;end;elseif n8==0X4 then G=G+4;n8=0X3;continue;else O8={J(F,G,G+3)};do n8=0x6;end;continue;end;end;end;end;end;end;Wi=1;continue;else gi=function(...)do return v('\#',...),{...};end;end;Wi=0X2;end;end;local Mi=(function(Xx)local tx=(3);local ax,Wx=nil,nil;repeat if not(tx<=1)then if tx<=0X2 then do return Wx;end;else if tx~=3 then for lH=Gi,ax,0x1f3d do local IH=(lH+7997-1);do if not(IH>ax)then else IH=ax;end;end;local EH,wH=0,nil;while EH<3 do if EH<=0x0000 then do wH={J(F,G+lH-0X0001,G+IH-0x001)};end;EH=0X1;continue;else if EH==1 then for sH=0X1,#wH do local OH=(0X1);while OH<0X00002 do if OH==0 then vi=(Xx*vi+147)%0X0100;OH=0X02;else do wH[sH]=W(wH[sH],vi);end;OH=0X00;end;end;end;EH=0x2;do continue;end;else Wx=Wx..A(f(wH));EH=3;continue;end;end;end;end;do tx=0X1;end;continue;else do ax=s();end;do tx=0;end;end;end;else if tx~=0 then G=G+ax;tx=0X002;do continue;end;else Wx="";do tx=0x004;end;do continue;end;end;end;until false;end);local Zi=({});do Wi=3;end;local ni,Ji,Ai=nil,nil,(nil);while'\123\105E\050\d'do if Wi<=0X2 then do if Wi<=0 then do return ni(Ai,C,nil)(...);end;else do if Wi==0X1 then do Ai=Ji();end;Wi=0X0002;else do Zi[2]=xi;end;Wi=0x00004;continue;end;end;end;end;else if Wi<=3 then function ni(WP,jP,GP)local bP=WP[9];local wP,ZP,pP=WP[0x4],WP[8],(WP[0x2]);local MP,hP=WP[3],(WP[5]);local qP=WP[6];local lP=t({},{__mode="v"});local IP,iP=WP[0X1],nil;if IP~=0X0001 then do iP=function(...)local N5=({});local Y5=(1);local l5=(V());local X5,o5=gi(...);local h5,Z5=(l5==C and jP or l5),{[2]=N5,[0X1]=WP};X5=X5-1;for Rh=0X0,X5 do if bP>Rh then(N5)[Rh]=o5[Rh+1];else break;end;end;if not ZP then o5=nil;else if not(pP)then else(N5)[bP]={n=X5>=bP and X5-bP+0x1 or 0x0,f(o5,bP+1,X5+0X1)};end;end;if h5~=l5 then(w)(iP,h5);end;local v5=(0X0);do repeat local Fm=MP[Y5];Y5=Y5+0X1;local im=Fm[6];return(function(s,a,...)local function j(R)if game.Players.LocalPlayer.Team==R.Team then return false;else return true;end;end;do a[0][1][a[0][2]].playerexists=function(f,N)if N=="Universal"or"universal"then if f~=nil then return false;else return true;end;end;end;end;do a[0][1][a[0][2]].universalvisual=function(k)local l={Box={Filledbox=Drawing.new("Square"),Outline=Drawing.new("Square"),Main=Drawing.new("Square"),HealthboxOutline=Drawing.new("Square"),Healthbox=Drawing.new("Square")},Text={Distance=Drawing.new("Text"),Name=Drawing.new("Text")},Line={Snapline=Drawing.new("Line")}};for B,K in pairs(l.Box)do K.Visible=false;K.Position=Vector2.new(20,20);K.Size=Vector2.new(20,20);K.Color=Color3.fromRGB(0,0,0);K.Filled=false;K.Transparency=0.9;K.Thickness=1;end;for w,T in pairs(l.Line)do T.From=Vector2.new(20,20);T.To=Vector2.new(50,50);T.Color=Color3.new(0,0,0);T.Thickness=1;T.Transparency=0.9;T.Visible=false;end;l.Box.HealthboxOutline.Thickness=2;l.Box.Outline.Thickness=2;l.Box.Healthbox.Filled=true;l.Box.HealthboxOutline.Filled=true;for P,E in pairs(l.Text)do E.Text="";E.Color=Color3.new(1,1,1);E.OutlineColor=Color3.new(0,0,0);E.Center=true;E.Outline=true;E.Position=Vector2.new(100,100);E.Size=15;E.Font=1;E.Transparency=0.9;E.Visible=false;end;local function b(G)for U,Z in pairs(l.Box)do Z.Visible=G;end;for J,T in pairs(l.Text)do T.Visible=G;end;for m,w in pairs(l.Line)do w.Visible=G;end;end;local function H(P)l.Box["Main"].Color=P;l.Box["Healthbox"].Color=P;for t,Z in pairs(l.Text)do Z.Color=P;end;for N,V in pairs(l.Line)do V.Color=P;end;end;task.spawn(function()while task.wait()do if k.Character~=nil and k.Character:FindFirstChild("Humanoid")~=nil and k.Character:FindFirstChild("Head")~=nil and k.Character:FindFirstChild("HumanoidRootPart")~=nil and k.Character.Humanoid.Health>0 then local K=k.Character;if K then local J,Z=a[1][1][a[1][2]]:WorldToScreenPoint(k.Character.HumanoidRootPart.Position);K=Z;end;local I,V=k.Character:GetBoundingBox();local c=(a[1][1][a[1][2]].CFrame-a[1][1][a[1][2]].CFrame.p)*Vector3.new((math.clamp(V.X,1,10)+0.5)/2,0,0);local M=(a[1][1][a[1][2]].CFrame-a[1][1][a[1][2]].CFrame.p)*Vector3.new(0,(math.clamp(V.X,1,10)+2)/2,0);c=math.abs(a[1][1][a[1][2]]:WorldToViewportPoint(I.Position+c).X-a[1][1][a[1][2]]:WorldToViewportPoint(I.Position-c).X);M=math.abs(a[1][1][a[1][2]]:WorldToViewportPoint(I.Position+M).Y-a[1][1][a[1][2]]:WorldToViewportPoint(I.Position-M).Y);local y=Vector2.new(math.floor(c),math.floor(M));y=Vector2.new(y.X%2==0 and y.X or y.X+1,y.Y%2==0 and y.Y or y.Y+1);local R=a[1][1][a[1][2]]:WorldToViewportPoint(k.Character.HumanoidRootPart.Position);local D=(k.Character.HumanoidRootPart.Position-a[1][1][a[1][2]].CFrame.p).Magnitude;local o=a[1][1][a[1][2]]:WorldToViewportPoint(k.Character.HumanoidRootPart.CFrame*CFrame.new(-3.0,3,0).p);local q=a[1][1][a[1][2]]:WorldToViewportPoint(k.Character.HumanoidRootPart.CFrame*CFrame.new(3,3,0).p);local A=a[1][1][a[1][2]]:WorldToViewportPoint(k.Character.HumanoidRootPart.CFrame*CFrame.new(-3.0,-3.0,0).p);local U=a[1][1][a[1][2]]:WorldToViewportPoint(k.Character.HumanoidRootPart.CFrame*CFrame.new(3,-3.0,0).p);if a[0][1][a[0][2]].Visual.Enabled and K and D<a[0][1][a[0][2]].Visual.ShowDistance then if j(k)==false then l.Box["Filledbox"].Visible=a[0][1][a[0][2]].Visual.Filledbox and a[0][1][a[0][2]].Visual.ShowTeam;l.Box["Filledbox"].Size=y;l.Box["Filledbox"].Filled=a[0][1][a[0][2]].Visual.Filledbox;l.Box["Filledbox"].Transparency=a[0][1][a[0][2]].Visual.FilledOpacity;l.Box["Filledbox"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y))-l.Box["Main"].Size/2;l.Box["Outline"].Visible=a[0][1][a[0][2]].Visual.Box and a[0][1][a[0][2]].Visual.ShowTeam;l.Box["Outline"].Size=y;l.Box["Outline"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y))-l.Box["Outline"].Size/2;l.Box["Main"].Visible=a[0][1][a[0][2]].Visual.Box and a[0][1][a[0][2]].Visual.ShowTeam;l.Box["Main"].Size=y;l.Box["Main"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y))-l.Box["Main"].Size/2;l.Box["HealthboxOutline"].Visible=a[0][1][a[0][2]].Visual.Healthbox and a[0][1][a[0][2]].Visual.ShowTeam;l.Box["HealthboxOutline"].Size=Vector2.new(1,y.Y*(1-(k.Character.Humanoid.MaxHealth-k.Character.Humanoid.Health)/k.Character.Humanoid.MaxHealth));l.Box["HealthboxOutline"].Position=Vector2.new(math.floor(R.X)-5,math.floor(R.Y)+(y.Y-math.floor(l.Box["HealthboxOutline"].Size.Y)))-y/2;l.Box["Healthbox"].Visible=a[0][1][a[0][2]].Visual.Healthbox and a[0][1][a[0][2]].Visual.ShowTeam;l.Box["Healthbox"].Size=Vector2.new(1,y.Y*(1-(k.Character.Humanoid.MaxHealth-k.Character.Humanoid.Health)/k.Character.Humanoid.MaxHealth));l.Box["Healthbox"].Position=Vector2.new(math.floor(R.X)-5,math.floor(R.Y)+(y.Y-math.floor(l.Box["Healthbox"].Size.Y)))-y/2;l.Text["Name"].Visible=a[0][1][a[0][2]].Visual.Name and a[0][1][a[0][2]].Visual.ShowTeam;l.Text["Name"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y)-y.Y/2-16);l.Text["Name"].Text=k.Name;l.Text["Distance"].Visible=a[0][1][a[0][2]].Visual.Distance and a[0][1][a[0][2]].Visual.ShowTeam;l.Text["Distance"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y+M*0.5));l.Text["Distance"].Text=tostring(math.ceil(D)).." studs";l.Line["Snapline"].Visible=a[0][1][a[0][2]].Visual.Snaplines and a[0][1][a[0][2]].Visual.ShowTeam;l.Line["Snapline"].From=Vector2.new(a[1][1][a[1][2]].ViewportSize.X/2,120);l.Line["Snapline"].To=Vector2.new(math.floor(R.X),math.floor(R.Y));H(a[0][1][a[0][2]].Visual.TeamColor);else l.Box["Filledbox"].Visible=a[0][1][a[0][2]].Visual.Filledbox;l.Box["Filledbox"].Size=y;l.Box["Filledbox"].Filled=a[0][1][a[0][2]].Visual.Filledbox;l.Box["Filledbox"].Transparency=a[0][1][a[0][2]].Visual.FilledOpacity;l.Box["Filledbox"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y))-l.Box["Main"].Size/2;l.Box["Outline"].Visible=a[0][1][a[0][2]].Visual.Box;l.Box["Outline"].Size=y;l.Box["Outline"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y))-l.Box["Outline"].Size/2;l.Box["Main"].Visible=a[0][1][a[0][2]].Visual.Box;l.Box["Main"].Size=y;l.Box["Main"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y))-l.Box["Main"].Size/2;l.Box["HealthboxOutline"].Visible=a[0][1][a[0][2]].Visual.Healthbox;l.Box["HealthboxOutline"].Size=Vector2.new(1,y.Y*(1-(k.Character.Humanoid.MaxHealth-k.Character.Humanoid.Health)/k.Character.Humanoid.MaxHealth));l.Box["HealthboxOutline"].Position=Vector2.new(math.floor(R.X)-5,math.floor(R.Y)+(y.Y-math.floor(l.Box["HealthboxOutline"].Size.Y)))-y/2;l.Box["Healthbox"].Visible=a[0][1][a[0][2]].Visual.Healthbox;l.Box["Healthbox"].Size=Vector2.new(1,y.Y*(1-(k.Character.Humanoid.MaxHealth-k.Character.Humanoid.Health)/k.Character.Humanoid.MaxHealth));l.Box["Healthbox"].Position=Vector2.new(math.floor(R.X)-5,math.floor(R.Y)+(y.Y-math.floor(l.Box["Healthbox"].Size.Y)))-y/2;l.Text["Name"].Visible=a[0][1][a[0][2]].Visual.Name;l.Text["Name"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y)-y.Y/2-16);l.Text["Name"].Text=k.Name;l.Text["Distance"].Visible=a[0][1][a[0][2]].Visual.Distance;l.Text["Distance"].Position=Vector2.new(math.floor(R.X),math.floor(R.Y+M*0.5));l.Text["Distance"].Text=tostring(math.ceil(D)).." studs";l.Line["Snapline"].Visible=a[0][1][a[0][2]].Visual.Snaplines;l.Line["Snapline"].From=Vector2.new(a[1][1][a[1][2]].ViewportSize.X/2,120);l.Line["Snapline"].To=Vector2.new(math.floor(R.X),math.floor(R.Y));H(a[0][1][a[0][2]].Visual.EnemyColor);end;else b(false);end;else b(false);if a[0][1][a[0][2]].playerexists(k,"universal")==false then end;end;end;end);end;end;do a[0][1][a[0][2]].michaelvisual=function(u)local T={Box={Filledbox=Drawing.new("Square"),Outline=Drawing.new("Square"),Main=Drawing.new("Square"),HealthboxOutline=Drawing.new("Square"),Healthbox=Drawing.new("Square")},Text={Distance=Drawing.new("Text"),Name=Drawing.new("Text")},Line={Snapline=Drawing.new("Line")}};for K,o in pairs(T.Box)do o.Visible=false;o.Position=Vector2.new(20,20);o.Size=Vector2.new(20,20);o.Color=Color3.fromRGB(0,0,0);o.Filled=false;o.Transparency=0.9;o.Thickness=1;end;for K,h in pairs(T.Line)do h.From=Vector2.new(20,20);h.To=Vector2.new(50,50);h.Color=Color3.new(0,0,0);h.Thickness=1;h.Transparency=0.9;h.Visible=false;end;T.Box.HealthboxOutline.Thickness=2;T.Box.Outline.Thickness=2;T.Box.Healthbox.Filled=true;T.Box.HealthboxOutline.Filled=true;for o,m in pairs(T.Text)do m.Text="";m.Color=Color3.new(1,1,1);m.OutlineColor=Color3.new(0,0,0);m.Center=true;m.Outline=true;m.Position=Vector2.new(100,100);m.Size=15;m.Font=1;m.Transparency=0.9;m.Visible=false;end;local function U(C)for m,e in pairs(T.Box)do e.Visible=C;end;for x,B in pairs(T.Text)do B.Visible=C;end;for G,y in pairs(T.Line)do y.Visible=C;end;end;local function R(D)T.Box["Main"].Color=D;T.Box["Healthbox"].Color=D;for F,g in pairs(T.Text)do g.Color=D;end;for L,d in pairs(T.Line)do d.Color=D;end;end;task.spawn(function()while task.wait()do if u~=nil and u:FindFirstChild("Humanoid")~=nil and u:FindFirstChild("Head")~=nil and u:FindFirstChild("HumanoidRootPart")~=nil and u.Humanoid.Health>0 then local D=u;if D then local M,h=a[1][1][a[1][2]]:WorldToScreenPoint(u.HumanoidRootPart.Position);D=h;end;local k,t=u:GetBoundingBox();local O=(a[1][1][a[1][2]].CFrame-a[1][1][a[1][2]].CFrame.p)*Vector3.new((math.clamp(t.X,1,10)+0.5)/2,0,0);local c=(a[1][1][a[1][2]].CFrame-a[1][1][a[1][2]].CFrame.p)*Vector3.new(0,(math.clamp(t.X,1,10)+2)/2,0);O=math.abs(a[1][1][a[1][2]]:WorldToViewportPoint(k.Position+O).X-a[1][1][a[1][2]]:WorldToViewportPoint(k.Position-O).X);c=math.abs(a[1][1][a[1][2]]:WorldToViewportPoint(k.Position+c).Y-a[1][1][a[1][2]]:WorldToViewportPoint(k.Position-c).Y);local Z=Vector2.new(math.floor(O),math.floor(c));Z=Vector2.new(Z.X%2==0 and Z.X or Z.X+1,Z.Y%2==0 and Z.Y or Z.Y+1);local W=a[1][1][a[1][2]]:WorldToViewportPoint(u.HumanoidRootPart.Position);local y=(u.HumanoidRootPart.Position-a[1][1][a[1][2]].CFrame.p).Magnitude;local I=a[1][1][a[1][2]]:WorldToViewportPoint(u.HumanoidRootPart.CFrame*CFrame.new(-3.0,3,0).p);local F=a[1][1][a[1][2]]:WorldToViewportPoint(u.HumanoidRootPart.CFrame*CFrame.new(3,3,0).p);local G=a[1][1][a[1][2]]:WorldToViewportPoint(u.HumanoidRootPart.CFrame*CFrame.new(-3.0,-3.0,0).p);local B=a[1][1][a[1][2]]:WorldToViewportPoint(u.HumanoidRootPart.CFrame*CFrame.new(3,-3.0,0).p);if a[0][1][a[0][2]].Visual.michael.Enabled and D and y<a[0][1][a[0][2]].Visual.michael.ShowDistance then T.Box["Filledbox"].Visible=a[0][1][a[0][2]].Visual.michael.Filledbox;T.Box["Filledbox"].Size=Z;T.Box["Filledbox"].Filled=a[0][1][a[0][2]].Visual.michael.Filledbox;T.Box["Filledbox"].Transparency=a[0][1][a[0][2]].Visual.michael.FilledOpacity;T.Box["Filledbox"].Position=Vector2.new(math.floor(W.X),math.floor(W.Y))-T.Box["Main"].Size/2;T.Box["Outline"].Visible=a[0][1][a[0][2]].Visual.michael.Box;T.Box["Outline"].Size=Z;T.Box["Outline"].Position=Vector2.new(math.floor(W.X),math.floor(W.Y))-T.Box["Outline"].Size/2;T.Box["Main"].Visible=a[0][1][a[0][2]].Visual.michael.Box;T.Box["Main"].Size=Z;T.Box["Main"].Position=Vector2.new(math.floor(W.X),math.floor(W.Y))-T.Box["Main"].Size/2;T.Box["HealthboxOutline"].Visible=a[0][1][a[0][2]].Visual.michael.Healthbox;T.Box["HealthboxOutline"].Size=Vector2.new(1,Z.Y*(1-(u.Humanoid.MaxHealth-u.Humanoid.Health)/u.Humanoid.MaxHealth));T.Box["HealthboxOutline"].Position=Vector2.new(math.floor(W.X)-5,math.floor(W.Y)+(Z.Y-math.floor(T.Box["HealthboxOutline"].Size.Y)))-Z/2;T.Box["Healthbox"].Visible=a[0][1][a[0][2]].Visual.michael.Healthbox;T.Box["Healthbox"].Size=Vector2.new(1,Z.Y*(1-(u.Humanoid.MaxHealth-u.Humanoid.Health)/u.Humanoid.MaxHealth));T.Box["Healthbox"].Position=Vector2.new(math.floor(W.X)-5,math.floor(W.Y)+(Z.Y-math.floor(T.Box["Healthbox"].Size.Y)))-Z/2;T.Text["Name"].Visible=a[0][1][a[0][2]].Visual.michael.Info;T.Text["Name"].Position=Vector2.new(math.floor(W.X),math.floor(W.Y)-Z.Y/2-16);T.Text["Name"].Text=u.Name;T.Text["Distance"].Visible=a[0][1][a[0][2]].Visual.michael.Distance;T.Text["Distance"].Position=Vector2.new(math.floor(W.X),math.floor(W.Y+c*0.5));T.Text["Distance"].Text=tostring(math.ceil(y)).." studs";T.Line["Snapline"].Visible=a[0][1][a[0][2]].Visual.michael.Snaplines;T.Line["Snapline"].From=Vector2.new(a[1][1][a[1][2]].ViewportSize.X/2,120);T.Line["Snapline"].To=Vector2.new(math.floor(W.X),math.floor(W.Y));R(a[0][1][a[0][2]].Visual.michael.EnemyColor);else U(false);end;else U(false);if a[0][1][a[0][2]].playerexists(u,"universal")==false then end;end;end;end);end;end;do a[0][1][a[0][2]].arsenalvisual=function(M)local c={Box={Filledbox=Drawing.new("Square"),Outline=Drawing.new("Square"),Main=Drawing.new("Square"),HealthboxOutline=Drawing.new("Square"),Healthbox=Drawing.new("Square")},Text={Distance=Drawing.new("Text"),Name=Drawing.new("Text")},Line={Snapline=Drawing.new("Line")}};for e,W in pairs(c.Box)do W.Visible=false;W.Position=Vector2.new(20,20);W.Size=Vector2.new(20,20);W.Color=Color3.fromRGB(0,0,0);W.Filled=false;W.Transparency=0.9;W.Thickness=1;end;for u,S in pairs(c.Line)do S.From=Vector2.new(20,20);S.To=Vector2.new(50,50);S.Color=Color3.new(0,0,0);S.Thickness=1;S.Transparency=0.9;S.Visible=false;end;c.Box.HealthboxOutline.Thickness=2;c.Box.Outline.Thickness=2;c.Box.Healthbox.Filled=true;c.Box.HealthboxOutline.Filled=true;for r,f in pairs(c.Text)do f.Text="";f.Color=Color3.new(1,1,1);f.OutlineColor=Color3.new(0,0,0);f.Center=true;f.Outline=true;f.Position=Vector2.new(100,100);f.Size=15;f.Font=1;f.Transparency=0.9;f.Visible=false;end;local function C(S)for h,q in pairs(c.Box)do q.Visible=S;end;for u,J in pairs(c.Text)do J.Visible=S;end;for D,E in pairs(c.Line)do E.Visible=S;end;end;local function I(H)c.Box["Main"].Color=H;c.Box["Healthbox"].Color=H;for w,J in pairs(c.Text)do J.Color=H;end;for J,Q in pairs(c.Line)do Q.Color=H;end;end;task.spawn(function()while task.wait()do if M.Character~=nil and M.Character:FindFirstChild("Humanoid")~=nil and M.Character:FindFirstChild("Head")~=nil and M.Character:FindFirstChild("HumanoidRootPart")~=nil and M.NRPBS.Health.Value>0 then local R=M.Character;if R then local r,z=a[1][1][a[1][2]]:WorldToScreenPoint(M.Character.HumanoidRootPart.Position);R=z;end;local i,B=M.Character:GetBoundingBox();local U=(a[1][1][a[1][2]].CFrame-a[1][1][a[1][2]].CFrame.p)*Vector3.new((math.clamp(B.X,1,10)+0.5)/2,0,0);local t=(a[1][1][a[1][2]].CFrame-a[1][1][a[1][2]].CFrame.p)*Vector3.new(0,(math.clamp(B.X,1,10)+2)/2,0);U=math.abs(a[1][1][a[1][2]]:WorldToViewportPoint(i.Position+U).X-a[1][1][a[1][2]]:WorldToViewportPoint(i.Position-U).X);t=math.abs(a[1][1][a[1][2]]:WorldToViewportPoint(i.Position+t).Y-a[1][1][a[1][2]]:WorldToViewportPoint(i.Position-t).Y);local W=Vector2.new(math.floor(U),math.floor(t));W=Vector2.new(W.X%2==0 and W.X or W.X+1,W.Y%2==0 and W.Y or W.Y+1);local x=a[1][1][a[1][2]]:WorldToViewportPoint(M.Character.HumanoidRootPart.Position);local N=(M.Character.HumanoidRootPart.Position-a[1][1][a[1][2]].CFrame.p).Magnitude;if a[0][1][a[0][2]].Visual.Enabled and R and N<a[0][1][a[0][2]].Visual.ShowDistance then if j(M)==false then c.Box["Filledbox"].Visible=a[0][1][a[0][2]].Visual.Filledbox and a[0][1][a[0][2]].Visual.ShowTeam;c.Box["Filledbox"].Size=W;c.Box["Filledbox"].Filled=a[0][1][a[0][2]].Visual.Filledbox;c.Box["Filledbox"].Transparency=a[0][1][a[0][2]].Visual.FilledOpacity;c.Box["Filledbox"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y))-c.Box["Main"].Size/2;c.Box["Outline"].Visible=a[0][1][a[0][2]].Visual.Box and a[0][1][a[0][2]].Visual.ShowTeam;c.Box["Outline"].Size=W;c.Box["Outline"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y))-c.Box["Outline"].Size/2;c.Box["Main"].Visible=a[0][1][a[0][2]].Visual.Box and a[0][1][a[0][2]].Visual.ShowTeam;c.Box["Main"].Size=W;c.Box["Main"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y))-c.Box["Main"].Size/2;c.Box["HealthboxOutline"].Visible=a[0][1][a[0][2]].Visual.Healthbox and a[0][1][a[0][2]].Visual.ShowTeam;c.Box["HealthboxOutline"].Size=Vector2.new(1,W.Y*(1-(M.NRPBS.MaxHealth.Value-M.NRPBS.Health.Value)/M.NRPBS.MaxHealth.Value));c.Box["HealthboxOutline"].Position=Vector2.new(math.floor(x.X)-5,math.floor(x.Y)+(W.Y-math.floor(c.Box["HealthboxOutline"].Size.Y)))-W/2;c.Box["Healthbox"].Visible=a[0][1][a[0][2]].Visual.Healthbox and a[0][1][a[0][2]].Visual.ShowTeam;c.Box["Healthbox"].Size=Vector2.new(1,W.Y*(1-(M.NRPBS.MaxHealth.Value-M.NRPBS.Health.Value)/M.NRPBS.MaxHealth.Value));c.Box["Healthbox"].Position=Vector2.new(math.floor(x.X)-5,math.floor(x.Y)+(W.Y-math.floor(c.Box["Healthbox"].Size.Y)))-W/2;c.Text["Name"].Visible=a[0][1][a[0][2]].Visual.Name and a[0][1][a[0][2]].Visual.ShowTeam;c.Text["Name"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y)-W.Y/2-16);c.Text["Name"].Text=M.Name;c.Text["Distance"].Visible=a[0][1][a[0][2]].Visual.Distance and a[0][1][a[0][2]].Visual.ShowTeam;c.Text["Distance"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y+t*0.5));c.Text["Distance"].Text=tostring(math.ceil(N)).." studs";c.Line["Snapline"].Visible=a[0][1][a[0][2]].Visual.Snaplines and a[0][1][a[0][2]].Visual.ShowTeam;c.Line["Snapline"].From=Vector2.new(a[1][1][a[1][2]].ViewportSize.X/2,120);c.Line["Snapline"].To=Vector2.new(math.floor(x.X),math.floor(x.Y));I(a[0][1][a[0][2]].Visual.TeamColor);else c.Box["Filledbox"].Visible=a[0][1][a[0][2]].Visual.Filledbox;c.Box["Filledbox"].Size=W;c.Box["Filledbox"].Filled=a[0][1][a[0][2]].Visual.Filledbox;c.Box["Filledbox"].Transparency=a[0][1][a[0][2]].Visual.FilledOpacity;c.Box["Filledbox"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y))-c.Box["Main"].Size/2;c.Box["Outline"].Visible=a[0][1][a[0][2]].Visual.Box;c.Box["Outline"].Size=W;c.Box["Outline"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y))-c.Box["Outline"].Size/2;c.Box["Main"].Visible=a[0][1][a[0][2]].Visual.Box;c.Box["Main"].Size=W;c.Box["Main"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y))-c.Box["Main"].Size/2;c.Box["HealthboxOutline"].Visible=a[0][1][a[0][2]].Visual.Healthbox;c.Box["HealthboxOutline"].Size=Vector2.new(1,W.Y*(1-(M.NRPBS.MaxHealth.Value-M.NRPBS.Health.Value)/M.NRPBS.MaxHealth.Value));c.Box["HealthboxOutline"].Position=Vector2.new(math.floor(x.X)-5,math.floor(x.Y)+(W.Y-math.floor(c.Box["HealthboxOutline"].Size.Y)))-W/2;c.Box["Healthbox"].Visible=a[0][1][a[0][2]].Visual.Healthbox;c.Box["Healthbox"].Size=Vector2.new(1,W.Y*(1-(M.NRPBS.MaxHealth.Value-M.NRPBS.Health.Value)/M.NRPBS.MaxHealth.Value));c.Box["Healthbox"].Position=Vector2.new(math.floor(x.X)-5,math.floor(x.Y)+(W.Y-math.floor(c.Box["Healthbox"].Size.Y)))-W/2;c.Text["Name"].Visible=a[0][1][a[0][2]].Visual.Name;c.Text["Name"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y)-W.Y/2-16);c.Text["Name"].Text=M.Name;c.Text["Distance"].Visible=a[0][1][a[0][2]].Visual.Distance;c.Text["Distance"].Position=Vector2.new(math.floor(x.X),math.floor(x.Y+t*0.5));c.Text["Distance"].Text=tostring(math.ceil(N)).." studs";c.Line["Snapline"].Visible=a[0][1][a[0][2]].Visual.Snaplines;c.Line["Snapline"].From=Vector2.new(a[1][1][a[1][2]].ViewportSize.X/2,120);c.Line["Snapline"].To=Vector2.new(math.floor(x.X),math.floor(x.Y));I(a[0][1][a[0][2]].Visual.EnemyColor);end;else C(false);end;else C(false);if a[0][1][a[0][2]].playerexists(M,"universal")==false then end;end;end;end);end;end;end)(N5,GP,...);until false;end;end;end;else iP=function(...)local oO,yO,nO=0X1,{},0;local uO={[0X1]=WP,[2]=yO};local RO=V();local jO=((RO==C and jP or RO));local tO,YO=gi(...);tO=tO-0x1;for oJ=0,tO do if not(bP>oJ)then do break;end;else yO[oJ]=YO[oJ+0X001];end;end;if not ZP then YO=nil;else if pP then yO[bP]={n=tO>=bP and tO-bP+0X1 or 0,f(YO,bP+1,tO+0X0001)};end;end;if jO~=RO then(w)(iP,jO);end;local aO,vO,zO,qO=c(function()while'\h]\106\078f'do local RP=MP[oO];local DP=RP[0x6];oO=oO+0X1;do if DP>=43 then if DP>=0x40 then if DP>=75 then if DP>=80 then if DP<0X53 then if DP>=0X0051 then if DP==82 then local ih=(RP[0x0001]);local Jh=l(function(...)j();do for UW,tW in...do j(true,UW,tW);end;end;end);(Jh)(yO[ih],yO[ih+1],yO[ih+2]);nO=ih;yO[ih]=Jh;oO=RP[3];else do if not(not(yO[RP[3]]<yO[RP[0X2]]))then else oO=RP[0X1];end;end;end;else(yO)[RP[1]]=q(yO[RP[0X3]],yO[RP[2]]);end;else if DP<0X00054 then local Jr=(RP[1]);(yO)[Jr]=yO[Jr](f(yO,Jr+0x01,nO));nO=Jr;else if DP~=85 then do yO[RP[1]]=yO[RP[3]][RP[0X007]];end;else local Fj=(RP[1]);do(yO)[Fj]=yO[Fj](yO[Fj+0X1],yO[Fj+0X002]);end;nO=Fj;end;end;end;elseif DP>=77 then if not(DP<78)then if DP~=0X4f then(yO)[RP[1]]=i(yO[RP[0x3]],yO[RP[0X02]]);else if RP[2]==0Xbf then oO=oO-0X0001;do(MP)[oO]={[3]=(RP[0X03]-205),[0X00006]=52,[0X00001]=(RP[0X1]-0XCD)};end;else yO[RP[0x1]]=YO[bP+1];end;end;else(yO)[RP[1]]=RP[4];end;else if DP~=0X4c then(yO)[RP[0X1]]=r(yO[RP[3]],yO[RP[2]]);else local ut=(RP[1]);local Zt=(l(function(...)j();for he in...do(j)(true,he);end;end));(Zt)(yO[ut],yO[ut+0X00001],yO[ut+0X002]);do nO=ut;end;(yO)[ut]=Zt;do oO=RP[3];end;end;end;else do if not(DP>=0x45)then if not(DP>=0X42)then if DP==65 then do if RP[2]~=0X90 then repeat local xm,Rm,wm=lP,yO,RP[0x1];do if not(#xm>0)then else local Qz={};for yj,zj in y,xm do for aP,gP in y,zj do if not(gP[1]==Rm and gP[2]>=wm)then else local Ez=gP[0X2];if not(not Qz[Ez])then else do Qz[Ez]={Rm[Ez]};end;end;(gP)[0X1]=Qz[Ez];gP[0X00002]=1;end;end;end;end;end;until-887084093;else oO=oO-1;(MP)[oO]={[0X3]=(RP[0X00003]-15),[0X6]=0X01,[1]=(RP[1]-15)};end;end;else yO[RP[1]]=yO[RP[3]]~=RP[7];end;else if DP>=0X043 then do if DP~=68 then local Oa=(RP[1]);local na=(RP[3]);do if na~=0 then nO=Oa+na-0X00001;end;end;local Ua,Ha=nil,(nil);local ja=RP[2];if na==1 then Ua,Ha=gi(yO[Oa]());else do Ua,Ha=gi(yO[Oa](f(yO,Oa+1,nO)));end;end;do if ja~=1 then if ja==0x0 then Ua=Ua+Oa-1;nO=Ua;else Ua=Oa+ja-2;nO=Ua+0X00001;end;local f_=0X0;do for fW=Oa,Ua do f_=f_+0X0001;(yO)[fW]=Ha[f_];end;end;else nO=Oa-1;end;end;else yO[RP[1]]=yO[RP[3]]%RP[7];end;end;else if yO[RP[3]]==yO[RP[0X2]]then else do oO=RP[0X00001];end;end;end;end;else if DP<72 then do if not(DP<0x46)then if DP==0x47 then yO[RP[1]][yO[RP[0x03]]]=yO[RP[2]];else oO=RP[0x0003];end;else local fl=RP[1];local Pl,ol=yO[fl]();if not(Pl)then else do oO=RP[0X3];end;yO[fl+3]=ol;end;end;end;else if DP<73 then local jz=RP[1];local Oz=yO[jz];local Tz,Gz=yO[jz+1],(yO[jz+0x2]);do(yO)[jz]=l(function()for JI=Oz,Tz,Gz do(j)(true,JI);end;end);end;do oO=RP[3];end;else if DP==0X4A then local mK,XK=RP[1],RP[0X03];do nO=mK+XK-0x01;end;repeat local IQ,JQ=lP,yO;do if not(#IQ>0X0)then else local Ex={};for n6,S6 in y,IQ do for g7,D7 in y,S6 do do if not(D7[1]==JQ and D7[2]>=0)then else local Ef=D7[2];if not(not Ex[Ef])then else Ex[Ef]={JQ[Ef]};end;do(D7)[0X0001]=Ex[Ef];end;D7[2]=1;end;end;end;end;end;end;until true;do return true,mK,XK;end;else do yO[RP[1]]=yO[RP[3]]==yO[RP[0X2]];end;end;end;end;end;end;end;else if DP<0x35 then if DP>=0X30 then if not(DP>=50)then do if DP~=49 then if RP[2]~=36 then do repeat local oa,Za=lP,(yO);if#oa>0X0 then local Hp={};for aD,nD in y,oa do for NR,fR in y,nD do do if not(fR[1]==Za and fR[2]>=0)then else local dB=fR[0x0002];if not(not Hp[dB])then else do(Hp)[dB]={Za[dB]};end;end;(fR)[1]=Hp[dB];fR[2]=1;end;end;end;end;end;until 0.7469346372961704;end;local VO=(RP[1]);return false,VO,VO;else do oO=oO-1;end;(MP)[oO]={[0X1]=(RP[1]-151),[6]=5,[0X03]=(RP[3]-0X97)};end;else do yO[RP[1]][RP[4]]=yO[RP[0x0002]];end;end;end;else do if not(DP<51)then if DP~=0X000034 then do(yO)[RP[0X1]]={f({},0X1,RP[0x003])};end;elseif RP[2]==39 then oO=oO-1;MP[oO]={[6]=62,[0X00001]=(RP[0X0001]-37),[3]=(RP[0X00003]-0X25)};else do(yO)[RP[1]]=#yO[RP[3]];end;end;else yO[RP[0X001]][yO[RP[0X3]]]=RP[7];end;end;end;else if DP>=45 then do if DP>=46 then do if DP~=47 then local L1=RP[0x00003];yO[RP[1]]=yO[L1]..yO[L1+1];else local Vw=(RP[1]);nO=Vw+RP[0X3]-1;(yO[Vw])(f(yO,Vw+1,nO));do nO=Vw-0x1;end;end;end;else yO[RP[1]]=W(yO[RP[0x0003]],yO[RP[2]]);end;end;elseif DP~=0X2c then repeat local ph,Dh=lP,(yO);if#ph>0 then local Sw=({});for JJ,kJ in y,ph do do for xf,Yf in y,kJ do if Yf[1]==Dh and Yf[2]>=0X0 then local ZE=Yf[2];do if not Sw[ZE]then do Sw[ZE]={Dh[ZE]};end;end;end;Yf[1]=Sw[ZE];Yf[2]=0X001;end;end;end;end;end;until true;do return true,RP[0x1],1;end;else(yO)[RP[0X1]]=yO[RP[0x3]]>yO[RP[0X002]];end;end;else do if not(DP>=0X0003A)then if not(DP<0X37)then do if not(DP<0X38)then if DP~=0X39 then local y1=RP[1];local F1,R1=yO[y1]();if F1 then do(yO)[y1+0X0001]=R1;end;do oO=RP[3];end;end;elseif yO[RP[0X0003]]~=RP[0X07]then do oO=RP[1];end;end;else yO[RP[1]]=jO[RP[0X04]];end;end;else if DP~=54 then local tn=(RP[1]);local Pn,Tn,cn=yO[tn]();if not(Pn)then else yO[tn+0X1]=Tn;(yO)[tn+2]=cn;do oO=RP[0X3];end;end;else yO[RP[1]]=yO[RP[3]]-yO[RP[0X2]];end;end;else do if DP<61 then if not(DP<59)then do if DP==60 then local TB,FB=RP[0X1],(RP[0X2]-1)*50;local YB=yO[TB];for mT=1,nO-TB do YB[FB+mT]=yO[TB+mT];end;else local cQ=(RP[1]);do yO[cQ]=yO[cQ](yO[cQ+1]);end;nO=cQ;end;end;else if not(not yO[RP[0x1]])then else do oO=RP[3];end;end;end;elseif DP<0X3e then(yO)[RP[0X0001]]=yO[RP[0x3]]^yO[RP[2]];else do if DP==0X3F then(yO)[RP[0X00001]]=yO[RP[0X003]]<yO[RP[0X2]];else if RP[2]~=0x00A then repeat local mC,JC=lP,(yO);if not(#mC>0)then else local AG={};for su,ku in y,mC do for BA,DA in y,ku do if not(DA[1]==JC and DA[0X0002]>=0)then else local I8=(DA[0X2]);do if not AG[I8]then AG[I8]={JC[I8]};end;end;do DA[1]=AG[I8];end;DA[2]=1;end;end;end;end;until true;return;else do oO=oO-1;end;(MP)[oO]={[3]=(RP[0x3]-0x98),[1]=(RP[1]-152),[0X006]=0X5};end;end;end;end;end;end;end;end;end;else if DP<21 then if DP<0Xa then if not(DP<5)then if DP<7 then do if DP==0X06 then(jO)[RP[0x04]]=yO[RP[1]];else do repeat local Hm,sm=lP,(yO);if#Hm>0 then local fk={};do for BC,gC in y,Hm do for YD,WD in y,gC do if WD[1]==sm and WD[0X2]>=0 then local gU=WD[2];do if not fk[gU]then fk[gU]={sm[gU]};end;end;do(WD)[0x1]=fk[gU];end;do(WD)[0X2]=1;end;end;end;end;end;end;until true;end;do return false,RP[0X1],nO;end;end;end;else do if not(DP>=8)then if not(yO[RP[0X1]])then else oO=RP[0X3];end;else if DP==9 then nO=RP[0x00001];yO[nO]();nO=nO-0X1;else local mG=RP[1];nO=mG+RP[0X3]-0X1;(yO)[mG]=yO[mG](f(yO,mG+0x1,nO));nO=mG;end;end;end;end;elseif DP<2 then if DP==0X1 then if RP[2]==0X0009A then do oO=oO-1;end;MP[oO]={[1]=(RP[1]-0X65),[0X0003]=(RP[3]-0X65),[6]=0xE};elseif RP[0x002]==163 then oO=oO-1;MP[oO]={[6]=14,[0X1]=(RP[1]-88),[0X03]=(RP[0X03]-0X58)};elseif RP[2]==128 then oO=oO-0X1;MP[oO]={[0X1]=(RP[0X00001]-0x9a),[0X6]=0X15,[3]=(RP[3]-0x9A)};elseif RP[0X2]~=78 then yO[RP[1]]=-yO[RP[0X3]];else oO=oO-0x1;(MP)[oO]={[0x1]=(RP[1]-39),[0x00003]=(RP[0x3]-0X27),[6]=62};end;else local Wn,Nn=RP[1],(yO[RP[3]]);do(yO)[Wn+1]=Nn;end;do(yO)[Wn]=Nn[RP[0x0007]];end;end;else if DP<0X3 then do if yO[RP[0X3]]==yO[RP[2]]then oO=RP[0X0001];end;end;else if DP==0X4 then(yO)[RP[1]]=yO[RP[0X03]][yO[RP[0x2]]];else if yO[RP[3]]<yO[RP[0X00002]]then oO=RP[1];end;end;end;end;else if DP>=15 then if not(DP>=0X12)then if not(DP>=16)then repeat local f2,I2=lP,(yO);if not(#f2>0x0)then else local Dh=({});for Ca,Oa in y,f2 do for ir,yr in y,Oa do if yr[1]==I2 and yr[0X2]>=0X0 then local vx=(yr[2]);if not(not Dh[vx])then else(Dh)[vx]={I2[vx]};end;(yr)[1]=Dh[vx];do yr[0X02]=0X1;end;end;end;end;end;until 0.5366966229340943;local p_=(RP[0x1]);return false,p_,p_+RP[3]-0X2;else do if DP~=17 then yO[RP[1]]=yO[RP[0X003]]>=yO[RP[0x00002]];else do(yO)[RP[1]]=true;end;end;end;end;else if not(DP<19)then if DP~=20 then local SF=RP[1];yO[SF](yO[SF+0x1],yO[SF+2]);nO=SF-1;else do repeat local VV,xV=lP,(yO);if#VV>0X0 then local Kn=({});for z5,X5 in y,VV do for oF,vF in y,X5 do if vF[0X00001]==xV and vF[2]>=0 then local Pf=vF[2];if not(not Kn[Pf])then else Kn[Pf]={xV[Pf]};end;vF[0X01]=Kn[Pf];vF[0x0002]=0X1;end;end;end;end;until'\*';end;return true,RP[0X001],0;end;else yO[RP[0X1]][RP[4]]=RP[0X7];end;end;else do if not(DP<12)then if DP>=0Xd then if DP==14 then local QX,gX=tO-bP,RP[1];do if not(QX<0)then else QX=-1;end;end;for VM=gX,gX+QX do do(yO)[VM]=YO[bP+(VM-gX)+1];end;end;nO=gX+QX;else do if RP[2]==213 then oO=oO-0X1;MP[oO]={[1]=(RP[0X0001]-237),[0X3]=(RP[0X03]-0Xed),[0X6]=0X5};else if RP[0x2]~=0X49 then local v0=RP[1];do for E4=v0,v0+(RP[0X3]-1)do(yO)[E4]=YO[bP+(E4-v0)+1];end;end;else do oO=oO-0X001;end;do(MP)[oO]={[3]=(RP[3]-0X85),[1]=(RP[1]-0X000085),[0X00006]=0x30};end;end;end;end;end;else if not(yO[RP[3]]<=RP[0X7])then oO=RP[1];end;end;else do if DP==0Xb then do(yO)[RP[0x001]]=yO[RP[0X03]]*yO[RP[0X02]];end;else do(yO)[RP[0x001]]=yO[RP[3]]/yO[RP[2]];end;end;end;end;end;end;end;else if DP<32 then if not(DP<26)then if not(DP<29)then if not(DP>=30)then do(yO)[RP[0X00001]]=yO[RP[0x3]]%yO[RP[2]];end;else if DP==0X0001F then yO[RP[0X1]]=false;else if yO[RP[0X0003]]==RP[7]then oO=RP[0X1];end;end;end;else if DP<0x01b then(yO)[RP[0X1]]=yO[RP[3]]<=yO[RP[2]];else if DP==0X001c then yO[RP[1]]=nil;else local LG=(RP[0x1]);(yO[LG])(yO[LG+0x01]);nO=LG-0X1;end;end;end;elseif not(DP>=23)then do if DP~=22 then do yO[RP[0X01]]=yO[RP[0X00003]];end;else do yO[RP[1]]=Zi[RP[3]];end;end;end;else if not(DP<24)then if DP==25 then do(yO)[RP[1]]=yO[RP[3]]+yO[RP[0X2]];end;else for Ad=RP[0X1],RP[0X3]do do yO[Ad]=nil;end;end;end;else local ea=(GP[RP[3]]);(ea[1])[ea[2]]=yO[RP[1]];end;end;else do if not(DP>=0X25)then if not(DP>=34)then do if DP==0X21 then local Mn=(hP[RP[3]]);local Sn=(Mn[0X07]);local On,on=#Sn,(nil);if not(On>0)then else on={};do for aZ=0X001,On do local vZ=(Sn[aZ]);do if vZ[0X001]==0X0 then on[aZ-0x1]={yO,vZ[2]};else do on[aZ-1]=GP[vZ[0X2]];end;end;end;end;end;Q(lP,on);end;yO[RP[1]]=ni(Mn,jO,on);else(uO)[RP[3]]=yO[RP[1]];end;end;else do if DP>=35 then if DP~=36 then do yO[RP[1]]=yO[RP[0x3]]~=yO[RP[0X00002]];end;else yO[RP[1]]=not yO[RP[3]];end;else local te=(RP[0X1]);yO[te](f(yO,te+0X1,nO));nO=te-0X00001;end;end;end;else if not(DP>=40)then do if not(DP<38)then if DP==39 then local m1=yO[RP[0x3]]/yO[RP[0x2]];do yO[RP[1]]=m1-m1%1;end;else do(yO)[RP[0x1]]={};end;end;else do(yO)[RP[0X0001]]=uO[RP[0X0003]];end;end;end;else do if DP<0X29 then local tC,AC=RP[1],((RP[2]-0X0001)*50);local LC=yO[tC];for kT=0X1,RP[0X3]do(LC)[AC+kT]=yO[tC+kT];end;else if DP==42 then local Oz=(GP[RP[0X03]]);yO[RP[1]]=Oz[0X0001][Oz[2]];else Zi[RP[0X3]]=yO[RP[0X1]];end;end;end;end;end;end;end;end;end;end;end;end);do if not(aO)then if M(vO)~="string"then(x)(vO,0X0);else if K(vO,"attempt to yield across metamethod/C%-call boundary")then return coroutine.yield();end;if not(K(vO,'\^.\-\:\037d\+\:\032'))then(x)(vO,0);else(x)('\Lu\114a\p\104\ \083\cript\:'..(wP[oO-0X1]or"(in\116ernal\)")..": "..g(vO),0X000);end;end;else if vO then if qO==1 then return yO[zO]();else return yO[zO](f(yO,zO+1,nO));end;else if not(zO)then else return f(yO,zO,qO);end;end;end;end;end;end;(w)(iP,jP);return iP;end;Wi=5;else if Wi~=4 then function Ji()local na,ea,Ha=nil,nil,(nil);local Wa=(2);repeat if not(Wa<=0x3)then if not(Wa<=5)then if Wa~=6 then do na={Oi,Oi,{},{},{},nil,nil,nil,nil};end;Wa=0X0005;else na[Fi]=E(Ha,2,Gi)~=0X0;Wa=4;end;else if Wa~=0x4 then ea={};Wa=0x00003;else na[Gi]=ei();Wa=8;end;end;elseif Wa<=0x0001 then if Wa==0 then do Ha=k();end;Wa=1;continue;else(na)[8]=E(Ha,0X0001,0x1)~=0;Wa=0X0006;do continue;end;end;else do if Wa~=0X2 then na[14]=k();Wa=0;else Wa=0X00007;end;end;end;until Wa>7;do Wa=0;end;local ja,ua=nil,(nil);while true do if not(Wa<=0X0)then if Wa==1 then do ua={};end;do break;end;else ja={};Wa=1;end;else(na)[6]=ei();Wa=2;end;end;do na[11]=k();end;Wa=0;local Ka=(nil);while'\m\%'do if not(Wa<=0)then do if Wa==0X001 then Ka=s()-29703;break;else do(na)[15]=s();end;Wa=0X1;end;end;else na[9]=ei();Wa=0x2;end;end;local la=(na[3]);for YM=1,Ka do(la)[YM]={[5]=0.17184655332165832,[7]=false,[0X4]=1025887148,[Fi]=0.700707243731031,[0x3]=0.3351382719468783,[0x007]=-0x007b413adf,[6]=ei(),[0X5]=false,[0X4]=k(),[0X5]=k(),[0x3]=Di(),[2]=Di(),[0X0007]=k(),[Gi]=Di()};end;(na)[0X0F]=k();do Wa=1;end;repeat do if Wa<=0X0 then(na)[0X0007]=ja;do Wa=2;end;else do if Wa==1 then do(na)[17]=k();end;do Wa=0x0;end;continue;else for mv=1,ei()do(ja)[mv]={k(),ei()};end;Wa=3;do continue;end;end;end;end;end;until Wa>=0X3;Wa=0;local Aa=(nil);while Wa<0X3 do do if not(Wa<=0)then do if Wa~=1 then for D6=0x1,Aa do local M6=0X001;local a6,q6,R6=nil,nil,nil;do while true do if not(M6<=0X0)then if M6~=1 then do q6=s();end;M6=0;else do a6=s();end;M6=0X02;end;else R6=s();do break;end;end;end;end;for gT=a6,q6 do na[0x4][gT]=R6;end;end;Wa=1;else(na)[Hi]=s();Wa=0X0003;end;end;else Aa=s();Wa=2;end;end;end;local Va=(s()-ui);local ka,qa,wa,Ea,ga=na[5],nil,nil,nil,nil;for OD=0,6 do if OD<=2 then if not(OD<=0X0)then if OD~=0X01 then wa=s()-53693;continue;else do qa=1;end;end;else for FT=Li,Va-0X00001 do ka[FT]=Ji();end;end;elseif not(OD<=4)then if OD==0X5 then for KX=0X1,wa do local pX,AX,uX=nil,nil,(nil);local qX=0x2;repeat if qX<=0x3 then if qX<=0X1 then if qX==0X0 then do(ua)[KX-0X1]=qa;end;qX=0X001;else if pX==Ei then AX=Z(Mi(Ea),4);elseif pX==0X093 then AX=z();elseif pX==112 then AX=true;elseif pX==33 then AX=s();elseif pX==0X093 then do AX=a();end;elseif pX==zi then AX=a()+s();elseif pX==27 then do AX=s();end;elseif pX==34 then do AX=a();end;elseif pX==158 then do AX=a()+s();end;elseif pX==0XF then AX=false;elseif pX==0Xa4 then AX=z();elseif pX~=151 then else AX=Z(Mi(Ea),k());end;qX=0X3;end;else do if qX~=2 then uX={AX,{}};qX=0X005;continue;else pX=k();qX=4;end;end;end;else do if not(qX<=0X0005)then if qX==0x00006 then do qa=qa+1;end;qX=0X7;continue;else if ga then do(xi)[Yi]=uX;end;Yi=Yi+0X1;end;qX=8;continue;end;else if qX==4 then AX=nil;qX=0;else ea[qa]=uX;qX=6;do continue;end;end;end;end;end;until qX>0X7;end;do continue;end;else do for jD=0X0001,Ka do local AD=(0X00001);local bD=nil;do repeat if AD~=0 then bD=na[3][jD];do AD=0;end;do continue;end;else for Xr,Gr in ai(P)do local Lr=(0X1);local rr,mr=nil,(nil);repeat if not(Lr<=0X00000)then do if Lr~=1 then mr=bD[rr];Lr=0;continue;else rr=S[Gr];Lr=0X2;continue;end;end;else do if mr==8 then local TD=0x2;local gD,hD=nil,nil;do while(true)do if TD<=0x00 then do hD=ea[gD];end;TD=1;continue;else if TD~=1 then gD=ua[bD[Gr]];TD=0;else if hD then local XL=nil;local cL=(1);repeat if cL<=0 then(XL)[#XL+Gi]={bD,rr};cL=0X003;continue;else if cL==1 then bD[rr]=hD[1];cL=2;continue;else XL=hD[2];cL=0;end;end;until cL==0x003;end;break;end;end;end;end;elseif mr==7 then do bD[Gr]=jD+bD[Gr]+0x00001;end;end;end;do Lr=3;end;continue;end;until Lr>=3;end;AD=2;end;until AD==0X2;end;end;end;do continue;end;end;else if OD==3 then Ea=k();continue;else ga=k()~=0;continue;end;end;end;return na;end;Wi=0x001;continue;else xi=Oi;Wi=0;continue;end;end;end;end;end)(17,string.gsub,"..",1,7,bit32.bor,unpack,0X0019,2,0X15159,next,rawset,string.rep,tonumber,string.unpack,bit32.bnot,"LPH)BD1BDE020102B1005632742D20742H0046072H0D000D0046070D0C000D0046070D0B000D00210A0D06000D0037080D2H000D004D080D01000D00332H0DE501000D00332H0DEB01000D00022H0D047A0DD5010B2H0D8E01300DDD01112H0DFE012D0D2H282H0D9A01500D6A2C2H0D3FA1010D1F3H0DB9017D0DD601210A0D2H000D00092H0D2H000D00210A0D01000D0006080D2H000D0037080D2H000D0006080D2H000D2H012H0D659A010D66432H0D2H000D0046070D01000D00182H0D9A01000D00302H0D9701240D9701CF645H003C41F3645B5101003C020132780015EF7653E9752H0046070DD902000D0046070DD802000D0046070DD702000D00210A0D09000D0037080D14000D004D080D1B000D00332H0DE601000D00332H0DE801000D000F2H0DF301DC010DC801482H0D03060D524A2H0D484A0D53492H0D3C630D28513H0D4C0D2546070DCC02000D003A070DAF03000D2346070DB201000D001A2H0D2H220D243A070D8101000D2446070D02000D00152H0D24000D2346070DFB3HFF0F000D0046070D02000D002H070D38000D2446072H0D000D00102H0D2H220D2446070D79000D003A070D03000D2546070D06000D00412H0D3490010D3846070D2B000D00112H0D2H000D2946070D2H000D00012H0DC30180010DC20146070D29000D001C2H0D2H000D29152H0D29000D2846070D26000D00012H0DBC0180010DBE0146070D28000D00012H0DC30180010DC20146070D22000D00402H0D250D08293A070D1E000D2946070DF03HFF0F000D00472H0D25270D2046070D2H000D0046070D7C000D00112H0D2H000D2746070D2H000D00012H0DC10180010DBD2H012H0DBC0180010DC10146070DF83HFF0F000D0045070D9803000D2A46070DF702000D0046070D14000D001F2H0D2H000D2946070D2H000D00012H0DC30180010DC20146070DFB3HFF0F000D00012H0DA60180010DBA2H012H0DB70180010DBB011C2H0D2H000D224C070D31000D20322H0D2129081D46070D2F000D0045070D1B000D2046070DF83HFF0F000D00152H0D1C000D212B2H0D2H000D21420D0726210D6546070DE83HFF0F000D00390D07272108F80246070DD13HFF0F000D002H070DDD3HFF0F000D2946070D8003000D00012H0DA60180010DC32H012H0DC00180010DC4011C2H0D2H000D2B52070DAF01000D29012H0DBE0180010DBD01192H0D2H220D240B2H0D2H220D250A2H0D25220D253D2H0D2H220D261D2H0D25260D25362H0D24250D24012H0DBE0180010DBD01492H0D2H220D243A070DCF02000D2446070DE202000D003E2H0D98010A0DBC012C2H0D2H220D2446070DB63HFF0F000D00042H0D10230D2446070D01000D0037080D14000D24542H0D240E082546070D01000D0037080D14000D25542H0D2411082646070D01000D0037080D14000D26153H0D000D2746070D2H000D00012H0DBF0180010DC2013B2H0D2H000D2746070D01000D00182H0D74000D271C2H0D2H000D28390D07270208D93HFF0F46070DC83HFF0F000D003E2H0D98010A0DB90138070DCE3HFF0F000D2046070DA702000D00152H0D22000D2446070D10000D00012H0DBC0180010DC00146070D18000D00012H0DBC0180010DBF0146070D12000D004D080D14000D272E2H0D26000D264D080D14000D2746070D05000D00432H0D01000D2846070D1A000D0012080D0F2908213A070DBB3HFF0F000D1046070D1C000D00012H0DBC0180010DC2012E2H0D27000D2746070D11000D00012H0DBC0180010DBF0146070DEE3HFF0F000D00472H0D22240D22042H0D2H220D24472H0D22240D2246070DF43HFF0F000D00152H0D22000D262E2H0D25000D25012H0DBC0180010DC00146070DEA3HFF0F000D00012H0DBC0180010DC12H012H0DBC0180010DC2013B2H0D2H000D27012H0DBC0180010DC20146070DE93HFF0F000D00012H0DBE0180010DBD0146070DDD3HFF0F000D002F2H0D04000D24012H0DBC0180010DBE0146070DEE3HFF0F000D00222H0D2H000D2446070D01000D00182H0D75000D24012H0DBC0180010DBE0146070DD93HFF0F000D0046070DC002000D0046070D8702000D00012H0D9A0180010DB40146070D2H000D00152H0D15000D1B3B2H0D2H000D1A46070D01000D00182H0DC201000D1A472H0D151A0D140B2H0D12150D1A192H0D1A130D1A442H0D1A07081A152H0D1A000D1546070DF33HFF0F000D0035070D993HFF0F000D2446070DE1FE2HFF0F000D00192H0D2F130D2F46070D06000D00042H0D142F0D2F46070D01000D0037080D14000D2F472H0D2E2F0D2A0B2H0D12110D2F46070DF83HFF0F000D00442H0D2F07082F012H0DC90180010DAB0146070D2H000D0046070D9002000D00012H0D9B0180010DC92H012H0DBF0180010DCA2H012H0DC80180010DCB0146070D2H000D00552H0D2H000D2F46070D01000D00182H0DFB01000D2F2D2H0D2F110D2F46070DED3HFF0F000D00020D0721220D5B46070DFA01000D00282H0D04010D17262H0D2H000D1846070D11000D00262H0D2H000D1646070D03000D0031080D251C0D1D31080D041C0D1D46070D1F000D00332H0D04000D1746070D13000D0012080D190A081D46070D0C000D0031080D1B1C0D1D31080D101C0D1D46070DFB3HFF0F000D0031080D2F1C0D1D31080D151C0D1D46070DF33HFF0F000D004D082H0D000D1A46070D11000D00262H0D2H000D19262H0D2H000D1A4D080D2A000D1B46070D15000D00210A0D05000D1E210A0D01000D1F012H0DA90180010DBA013A070DE3FE2HFF0F000D2046070D13000D004D080D14000D18112H0D2H000D1946070DF23HFF0F000D0031080D1E1C0D1D31080D231C0D1D31080D201C0D1D31080D091C0D1D46070DEA3HFF0F000D00210A0D03000D1B46070DD93HFF0F000D0031080D121C0D1D31080D261C0D1D46070DE23HFF0F000D0031080D0F1C0D1D31080D2C1C0D1D46070DF33HFF0F000D00210A0D04000D1C262H0D2H000D1D46070DFA3HFF0F000D0046070DB901000D0048070DD301000D2B012H0DC30180010DC60146070D04000D00262H0D2H000D2A46070D2H000D004D080D0E000D2B46070DFA3HFF0F000D004D080D0E000D2D46070DF73HFF0F000D0035070DB801000D2946070DC1FE2HFF0F000D00152H0D22000D2446070D94FE2HFF0F000D0031080D23200D2131080D2H200D2131080D09200D2131080D2F200D2131080D15200D2146070D14000D00552H0D2H000D2246070D01000D00182H0D6A000D22152H0D22000D2346070D2H000D00152H0D22000D24012H0DBC0180010DBF2H012H0DBC0180010DC00146070D04000D0012080D190A082146070D16000D0031080D1E200D2146070DED3HFF0F000D00432H0D01000D2646070D01000D00182H0DD701000D26532H0D2H000D2346070D11000D0031080D1B200D2146070D09000D0031080D25200D2146070D15000D00210A0D02000D2046070D02000D0031080D2C200D2146070DF13HFF0F000D00262H0D2H000D2131080D0F1C0D2146070DFB3HFF0F000D0031080D10200D2146070DEA3HFF0F000D0031080D26200D2146070DF13HFF0F000D00152H0D05000D2246070D0B000D00210A0D2H000D24152H0D22000D25152H0D22000D26552H0D2H000D2446070D01000D00182H0DE001000D243A070DE4FD2HFF0F000D2446070D06000D0031080D04200D2131080D12200D2146070DF13HFF0F000D00262H0D2H000D23012H0DBB0180010DBE0146070DCF3HFF0F000D0046070DC63HFF0F000D00012H0DBA0180010DBF011C2H0D2H000D2652070DEEFE2HFF0F000D24012H0DBA0180010DBC0146070D06000D001F2H0D2H000D2346070D02000D00012H0D9F0180010DBB0146070DFA3HFF0F000D00012H0DA60180010DBE0146070DF53HFF0F000D001C2H0D2H000D23132H0D2H000D2146070D01000D00182H0DF901000D21262H0D2H000D21262H0D2H000D2246070DF33HFF0F000D00012H0DA00180010DBC2H012H0DBA0180010DBD013B2H0D2H000D2246070D01000D00182H0D37000D221E0D07222908EF3HFF0F46070DF0FD2HFF0F000D00390D07270008F7FD2HFF0F46070D4C000D0048070D50000D16262H0D2H000D144D080D1D000D154D082H0D000D1646070D3A000D0037080D2H000D00542H0D001A080046070D01000D0037080D14000D0037080D2H000D0146070D01000D0037080D14000D01542H0D012H080137080D2H000D0246070D2H000D00542H0D0227080237080D2H000D0346070D01000D0037080D14000D03542H0D0322080346070D0E000D0037080D28000D0746070D01000D0037080D14000D0737080D18000D0846070D01000D0037080D14000D0837080D06000D0946070D01000D0037080D14000D0937080D05000D0A46070D01000D0037080D14000D0A37080D13000D0B46072H0D000D0037080D01000D0446070D01000D0037080D14000D04542H0D041C080446070D01000D0037080D14000D0437080D03000D0546070D01000D0037080D14000D0537080D1F000D0646070DE73HFF0F000D004D080D16000D1246070D12000D0037080D24000D0C37080D0B002H0D46070D01000D0037080D14002H0D37080D2D000D0E46070D01000D0037080D14000D0E252H0D02000D0F46070D01000D0037080D14000D0F162H0D02000D1046070D01000D0037080D14000D104D080D1D000D1146070DEF3HFF0F000D004D080D17000D174D080D0E000D1846070DBE3HFF0F000D004D080D2B000D1346070DBD3HFF0F000D001C2H0D2H000D20292H0D02000D20342H0D26270D25012H0DC30180010DC5014D080D0E000D2C48070D95FD2HFF0F000D2A4D080D0E000D2A46070DFB3HFF0F000D004D080D14000D29152H0D29000D28342H0D25000D290C0D07290C08D3FE2HFF0F46070DF93HFF0F000D0045070DF8FD2HFF0F000D1646070D9FFE2HFF0F000D00152H0D24000D233F2H0D2H220D2446070D2H000D003A070DE7FC2HFF0F000D2446070DAEFD2HFF0F000D0046070D9DFD2HFF0F000D00012H0DA70180010DBB0146070D2H000D00012H0DBA0180010DBC0146070D2H000D003B2H0D2H000D21390D072101088FFD2HFF0F46070D973HFF0F000D00472H0D2D2E0D2C46070DC7FE2HFF0F000D00542H0D2B0E082C46070D2H000D00542H0D2B11082D012H0DC20180010DC80146070DF93HFF0F000D00232H0D2H220D2446070DEA3HFF0F000D00012H0DB60180010DBE012B2H0D2H000D24390D07272E08923HFF0F46070DE7FC2HFF0F000D00152H0D04000D2B012H0DC40180010DC60146070D2H000D003B2H0D2H000D2B46070D2H000D00012H0DC50180010DC20146070D82FD2HFF0F000D0045070DEFFD2HFF0F000D2B46070DF73HFF0F000D00152H0D25000D2946070DDAFC2HFF0F000D00152H0D28000D2E012H0D9B0180010DC92H012H0DBF0180010DCA2H012H0DC70180010DCB01552H0D2H000D2F2D2H0D2F110D2F46070D03000D00442H0D2E07082E012H0DC80180010DAB0146070DDDFC2HFF0F000D00042H0D142F0D2F46070D01000D0037080D14000D2F2E2H0D2E000D280B2H0D12110D2E192H0D2E130D2E46070DF63HFF0F000D004D080D0E000D204F2H0DDD01BF010DEE014D080D0E000D2248070DDFFC2HFF0F000D20EACD5H00C2B5014C5F510100AF0301035700CDC92A231A742H0046070D10000D0046070D0F000D0046070D0E000D00210A0D03000D0037080D01000D004D080D02000D00332H0DE101000D00332H0DEB01000D00412H0D51C0010D34242H0D5AAB010D09242H0D25B0010D5C102H0D416A0DF401332H0DBE01090DD701192H0DD501AA010D6D4A2H0D629F010DCB0146070D01000D00342H0D26270D25012H0D659A010D66302H0D9701240D980138855H000A249A7059510100BDD12H00110074030106140193B8A3771F742H0046070D0F000D0046070D0E000D0046072H0D000D00210A0D04000D0037080D01000D004D080D02000D00332H0DE601000D00332H0DEC01000D00102H0D94016D0D78252H0D21FE010D31202H0DD3012F0DF501042H0D6C2D0DEA01182H0D4C91010DF801032H0D12750D6946070D01000D003H0DED01D5010DEF012A2H0D2H000D02012H0D9A0180010D9D0146070D2H000D001C2H0D2H000D04012H0D58A3010D5D46070D2H000D00142H0D2H000D02012H0D284E0D275CCA01001E4H00FBC7336459510100BDD12H00FD0093030103C400A16AF1101D742H0046070D13000D0046070D12000D0046070D11000D00210A0D05000D0037080D01000D004D080D02000D00332H0DE201000D00332H0DEA01000D00452H0D9201A4010D5F272H0D8F01390DF6013A2H0DD201520D583D2H0D37440DB5012C2H0D60550D39012H0D8101E2010DCA013D2H0D343B0D66502H0D57E4010D5D372H0DAD016D0D8E01502H0D02540DF40146070D01000D00342H0D26270D25012H0D659A010D663E2H0D98010A0D99015E7E5H00C5F7952D59510100BDD12H00AD002E00010220009C16AB5A16742H0046072H0D000D0046070D0C000D0046070D0B000D00210A0D05000D0037080D01000D004D080D02000D00332H0DE601000D00332H0DEA01000D00342H0D33FF010DC7014B2H0DE101600D3C2D2H0D67B8010DE201252H0DF501FA010DBB01242H0DEA01DF010DC701272H0DBD018B010D15342H0D26270D252F6B5H00A13F532C59510100BDD12H00BD00BE000108D1001E1C317A3F742H0046070D2D000D0046070D2C000D0046070D2B000D00210A0D03000D0037080D02000D004D080D07000D00332H0DE301000D00332H0DE801000D001D2H0D6CB2010D6C202H0D1B9B010DE601182H0DCA019E010D78422H0DCA01180D9601042H0DF601C1010D54072H0DAC01140D0F4E2H0DD301DF010D6D46070D1E000D00472H0D04060D0546070D05000D002A2H0D01000D0546070D01000D0037080D02000D05012H0D9A0180010DA00146070DF93HFF0F000D0045070DFA3HFF0F000D0146070D06000D003E2H0D2H000D0046070D4HFF0F000D00012H0D9B0180010D9C01152H0D2H000D031B2H0D2H000D0246070D0B000D004D080D01000D014D080D01000D024D080D01000D034D080D01000D04172H0D05000D04172H0D04000D03172H0D03000D02172H0D02000D0137080D02000D0146070D01000D0037080D02000D013A070DEF3HFF0F000D0146070DEF3HFF0F000D004D080D2H000D0146070D02000D002A2H0D2H000D0046070DFC3HFF0F000D004D080D04000D02552H0D2H000D0046070D01000D00182H0DED01000D004D080D01000D014D080D03000D024D080D05000D0348070DDF3HFF0F000D013932060002001400120013001100154H0036E5966D59510100C3D12H00190019043H00BD085B71A48H0019083H001904F7C287E97D1AA4FF7H00223H00205FA00242A4017H00CE03010BDB01AF18240941742H0046070D34000D0046070D33000D0046070D32000D00210A0D04000D0037080D01000D004D080D05000D00332H0DE301000D00332H0DE801000D00492H0D2B190D383A2H0D65000D9F01212H0D2587010D44032H0DF3015B0DDB01152H0D6BD2010D5B2C2H0DD401520D53042H0DFE01580D2D062H0DA001A5010D433D2H0D1D190D51032H0DFB01A6010DE601042H0D2D210DA101282H0D68A7010DFF01232H0D8A01A8010D7446070D1F000D0045070D01000D0346070D0B000D00042H0D02060D0746070D01000D0037080D01000D07420D0700070DFA3HFF0F37080D2H000D08012H0DA10180010DA32H012H0D9A0180010DA401552H0D2H000D083A070DF53HFF0F000D0846070D06000D00052H0D2H000D032A2H0D2H000D0346070D01000D0037080D01000D032B2H0D2H000D033E2H0D2H000D00112H0D2H000D083H0D8701490D8D2H012H0D58A3010D5E46070D07000D0037080D01000D0446070D01000D0037080D01000D044D080D03000D0546070DF93HFF0F000D004D080D02000D0548070DE33HFF0F000D03532H0D2H000D0446070DFC3HFF0F000D00262H0D2H000D020E2H0D2H000D033C2H0D00010D024D080D02000D0346070DF23HFF0F000D002D5001001C4H00B952923C59510100C1D12H009500190B3H0051B8AB68D49B8ADFAC819F19093H0002BD94C4730D6D589EA4017H0019043H00C53C7F5DEDD12H00290019093H00E9E4173151F27AF08619083H009C8F7A6959E9BABC19063H005407B27B996F190F3H000ED12H0C8F79C51E32A8B09640690519073H00F37EC123303689190B3H00186BB6CD5B89E798B2869C190B3H00B1EC5FBE82FB2F54C0CAB0A400016H0019073H0002E540B127D53919083H004F3ADDA714F2F0620F19073H00C772D5C4BABEF4A4E8036H00A48H00A4017H00190D3H00CC3FAA92374F69FAF0C58BAB47190D3H00B33E81637074D8AF42181D91DFA4027H0019073H0052B590FCF11DC919083H001F8AAD3878870508194H0019083H0097C2A55FCC6E0E6BA4357H00A4FF7H0019093H000FFA9DCA6A212AB1F3190E3H00329570DCD13CE98B0BF94999AA2C19073H004477A2E688128C190A3H0041FCEF8522F185525CCC19093H00671275330C00520DABA4CE7H0019083H004A6D0884F9484033190F3H008265C034BB55B1AACE3C0CAA7475F119083H0047F2556F1C236420190A3H00BF2A4D8AD4E96561560C19083H0045A033D360C8CCF219083H003D58ABA9A60752B019073H00351023409454EB19073H000A2DC8C4398C95190B3H00174225DF4CFD8EF2EC1B6919063H00388BD6AB317719093H00B215F0716FA66B1A9E15A4047H00A44F7H0019093H000DA87B1996A7964E69190B3H0060F37E9E2H2A08AE5124F819093H00B934E7FC80BD818BC319083H00EC5FCAB2D73649CD0D02010DB100B66D895971742H0046070D0F000D0046070D0E000D0046072H0D000D00210A0D04000D0037080D16000D004D080D21000D00332H0DE101000D00332H0DEA01000D00062H0D3D8F010D96014B2H0D9E016F0D8701412H0DFA01C8010DDE014A2H0D64010D902H012H0D41F2010D73252H0D28F1010DB3013D2H0D7AED010D010A2H0D6E1B0DBC0137080D06000D0046070D01000D0037080D16000D2H002H0D000108004D080D11000D02552H0D2H000D0037080D06000D0146070D01000D0037080D16000D01002H0D2H0108014D080D02000D03552H0D2H000D0146070D01000D00182H0D65000D0137080D06000D0246070D01000D0037080D16000D02542H0D020D080246070D01000D0037080D16000D02542H0D02090802002H0D021308033B2H0D2H000D0337080D06000D0446070D01000D0037080D16000D04002H0D040108044D080D2H000D06552H0D2H000D0446070D01000D00182H0DB101000D04542H0D0418080546070D01000D0037080D16000D05262H0D2H000D06262H0D2H000D0712080D0F05080712080D1505080712080D1D05080712080D1405080712080D1B05080712080D0C05080712080D1705080712080D121E080712080D0407080712080D1C0A080737080D10000D08542H0D081A2H084D080D0E000D094D080D19000D0A4D080D0E000D0B082H0D04000D0846070D01000D00182H0DCC01000D0831080D03080D0737080D10000D08542H0D081A2H0846070D01000D0037080D16000D084D080D19000D094D080D0E000D0A4D080D0E000D0B082H0D04000D0831080D16080D07262H0D2H000D0812080D0F052H0812080D15052H0812080D1D052H0812080D08052H0812080D1B052H0812080D0C052H0812080D17052H0812080D04072H0812080D1C0A2H0837080D10000D09542H0D091A080946070D01000D0037080D16000D094D080D19000D0A4D080D0E000D0B4D080D0E000D0C082H0D04000D0931080D16090D0831080D1F080D0731080D0B070D06210A0D2H000D07092H0D2H000D07012H0DA00180010DA101302H0D2H000D07012H0D284E0D270FDE00243H00013H00083H00013H00093H00093H00183BF1220A3H000A3H00D25D1A3F0B3H000B3H0060343A4B0C3H000C3H00B6AA76710D3H000D3H00A33A71580E3H000E3H00DE0029030F3H000F3H000C8BA860103H00103H00198BBA03113H00193H00013H001A3H001C3H00023H001D3H001E3H00013H001F3H001F3H00023H00203H00213H00013H00223H00223H00033H00233H00243H00013H00253H00253H00033H00263H00283H00043H00293H002A3H00013H002B3H002D3H00053H002E3H002F3H00013H00303H00303H00063H00313H00323H00013H00333H003F3H00063H00403H00443H00143H00453H00463H00013H00473H00483H00143H00493H00493H00153H004A3H004B3H00013H004C3H005B3H00153H005C3H005C3H00203H005D3H005E3H00013H005F3H00653H00203H00663H00663H00013H00673H00693H002D022H006A3H006A3H00013H00D525234B5A510100202H000406003BA3191308743H002H0D01000D001E070200060005013H00013H00013H00013H00BF8C7B2959510100BDD12H009100DDD12H00E9E4190C3H00A4D7423C5A2982E0C5A2522E190D3H0078CB5603A1EC1BE1960639F731190D3H003FEA8D7D4C9186FA23B98CEC5C190C3H00FEC13C1A5B1FDB7D7142095C19103H00927510C9EC2BFD8A5138090E163EF5561519073H00026580131D1545226H00F0BF19073H000F3A5DCAE3FD76190E3H00D48772D6B561AB5ED2A683037F20225H007097C019093H00868944ED0020C8824D190B3H0081FCEF64057F6C89920F05190A3H005235D0713B4C4E9CD5FE228H00190A3H00885B66430097040A0B6219093H009E61DCE442A35ED5CE19133H00599447511BE58E1DCE08D9207BF5EED2391BA9190B3H00A20520A6DBEEC491FE5856190B3H002BB6397D37EECF0DBF919F19073H002C9F4AF534269C19063H0029E417BA1B2C190D3H00935E216ABF1AA8864A40E9A013190C3H00F2D570A64BDF2HEAA62C299619103H000609C41C00A59B3A3B03827E8842DBFE225H00E06FC019063H0076F934DAC9A7190C3H005063AE9A651C237D5A338E9A190F3H00A4D742B902BD6D86BB89C64B24017F190C3H00D914C7FF6A01BFF40F7FC4610F190A3H008DE8BB35A5BF58011910BED12H00B11CA4DD046HFF",coroutine.yield,string,setmetatable,ipairs,0,bit32,tostring,coroutine.wrap,256,nil,0X0048,0X00010000,type,0x3,{60861,0X7FC69011,0xA45ab7a2,0X96e48AcB,1265273198,3529112597,2888073974,1620604341,1264641430},...);
+local module = {
+    Visual = {
+        Enabled = false,
+        Box = false,
+        Filledbox = false,
+        Name = false,
+        Snaplines = false,
+        Distance = false,
+        Healthbox = false,
+        ShowTeam = true,
+        FilledOpacity = 1,
+        ShowDistance = 1500,
+        TeamColor = Color3.new(0, 255, 0),
+        EnemyColor = Color3.new(255, 0, 0),
+        michael = {
+            Enabled = false,
+            Box = false,
+            Filledbox = false,
+            Info = false,
+            Snaplines = false,
+            Distance = false,
+            Healthbox = false,
+            FilledOpacity = 1,
+            ShowDistance = 1500,
+            EnemyColor = Color3.new(255, 0, 0),
+        }
+    },
+}
+
+local function teamcheck(targetplayer)
+    if game.Players.LocalPlayer.Team == targetplayer.Team then return false
+    else return true end
+end
+
+function module.playerexists(player, game)
+    if game == "Universal" or "universal" then
+        if player ~= nil then
+            return false
+        else
+            return true
+        end
+    end
+end
+
+function module.universalvisual(v)
+    local esp = {
+        Box = {Filledbox = Drawing.new("Square"), Outline = Drawing.new("Square"), Main = Drawing.new("Square"), HealthboxOutline = Drawing.new("Square"), Healthbox = Drawing.new("Square")},
+        Text = {Distance = Drawing.new("Text"), Name = Drawing.new("Text")},
+        Line = {Snapline = Drawing.new("Line")}
+    };
+
+    for index, v in pairs(esp.Box) do
+        v.Visible = false
+        v.Position = Vector2.new(20, 20);
+        v.Size = Vector2.new(20, 20); -- pixels offset from .Position
+        v.Color = Color3.fromRGB(0, 0, 0);
+        v.Filled = false;
+        v.Transparency = 0.9;
+        v.Thickness = 1
+    end
+
+    for index, v in pairs(esp.Line) do
+        v.From = Vector2.new(20, 20); -- origin
+        v.To = Vector2.new(50, 50); -- destination
+        v.Color = Color3.new(0,0,0);
+        v.Thickness = 1;
+        v.Transparency = 0.9;
+        v.Visible = false
+    end
+
+    esp.Box.HealthboxOutline.Thickness = 2
+    esp.Box.Outline.Thickness = 2
+    esp.Box.Healthbox.Filled = true
+    esp.Box.HealthboxOutline.Filled = true
+
+    for index, v in pairs(esp.Text) do
+        v.Text = ""
+        v.Color = Color3.new(1, 1, 1)
+        v.OutlineColor = Color3.new(0, 0, 0)
+        v.Center = true
+        v.Outline = true
+        v.Position = Vector2.new(100, 100)
+        v.Size = 15
+        v.Font = 1 -- 'UI', 'System', 'Plex', 'Monospace'
+        v.Transparency = 0.9
+        v.Visible = false
+    end
+
+    local function toggledrawing(value)
+        for index, v in pairs(esp.Box) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Text) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Line) do
+            v.Visible = value
+        end
+    end
+
+    local function changedrawingcolor(color)
+        esp.Box["Main"].Color = color
+        esp.Box["Healthbox"].Color = color
+        for i,v in pairs(esp.Text) do
+            v.Color = color
+        end
+        for i,v in pairs(esp.Line) do
+            v.Color = color
+        end
+    end
+
+    task.spawn(function()
+        while task.wait() do
+            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Head") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v.Character.Humanoid.Health > 0 then --  and v.Character.Humanoid.RigType == Enum.HumanoidRigType.R6
+                local displayEsp = v.Character
+                if displayEsp then
+                    local _,onscreen = dwCamera:WorldToScreenPoint(v.Character.HumanoidRootPart.Position)
+                    displayEsp = onscreen
+                end
+
+                local orientation, sizee = v.Character:GetBoundingBox()
+                local width = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new((math.clamp(sizee.X, 1, 10) + 0.5) / 2, 0, 0)
+                local height = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new(0, (math.clamp(sizee.X, 1, 10) + 2) / 2, 0)
+                width = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + width).X - dwCamera:WorldToViewportPoint(orientation.Position - width).X)
+                height = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + height).Y - dwCamera:WorldToViewportPoint(orientation.Position - height).Y)
+                local size = Vector2.new(math.floor(width), math.floor(height))
+                size = Vector2.new(size.X % 2 == 0 and size.X or size.X + 1, size.Y % 2 == 0 and size.Y or size.Y + 1)
+                local rootPos = dwCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
+                local magnitude = (v.Character.HumanoidRootPart.Position - dwCamera.CFrame.p).Magnitude
+
+                local TL = dwCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.CFrame * CFrame.new(-3,3,0).p)
+                local TR = dwCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.CFrame * CFrame.new(3,3,0).p)
+                local BL = dwCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.CFrame * CFrame.new(-3,-3,0).p)
+                local BR = dwCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.CFrame * CFrame.new(3,-3,0).p)
+
+                if module.Visual.Enabled and displayEsp and magnitude < module.Visual.ShowDistance then
+                    if teamcheck(v) == false then
+                        --Filledbox
+                        esp.Box["Filledbox"].Visible = module.Visual.Filledbox and module.Visual.ShowTeam
+                        esp.Box["Filledbox"].Size = size
+                        esp.Box["Filledbox"].Filled = module.Visual.Filledbox
+                        esp.Box["Filledbox"].Transparency = module.Visual.FilledOpacity
+                        esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                        --Box
+                        esp.Box["Outline"].Visible = module.Visual.Box and module.Visual.ShowTeam
+                        esp.Box["Outline"].Size = size
+                        esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
+                        esp.Box["Main"].Visible = module.Visual.Box and module.Visual.ShowTeam
+                        esp.Box["Main"].Size = size
+                        esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                        --Healthbox
+                        esp.Box["HealthboxOutline"].Visible = module.Visual.Healthbox and module.Visual.ShowTeam
+                        esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Character.Humanoid.MaxHealth - v.Character.Humanoid.Health) / v.Character.Humanoid.MaxHealth)))
+                        esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
+                        esp.Box["Healthbox"].Visible = module.Visual.Healthbox and module.Visual.ShowTeam
+                        esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Character.Humanoid.MaxHealth - v.Character.Humanoid.Health) / v.Character.Humanoid.MaxHealth)))
+                        esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
+
+                        --Name
+                        esp.Text["Name"].Visible = module.Visual.Name and module.Visual.ShowTeam
+                        esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                        esp.Text["Name"].Text = v.Name
+
+                        --Distance
+                        esp.Text["Distance"].Visible = module.Visual.Distance and module.Visual.ShowTeam
+                        esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
+                        esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
+
+                        --Snapline
+                        esp.Line["Snapline"].Visible = module.Visual.Snaplines and module.Visual.ShowTeam
+                        esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
+                        esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
+                        changedrawingcolor(module.Visual.TeamColor)
+                    else
+                        --Filledbox
+                        esp.Box["Filledbox"].Visible = module.Visual.Filledbox
+                        esp.Box["Filledbox"].Size = size
+                        esp.Box["Filledbox"].Filled = module.Visual.Filledbox
+                        esp.Box["Filledbox"].Transparency = module.Visual.FilledOpacity
+                        esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                        --Box
+                        esp.Box["Outline"].Visible = module.Visual.Box
+                        esp.Box["Outline"].Size = size
+                        esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
+                        esp.Box["Main"].Visible = module.Visual.Box
+                        esp.Box["Main"].Size = size
+                        esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                        --Healthbox
+                        esp.Box["HealthboxOutline"].Visible = module.Visual.Healthbox
+                        esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Character.Humanoid.MaxHealth - v.Character.Humanoid.Health) / v.Character.Humanoid.MaxHealth)))
+                        esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
+                        esp.Box["Healthbox"].Visible = module.Visual.Healthbox
+                        esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Character.Humanoid.MaxHealth - v.Character.Humanoid.Health) / v.Character.Humanoid.MaxHealth)))
+                        esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
+
+                        --Name
+                        esp.Text["Name"].Visible = module.Visual.Name
+                        esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                        esp.Text["Name"].Text = v.Name
+
+                        --Distance
+                        esp.Text["Distance"].Visible = module.Visual.Distance
+                        esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
+                        esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
+
+                        --Snapline
+                        esp.Line["Snapline"].Visible = module.Visual.Snaplines
+                        esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
+                        esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
+                        changedrawingcolor(module.Visual.EnemyColor)
+                    end
+                else
+                    toggledrawing(false)
+                end
+            else
+                toggledrawing(false)
+                if module.playerexists(v, "universal") == false then
+                    --break
+                end
+            end
+        end
+    end)
+end
+
+function module.michaelvisual(v)
+    local esp = {
+        Box = {Filledbox = Drawing.new("Square"), Outline = Drawing.new("Square"), Main = Drawing.new("Square"), HealthboxOutline = Drawing.new("Square"), Healthbox = Drawing.new("Square")},
+        Text = {Distance = Drawing.new("Text"), Name = Drawing.new("Text")},
+        Line = {Snapline = Drawing.new("Line")}
+    };
+
+    for index, v in pairs(esp.Box) do
+        v.Visible = false
+        v.Position = Vector2.new(20, 20);
+        v.Size = Vector2.new(20, 20); -- pixels offset from .Position
+        v.Color = Color3.fromRGB(0, 0, 0);
+        v.Filled = false;
+        v.Transparency = 0.9;
+        v.Thickness = 1
+    end
+
+    for index, v in pairs(esp.Line) do
+        v.From = Vector2.new(20, 20); -- origin
+        v.To = Vector2.new(50, 50); -- destination
+        v.Color = Color3.new(0,0,0);
+        v.Thickness = 1;
+        v.Transparency = 0.9;
+        v.Visible = false
+    end
+
+    esp.Box.HealthboxOutline.Thickness = 2
+    esp.Box.Outline.Thickness = 2
+    esp.Box.Healthbox.Filled = true
+    esp.Box.HealthboxOutline.Filled = true
+
+    for index, v in pairs(esp.Text) do
+        v.Text = ""
+        v.Color = Color3.new(1, 1, 1)
+        v.OutlineColor = Color3.new(0, 0, 0)
+        v.Center = true
+        v.Outline = true
+        v.Position = Vector2.new(100, 100)
+        v.Size = 15
+        v.Font = 1 -- 'UI', 'System', 'Plex', 'Monospace'
+        v.Transparency = 0.9
+        v.Visible = false
+    end
+
+    local function toggledrawing(value)
+        for index, v in pairs(esp.Box) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Text) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Line) do
+            v.Visible = value
+        end
+    end
+
+    local function changedrawingcolor(color)
+        esp.Box["Main"].Color = color
+        esp.Box["Healthbox"].Color = color
+        for i,v in pairs(esp.Text) do
+            v.Color = color
+        end
+        for i,v in pairs(esp.Line) do
+            v.Color = color
+        end
+    end
+
+    task.spawn(function()
+        while task.wait() do
+            if v ~= nil and v:FindFirstChild("Humanoid") ~= nil and v:FindFirstChild("Head") ~= nil and v:FindFirstChild("HumanoidRootPart") ~= nil and v.Humanoid.Health > 0 then --  and v.Humanoid.RigType == Enum.HumanoidRigType.R6
+                local displayEsp = v
+                if displayEsp then
+                    local _,onscreen = dwCamera:WorldToScreenPoint(v.HumanoidRootPart.Position)
+                    displayEsp = onscreen
+                end
+
+                local orientation, sizee = v:GetBoundingBox()
+                local width = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new((math.clamp(sizee.X, 1, 10) + 0.5) / 2, 0, 0)
+                local height = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new(0, (math.clamp(sizee.X, 1, 10) + 2) / 2, 0)
+                width = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + width).X - dwCamera:WorldToViewportPoint(orientation.Position - width).X)
+                height = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + height).Y - dwCamera:WorldToViewportPoint(orientation.Position - height).Y)
+                local size = Vector2.new(math.floor(width), math.floor(height))
+                size = Vector2.new(size.X % 2 == 0 and size.X or size.X + 1, size.Y % 2 == 0 and size.Y or size.Y + 1)
+                local rootPos = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.Position)
+                local magnitude = (v.HumanoidRootPart.Position - dwCamera.CFrame.p).Magnitude
+
+                local TL = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.CFrame * CFrame.new(-3,3,0).p)
+                local TR = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.CFrame * CFrame.new(3,3,0).p)
+                local BL = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.CFrame * CFrame.new(-3,-3,0).p)
+                local BR = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.CFrame * CFrame.new(3,-3,0).p)
+
+                if module.Visual.michael.Enabled and displayEsp and magnitude < module.Visual.michael.ShowDistance then
+                    --Filledbox
+                    esp.Box["Filledbox"].Visible = module.Visual.michael.Filledbox
+                    esp.Box["Filledbox"].Size = size
+                    esp.Box["Filledbox"].Filled = module.Visual.michael.Filledbox
+                    esp.Box["Filledbox"].Transparency = module.Visual.michael.FilledOpacity
+                    esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                    --Box
+                    esp.Box["Outline"].Visible = module.Visual.michael.Box
+                    esp.Box["Outline"].Size = size
+                    esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
+                    esp.Box["Main"].Visible = module.Visual.michael.Box
+                    esp.Box["Main"].Size = size
+                    esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                    --Healthbox
+                    esp.Box["HealthboxOutline"].Visible = module.Visual.michael.Healthbox
+                    esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
+                    esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
+                    esp.Box["Healthbox"].Visible = module.Visual.michael.Healthbox
+                    esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
+                    esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
+
+                    --Name
+                    esp.Text["Name"].Visible = module.Visual.michael.Info
+                    esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                    esp.Text["Name"].Text = v.Name
+
+                    --Distance
+                    esp.Text["Distance"].Visible = module.Visual.michael.Distance
+                    esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
+                    esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
+
+                    --Snapline
+                    esp.Line["Snapline"].Visible = module.Visual.michael.Snaplines
+                    esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
+                    esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
+                    changedrawingcolor(module.Visual.michael.EnemyColor)
+                else
+                    toggledrawing(false)
+                end
+            else
+                toggledrawing(false)
+                if module.playerexists(v, "universal") == false then
+                    --break
+                end
+            end
+        end
+    end)
+end
+
+function module.arsenalvisual(v)
+    local esp = {
+        Box = {Filledbox = Drawing.new("Square"), Outline = Drawing.new("Square"), Main = Drawing.new("Square"), HealthboxOutline = Drawing.new("Square"), Healthbox = Drawing.new("Square")},
+        Text = {Distance = Drawing.new("Text"), Name = Drawing.new("Text")},
+        Line = {Snapline = Drawing.new("Line")}
+    };
+
+    for index, v in pairs(esp.Box) do
+        v.Visible = false
+        v.Position = Vector2.new(20, 20);
+        v.Size = Vector2.new(20, 20); -- pixels offset from .Position
+        v.Color = Color3.fromRGB(0, 0, 0);
+        v.Filled = false;
+        v.Transparency = 0.9;
+        v.Thickness = 1
+    end
+
+    for index, v in pairs(esp.Line) do
+        v.From = Vector2.new(20, 20); -- origin
+        v.To = Vector2.new(50, 50); -- destination
+        v.Color = Color3.new(0,0,0);
+        v.Thickness = 1;
+        v.Transparency = 0.9;
+        v.Visible = false
+    end
+
+    esp.Box.HealthboxOutline.Thickness = 2
+    esp.Box.Outline.Thickness = 2
+    esp.Box.Healthbox.Filled = true
+    esp.Box.HealthboxOutline.Filled = true
+
+    for index, v in pairs(esp.Text) do
+        v.Text = ""
+        v.Color = Color3.new(1, 1, 1)
+        v.OutlineColor = Color3.new(0, 0, 0)
+        v.Center = true
+        v.Outline = true
+        v.Position = Vector2.new(100, 100)
+        v.Size = 15
+        v.Font = 1 -- 'UI', 'System', 'Plex', 'Monospace'
+        v.Transparency = 0.9
+        v.Visible = false
+    end
+
+    local function toggledrawing(value)
+        for index, v in pairs(esp.Box) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Text) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Line) do
+            v.Visible = value
+        end
+    end
+
+    local function changedrawingcolor(color)
+        esp.Box["Main"].Color = color
+        esp.Box["Healthbox"].Color = color
+        for i,v in pairs(esp.Text) do
+            v.Color = color
+        end
+        for i,v in pairs(esp.Line) do
+            v.Color = color
+        end
+    end
+
+    task.spawn(function()
+        while task.wait() do
+            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Head") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v.NRPBS.Health.Value > 0 then --  and v.Character.Humanoid.RigType == Enum.HumanoidRigType.R6
+                local displayEsp = v.Character
+                if displayEsp then
+                    local _,onscreen = dwCamera:WorldToScreenPoint(v.Character.HumanoidRootPart.Position)
+                    displayEsp = onscreen
+                end
+
+                local orientation, sizee = v.Character:GetBoundingBox()
+                local width = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new((math.clamp(sizee.X, 1, 10) + 0.5) / 2, 0, 0)
+                local height = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new(0, (math.clamp(sizee.X, 1, 10) + 2) / 2, 0)
+                width = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + width).X - dwCamera:WorldToViewportPoint(orientation.Position - width).X)
+                height = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + height).Y - dwCamera:WorldToViewportPoint(orientation.Position - height).Y)
+                local size = Vector2.new(math.floor(width), math.floor(height))
+                size = Vector2.new(size.X % 2 == 0 and size.X or size.X + 1, size.Y % 2 == 0 and size.Y or size.Y + 1)
+                local rootPos = dwCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
+                local magnitude = (v.Character.HumanoidRootPart.Position - dwCamera.CFrame.p).Magnitude
+
+                if module.Visual.Enabled and displayEsp and magnitude < module.Visual.ShowDistance then
+                    if teamcheck(v) == false then
+                        --Filledbox
+                        esp.Box["Filledbox"].Visible = module.Visual.Filledbox and module.Visual.ShowTeam
+                        esp.Box["Filledbox"].Size = size
+                        esp.Box["Filledbox"].Filled = module.Visual.Filledbox
+                        esp.Box["Filledbox"].Transparency = module.Visual.FilledOpacity
+                        esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                        --Box
+                        esp.Box["Outline"].Visible = module.Visual.Box and module.Visual.ShowTeam
+                        esp.Box["Outline"].Size = size
+                        esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
+                        esp.Box["Main"].Visible = module.Visual.Box and module.Visual.ShowTeam
+                        esp.Box["Main"].Size = size
+                        esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                        --Healthbox
+                        esp.Box["HealthboxOutline"].Visible = module.Visual.Healthbox and module.Visual.ShowTeam
+                        esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.NRPBS.MaxHealth.Value - v.NRPBS.Health.Value) / v.NRPBS.MaxHealth.Value)))
+                        esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
+                        esp.Box["Healthbox"].Visible = module.Visual.Healthbox and module.Visual.ShowTeam
+                        esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.NRPBS.MaxHealth.Value - v.NRPBS.Health.Value) / v.NRPBS.MaxHealth.Value)))
+                        esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
+
+                        --Name
+                        esp.Text["Name"].Visible = module.Visual.Name and module.Visual.ShowTeam
+                        esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                        esp.Text["Name"].Text = v.Name
+
+                        --Distance
+                        esp.Text["Distance"].Visible = module.Visual.Distance and module.Visual.ShowTeam
+                        esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
+                        esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
+
+                        --Snapline
+                        esp.Line["Snapline"].Visible = module.Visual.Snaplines and module.Visual.ShowTeam
+                        esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
+                        esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
+                        changedrawingcolor(module.Visual.TeamColor)
+                    else
+                        --Filledbox
+                        esp.Box["Filledbox"].Visible = module.Visual.Filledbox
+                        esp.Box["Filledbox"].Size = size
+                        esp.Box["Filledbox"].Filled = module.Visual.Filledbox
+                        esp.Box["Filledbox"].Transparency = module.Visual.FilledOpacity
+                        esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                        --Box
+                        esp.Box["Outline"].Visible = module.Visual.Box
+                        esp.Box["Outline"].Size = size
+                        esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
+                        esp.Box["Main"].Visible = module.Visual.Box
+                        esp.Box["Main"].Size = size
+                        esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                        --Healthbox
+                        esp.Box["HealthboxOutline"].Visible = module.Visual.Healthbox
+                        esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.NRPBS.MaxHealth.Value - v.NRPBS.Health.Value) / v.NRPBS.MaxHealth.Value)))
+                        esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
+                        esp.Box["Healthbox"].Visible = module.Visual.Healthbox
+                        esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.NRPBS.MaxHealth.Value - v.NRPBS.Health.Value) / v.NRPBS.MaxHealth.Value)))
+                        esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
+
+                        --Name
+                        esp.Text["Name"].Visible = module.Visual.Name
+                        esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                        esp.Text["Name"].Text = v.Name
+
+                        --Distance
+                        esp.Text["Distance"].Visible = module.Visual.Distance
+                        esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
+                        esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
+
+                        --Snapline
+                        esp.Line["Snapline"].Visible = module.Visual.Snaplines
+                        esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
+                        esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
+                        changedrawingcolor(module.Visual.EnemyColor)
+                    end
+                else
+                    toggledrawing(false)
+                end
+            else
+                toggledrawing(false)
+                if module.playerexists(v, "universal") == false then
+                    --break
+                end
+            end
+        end
+    end)
+end
+return module
