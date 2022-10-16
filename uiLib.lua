@@ -130,6 +130,10 @@ function Library:CreateWindow(Config, Parent)
 	function WindowInit:Toggle(State)
 		Toggle(State)
 	end
+	
+	function WindowInit:Destroy()
+		Main:Destroy()
+	end
 
 	function WindowInit:ChangeColor(Color)
 		ChangeColor(Color)
