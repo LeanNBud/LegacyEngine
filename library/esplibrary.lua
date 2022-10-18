@@ -19,6 +19,15 @@ local module = {
         ShowDistance = 1500,
         TeamColor = Color3.new(0, 255, 0),
         EnemyColor = Color3.new(255, 0, 0),
+
+        crosshair = {
+            Show = false,
+            Spin = false,
+            Outline = false,
+            Thickness = 2,
+            Color = Color3.new(255, 0, 0),
+        },
+
         michael = {
             Enabled = false,
             Box = false,
@@ -32,7 +41,7 @@ local module = {
             EnemyColor = Color3.new(255, 0, 0),
         }
     },
-}
+};
 
 local function teamcheck(targetplayer)
     if game.Players.LocalPlayer.Team == targetplayer.Team then return false
@@ -554,4 +563,68 @@ function module.arsenalvisual(v)
         end
     end)
 end
-return module
+
+function module.drawcrosshair()
+    local LegacyElements = Instance.new("ScreenGui")
+    LegacyElements.Name = "LegacyElements"
+    LegacyElements.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    LegacyElements.Parent = game:GetService("CoreGui")
+
+    local Crosshair = Instance.new("Frame")
+    Crosshair.Name = "Crosshair"
+    Crosshair.Size = UDim2.new(0, 48, 0, 48)
+    Crosshair.BackgroundTransparency = 1
+    Crosshair.Position = UDim2.new(0.5, -24,0.5, -40)
+    --Crosshair.Rotation = 0
+
+    task.spawn(function()
+        while task.wait() do
+            Crosshair.Visible = module.Visual.crosshair.Show
+            for index, v in pairs(Crosshair:GetChildren()) do
+                v.BackgroundColor3 = module.Visual.crosshair.Color
+                if v.Name == "1" or v.Name == "2" then
+                    v.Size = UDim2.new(0, 19, 0, module.Visual.crosshair.Thickness);
+                elseif v.Name == "3" or v.Name == "4" then
+                    v.Size = UDim2.new(0, module.Visual.crosshair.Thickness, 0, 19);
+                end
+            end
+            if module.Visual.crosshair.Spin then
+                Crosshair.Rotation = Crosshair.Rotation + 1
+            else
+                Crosshair.Rotation = 0
+            end
+        end
+    end);
+
+    Crosshair.BackgroundColor3 = Color3.fromRGB(255, 255,    255)
+    Crosshair.Parent = LegacyElements
+
+    local Frame = Instance.new("Frame")
+    Frame.Name = "1"
+    Frame.Size = UDim2.new(0, 19, 0, 5)
+    Frame.Position = UDim2.new(0, 0, 0.5, -2)
+    Frame.BackgroundColor3 = module.Visual.crosshair.Color
+    Frame.Parent = Crosshair
+
+    local Frame1 = Instance.new("Frame")
+    Frame1.Name = "2"
+    Frame1.Size = UDim2.new(0, 19, 0, 5)
+    Frame1.Position = UDim2.new(1, -19, 0.5, -2)
+    Frame1.BackgroundColor3 = module.Visual.crosshair.Color
+    Frame1.Parent = Crosshair
+
+    local Frame2 = Instance.new("Frame")
+    Frame2.Name = "3"
+    Frame2.Size = UDim2.new(0, 5, 0, 19)
+    Frame2.Position = UDim2.new(0.5, -2, 0, 0)
+    Frame2.BackgroundColor3 = module.Visual.crosshair.Color
+    Frame2.Parent = Crosshair
+
+    local Frame3 = Instance.new("Frame")
+    Frame3.Name = "4"
+    Frame3.Size = UDim2.new(0, 5, 0, 19)
+    Frame3.Position = UDim2.new(0.5, -2, 1, -19)
+    Frame3.BackgroundColor3 = module.Visual.crosshair.Color
+    Frame3.Parent = Crosshair
+end
+return module;
