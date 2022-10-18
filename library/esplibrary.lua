@@ -24,7 +24,7 @@ local module = {
             Show = false,
             Spin = false,
             Outline = false,
-            Thickness = 2,
+            Thickness = 5,
             Color = Color3.new(255, 0, 0),
         },
 
@@ -582,6 +582,11 @@ function module.drawcrosshair()
             Crosshair.Visible = module.Visual.crosshair.Show
             for index, v in pairs(Crosshair:GetChildren()) do
                 v.BackgroundColor3 = module.Visual.crosshair.Color
+                if module.Visual.crosshair.Outline then
+                    v.BorderSizePixel = 1
+                else
+                    v.BorderSizePixel = 0
+                end
                 if v.Name == "1" or v.Name == "2" then
                     v.Size = UDim2.new(0, 19, 0, module.Visual.crosshair.Thickness);
                 elseif v.Name == "3" or v.Name == "4" then
