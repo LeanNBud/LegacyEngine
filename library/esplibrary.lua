@@ -604,29 +604,29 @@ function module.drawcrosshair()
 
     local Frame = Instance.new("Frame")
     Frame.Name = "1"
-    Frame.Size = UDim2.new(0, 19, 0, 5)
-    Frame.Position = UDim2.new(0, 0, 0.5, -2)
+    Frame.Size = UDim2.new(0, 19, 0, 3)
+    Frame.Position = UDim2.new(0, 0, 0.5, -1)
     Frame.BackgroundColor3 = module.Visual.crosshair.Color
     Frame.Parent = Crosshair
 
     local Frame1 = Instance.new("Frame")
     Frame1.Name = "2"
-    Frame1.Size = UDim2.new(0, 19, 0, 5)
-    Frame1.Position = UDim2.new(1, -19, 0.5, -2)
+    Frame1.Size = UDim2.new(0, 19, 0, 3)
+    Frame1.Position = UDim2.new(1, -19, 0.5, -1)
     Frame1.BackgroundColor3 = module.Visual.crosshair.Color
     Frame1.Parent = Crosshair
 
     local Frame2 = Instance.new("Frame")
     Frame2.Name = "3"
-    Frame2.Size = UDim2.new(0, 5, 0, 19)
-    Frame2.Position = UDim2.new(0.5, -2, 0, 0)
+    Frame2.Size = UDim2.new(0, 3, 0, 19)
+    Frame2.Position = UDim2.new(0.5, 0, 0, 0)
     Frame2.BackgroundColor3 = module.Visual.crosshair.Color
     Frame2.Parent = Crosshair
 
     local Frame3 = Instance.new("Frame")
     Frame3.Name = "4"
-    Frame3.Size = UDim2.new(0, 5, 0, 19)
-    Frame3.Position = UDim2.new(0.5, -2, 1, -19)
+    Frame3.Size = UDim2.new(0, 3, 0, 19)
+    Frame3.Position = UDim2.new(0.5, 0, 1, -19)
     Frame3.BackgroundColor3 = module.Visual.crosshair.Color
     Frame3.Parent = Crosshair
 end
