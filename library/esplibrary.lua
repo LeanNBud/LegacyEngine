@@ -23,7 +23,7 @@ local module = {
             Show = false,
             Spin = false,
             Outline = false,
-            Thickness = 5,
+            Thickness = 3,
             Color = Color3.new(255, 0, 0),
         },
         michael = {
