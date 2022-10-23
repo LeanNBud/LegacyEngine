@@ -19,7 +19,6 @@ local module = {
         ShowDistance = 1500,
         TeamColor = Color3.new(0, 255, 0),
         EnemyColor = Color3.new(255, 0, 0),
-
         crosshair = {
             Show = false,
             Spin = false,
@@ -27,7 +26,6 @@ local module = {
             Thickness = 5,
             Color = Color3.new(255, 0, 0),
         },
-
         michael = {
             Enabled = false,
             Box = false,
@@ -39,7 +37,7 @@ local module = {
             FilledOpacity = 1,
             ShowDistance = 1500,
             EnemyColor = Color3.new(255, 0, 0),
-        }
+        };
     },
 };
 
@@ -631,5 +629,115 @@ function module.drawcrosshair()
     Frame3.Position = UDim2.new(0.5, -2, 1, -19)
     Frame3.BackgroundColor3 = module.Visual.crosshair.Color
     Frame3.Parent = Crosshair
+end
+
+function module.getboundingbox(folder) --ghetto boundingbox func for classes that arent models
+    local model = Instance.new("Model", nil)
+    folder.Parent = model
+    return model:GetBoundingBox()
+end
+
+function module.itemvisual(model, name, table)
+    table = {
+        Enabled = table.Enabled,
+        Name = table.Name,
+        Snaplines = table.Snaplines,
+        Distance = table.Distance,
+        ShowDistance = table.ShowDistance,
+        Color = table.Color,
+    };
+    local esp = {
+        Text = {Distance = Drawing.new("Text"), Name = Drawing.new("Text")},
+        Line = {Snapline = Drawing.new("Line")}
+    };
+
+    for index, v in pairs(esp.Line) do
+        v.From = Vector2.new(20, 20); -- origin
+        v.To = Vector2.new(50, 50); -- destination
+        v.Color = Color3.new(0,0,0);
+        v.Thickness = 1;
+        v.Transparency = 0.9;
+        v.Visible = false
+    end
+
+    for index, v in pairs(esp.Text) do
+        v.Text = ""
+        v.Color = Color3.new(1, 1, 1)
+        v.OutlineColor = Color3.new(0, 0, 0)
+        v.Center = true
+        v.Outline = true
+        v.Position = Vector2.new(100, 100)
+        v.Size = 15
+        v.Font = 1 -- 'UI', 'System', 'Plex', 'Monospace'
+        v.Transparency = 0.9
+        v.Visible = false
+    end
+
+    local function toggledrawing(value)
+        for index, v in pairs(esp.Text) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Line) do
+            v.Visible = value
+        end
+    end
+
+    local function changedrawingcolor(color)
+        for i,v in pairs(esp.Text) do
+            v.Color = color
+        end
+        for i,v in pairs(esp.Line) do
+            v.Color = color
+        end
+    end
+
+    task.spawn(function()
+        while task.wait() do
+            if model ~= nil and model ~= nil then
+                local displayEsp = model
+                if displayEsp then
+                    local _,onscreen = dwCamera:WorldToScreenPoint(model.Position)
+                    displayEsp = onscreen
+                end
+
+                --local orientation, sizee = model:GetBoundingBox()
+                --local width = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new((math.clamp(sizee.X, 1, 10) + 0.5) / 2, 0, 0)
+                --local height = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new(0, (math.clamp(sizee.X, 1, 10) + 2) / 2, 0)
+                --width = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + width).X - dwCamera:WorldToViewportPoint(orientation.Position - width).X)
+                --height = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + height).Y - dwCamera:WorldToViewportPoint(orientation.Position - height).Y)
+                --local size = Vector2.new(math.floor(width), math.floor(height))
+                --size = Vector2.new(size.X % 2 == 0 and size.X or size.X + 1, size.Y % 2 == 0 and size.Y or size.Y + 1)
+                local rootPos = dwCamera:WorldToViewportPoint(model.Position)
+                local magnitude = (model.Position - dwCamera.CFrame.p).Magnitude
+
+                local TL = dwCamera:WorldToViewportPoint(model.CFrame * CFrame.new(-3,3,0).p)
+                local TR = dwCamera:WorldToViewportPoint(model.CFrame * CFrame.new(3,3,0).p)
+                local BL = dwCamera:WorldToViewportPoint(model.CFrame * CFrame.new(-3,-3,0).p)
+                local BR = dwCamera:WorldToViewportPoint(model.CFrame * CFrame.new(3,-3,0).p)
+
+                if table.Enabled and displayEsp and magnitude < table.ShowDistance then
+                    --Name
+                    esp.Text["Name"].Visible = table.Name
+                    esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - 16)
+                    esp.Text["Name"].Text = name
+
+                    --Distance
+                    esp.Text["Distance"].Visible = table.Distance
+                    esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + 0.5))
+                    esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
+
+                    --Snapline
+                    esp.Line["Snapline"].Visible = table.Snaplines
+                    esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
+                    esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
+                    changedrawingcolor(table.Color)
+                else
+                    toggledrawing(false)
+                end
+            else
+                toggledrawing(false)
+            end
+        end
+    end)
 end
 return module;
