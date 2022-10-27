@@ -637,7 +637,8 @@ function module.getboundingbox(folder) --ghetto boundingbox func for classes tha
     return model:GetBoundingBox()
 end
 
-function module.itemvisual(model, name, table)
+function module.itemvisual(model, name, table, debug)
+    debug = debug or false
     table = {
         Enabled = table.Enabled,
         Name = table.Name,
@@ -691,7 +692,14 @@ function module.itemvisual(model, name, table)
         end
     end
 
+    if debug then
+        print("DEBUG: Loaded")
+    end
+
     task.spawn(function()
+        if debug then
+            print("DEBUG: Loop created")
+        end
         while task.wait() do
             if model ~= nil and model ~= nil then
                 local displayEsp = model
@@ -700,26 +708,18 @@ function module.itemvisual(model, name, table)
                     displayEsp = onscreen
                 end
 
-                --local orientation, sizee = model:GetBoundingBox()
-                --local width = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new((math.clamp(sizee.X, 1, 10) + 0.5) / 2, 0, 0)
-                --local height = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new(0, (math.clamp(sizee.X, 1, 10) + 2) / 2, 0)
-                --width = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + width).X - dwCamera:WorldToViewportPoint(orientation.Position - width).X)
-                --height = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + height).Y - dwCamera:WorldToViewportPoint(orientation.Position - height).Y)
-                --local size = Vector2.new(math.floor(width), math.floor(height))
-                --size = Vector2.new(size.X % 2 == 0 and size.X or size.X + 1, size.Y % 2 == 0 and size.Y or size.Y + 1)
                 local rootPos = dwCamera:WorldToViewportPoint(model.Position)
                 local magnitude = (model.Position - dwCamera.CFrame.p).Magnitude
-
-                local TL = dwCamera:WorldToViewportPoint(model.CFrame * CFrame.new(-3,3,0).p)
-                local TR = dwCamera:WorldToViewportPoint(model.CFrame * CFrame.new(3,3,0).p)
-                local BL = dwCamera:WorldToViewportPoint(model.CFrame * CFrame.new(-3,-3,0).p)
-                local BR = dwCamera:WorldToViewportPoint(model.CFrame * CFrame.new(3,-3,0).p)
 
                 if table.Enabled and displayEsp and magnitude < table.ShowDistance then
                     --Name
                     esp.Text["Name"].Visible = table.Name
                     esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - 16)
                     esp.Text["Name"].Text = name
+
+                    if debug then
+                        print("DEBUG: Position"..tostring(esp.Text["Name"].Position))
+                    end
 
                     --Distance
                     esp.Text["Distance"].Visible = table.Distance
