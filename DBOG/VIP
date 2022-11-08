@@ -7,6 +7,7 @@ local delta = 6116023427
 local dbxmtm = 4147411085
 local dbxmdc = 9725967657
 local mm2 = 142823291
+local gpo = 3978370137
 
 if game.PlaceId == Earth then
    loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/1Earth.lua', true))()
@@ -42,6 +43,8 @@ elseif game.PlaceId == delta then
    loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DeltaRing.lua', true))()
 elseif game.PlaceId == mm2 then
    loadstring(game:HttpGet('https://raw.githubusercontent.com/LeanNBud/LegacyEngine/main/Games/VIP/Murder%20Mystery%202', true))()
-elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or delta or mm2 then
+elseif game.PlaceId == gpo then
+   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/GPO.lua', true))()
+elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or delta or mm2 or gpo then
    loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/6Others.lua', true))()
 end
