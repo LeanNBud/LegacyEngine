@@ -56,13 +56,12 @@ function module.playerexists(player, game)
     end
 end
 
-function module.universalvisual(v, table)
+function module.universalvisual(v)
             local esp = {
                 Box = {Filledbox = Drawing.new("Square"), Outline = Drawing.new("Square"), Main = Drawing.new("Square"), HealthboxOutline = Drawing.new("Square"), Healthbox = Drawing.new("Square")},
                 Text = {Distance = Drawing.new("Text"), Name = Drawing.new("Text")},
                 Line = {Snapline = Drawing.new("Line")}
             };
-            local newtable = {}
         
             for index, v in pairs(esp.Box) do
                 v.Visible = false
@@ -126,9 +125,6 @@ function module.universalvisual(v, table)
         
             task.spawn(function()
                 while task.wait() do
-                    newtable = {
-                        Text = table.Text or "",
-                    };
                     if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Head") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v.Character.Humanoid.Health > 0 then --  and v.Character.Humanoid.RigType == Enum.HumanoidRigType.R6
                         local displayEsp = v.Character
                         if displayEsp then
@@ -184,7 +180,7 @@ function module.universalvisual(v, table)
                                 --Distance
                                 esp.Text["Distance"].Visible = module.Visual.Distance and module.Visual.ShowTeam
                                 esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
-                                esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs\n"..newtable.Text
+                                esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
         
                                 --Snapline
                                 esp.Line["Snapline"].Visible = module.Visual.Snaplines and module.Visual.ShowTeam
