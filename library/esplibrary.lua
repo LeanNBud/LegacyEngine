@@ -368,7 +368,7 @@ function module.demonslayer(v)
                         --NewText
                         esp.Text["NewText"].Visible = module.Visual.NewText and module.Visual.ShowTeam
                         esp.Text["NewText"].Position = esp.Text["Distance"].Position + Vector2.new(0,12)
-                        esp.Text["NewText"].Text = "Clan: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Clan.Value.."\nPower: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Power.Value.."\nYen/Money: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Yen.Value.."\nWinstreak: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].winstreak.Value.."\nSlot: "..game:GetService("Players")[v.Name].Slot.Value
+                        esp.Text["NewText"].Text = "Clan: "..tostring(game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Clan.Value).."\nPower: "..tostring(game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Power.Value).."\nYen/Money: "..tostring(game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Yen.Value).."\nWinstreak: "..tostring(game:GetService("ReplicatedStorage")["Player_Data"][v.Name].winstreak.Value).."\nSlot: "..tostring(game:GetService("Players")[v.Name].Slot.Value)
 
                         --Distance
                         esp.Text["Distance"].Visible = module.Visual.Distance and module.Visual.ShowTeam
