@@ -357,9 +357,9 @@ function module.demonslayer(v)
                         esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
 
                         --Name
-                        esp.Text["Name"].Visible = module.Visual.ShowName and module.Visual.ShowTeam
-                        esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
-                        esp.Text["Name"].Text = v.Name.." | "..v.Character.Humanoid.Health.."/"..v.Character.Humanoid.MaxHealth
+                        esp.Text["ShowName"].Visible = module.Visual.ShowName and module.Visual.ShowTeam
+                        esp.Text["ShowName"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                        esp.Text["ShowName"].Text = v.Name.." | "..v.Character.Humanoid.Health.."/"..v.Character.Humanoid.MaxHealth
 
                         --Distance
                         esp.Text["Distance"].Visible = module.Visual.Distance and module.Visual.ShowTeam
@@ -402,9 +402,9 @@ function module.demonslayer(v)
                         esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
 
                         --Name
-                        esp.Text["Name"].Visible = module.Visual.ShowName
-                        esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
-                        esp.Text["Name"].Text = v.Name.." | "..v.Character.Humanoid.Health.."/"..v.Character.Humanoid.MaxHealth
+                        esp.Text["ShowName"].Visible = module.Visual.ShowName
+                        esp.Text["ShowName"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                        esp.Text["ShowName"].Text = v.Name.." | "..v.Character.Humanoid.Health.."/"..v.Character.Humanoid.MaxHealth
 
                         --Distance
                         esp.Text["Distance"].Visible = module.Visual.Distance
