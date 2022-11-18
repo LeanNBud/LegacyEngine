@@ -38,6 +38,18 @@ local module = {
             ShowDistance = 1500,
             EnemyColor = Color3.new(255, 0, 0),
         };
+        slayersnpc = {
+            Enabled = false,
+            Box = false,
+            Filledbox = false,
+            Info = false,
+            Snaplines = false,
+            Distance = false,
+            Healthbox = false,
+            FilledOpacity = 1,
+            ShowDistance = 1500,
+            EnemyColor = Color3.new(255, 0, 0),
+        };
     },
 };
 
@@ -438,7 +450,7 @@ end
 function module.demonslayernpc(v)
     local esp = {
         Box = {Filledbox = Drawing.new("Square"), Outline = Drawing.new("Square"), Main = Drawing.new("Square"), HealthboxOutline = Drawing.new("Square"), Healthbox = Drawing.new("Square")},
-        Text = {Distance = Drawing.new("Text"), Name = Drawing.new("Text"), NewText = Drawing.new("Text")},
+        Text = {Distance = Drawing.new("Text"), Name = Drawing.new("Text")},
         Line = {Snapline = Drawing.new("Line")}
     };
 
@@ -529,93 +541,83 @@ function module.demonslayernpc(v)
                 if module.Visual.Enabled and displayEsp and magnitude < module.Visual.ShowDistance then
                     if teamcheck(v) == false then
                         --Filledbox
-                        esp.Box["Filledbox"].Visible = module.Visual.Filledbox and module.Visual.ShowTeam and module.Visual.Box
+                        esp.Box["Filledbox"].Visible = module.Visual.slayersnpc.Filledbox and module.Visual.slayersnpc.ShowTeam and module.Visual.slayersnpc.Box
                         esp.Box["Filledbox"].Size = size
-                        esp.Box["Filledbox"].Filled = module.Visual.Filledbox
-                        esp.Box["Filledbox"].Transparency = module.Visual.FilledOpacity
+                        esp.Box["Filledbox"].Filled = module.Visual.slayersnpc.Filledbox
+                        esp.Box["Filledbox"].Transparency = module.Visual.slayersnpc.FilledOpacity
                         esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
 
                         --Box
-                        esp.Box["Outline"].Visible = module.Visual.Box and module.Visual.ShowTeam
+                        esp.Box["Outline"].Visible = module.Visual.slayersnpc.Box and module.Visual.slayersnpc.ShowTeam
                         esp.Box["Outline"].Size = size
                         esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
-                        esp.Box["Main"].Visible = module.Visual.Box and module.Visual.ShowTeam
+                        esp.Box["Main"].Visible = module.Visual.slayersnpc.Box and module.Visual.slayersnpc.ShowTeam
                         esp.Box["Main"].Size = size
                         esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
 
                         --Healthbox
-                        esp.Box["HealthboxOutline"].Visible = module.Visual.Healthbox and module.Visual.ShowTeam
+                        esp.Box["HealthboxOutline"].Visible = module.Visual.slayersnpc.Healthbox and module.Visual.slayersnpc.ShowTeam
                         esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
                         esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
-                        esp.Box["Healthbox"].Visible = module.Visual.Healthbox and module.Visual.ShowTeam
+                        esp.Box["Healthbox"].Visible = module.Visual.slayersnpc.Healthbox and module.Visual.slayersnpc.ShowTeam
                         esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
                         esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
 
                         --Nameds
-                        esp.Text["Name"].Visible = module.Visual.Name and module.Visual.ShowTeam
+                        esp.Text["Name"].Visible = module.Visual.slayersnpc.Name and module.Visual.slayersnpc.ShowTeam
                         esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
                         esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Humanoid.Health).."/"..math.floor(v.Humanoid.MaxHealth)
 
                         --Distance
-                        esp.Text["Distance"].Visible = module.Visual.Distance and module.Visual.ShowTeam
+                        esp.Text["Distance"].Visible = module.Visual.slayersnpc.Distance and module.Visual.slayersnpc.ShowTeam
                         esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
                         esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
-
-                        --NewText
-                        esp.Text["NewText"].Visible = module.Visual.NewText and module.Visual.ShowTeam
-                        esp.Text["NewText"].Position = esp.Text["Distance"].Position + Vector2.new(0, 12) -- it copies the distance pos and the vector2 is me adding pos so it can be either under or above
-                        esp.Text["NewText"].Text = "Clan: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Clan.Value.."\nDemon Art: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name]["Demon_Art"].Value.."\nPower: "..tostring(game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Power.Value).."\nYen/Money: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Yen.Value.."\nWinstreak: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].winstreak.Value.."\nSlot: "..game:GetService("Players")[v.Name].Slot.Value
 
                         --its fine since your gonna replace it each time u update.
                         --Snapline
-                        esp.Line["Snapline"].Visible = module.Visual.Snaplines and module.Visual.ShowTeam
+                        esp.Line["Snapline"].Visible = module.Visual.slayersnpc.Snaplines and module.Visual.slayersnpc.ShowTeam
                         esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
                         esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
-                        changedrawingcolor(module.Visual.TeamColor)
+                        changedrawingcolor(module.Visual.slayersnpc.TeamColor)
                     else
                         --Filledbox
-                        esp.Box["Filledbox"].Visible = module.Visual.Filledbox and module.Visual.Box
+                        esp.Box["Filledbox"].Visible = module.Visual.slayersnpc.Filledbox and module.Visual.slayersnpc.Box
                         esp.Box["Filledbox"].Size = size
-                        esp.Box["Filledbox"].Filled = module.Visual.Filledbox
-                        esp.Box["Filledbox"].Transparency = module.Visual.FilledOpacity
+                        esp.Box["Filledbox"].Filled = module.Visual.slayersnpc.Filledbox
+                        esp.Box["Filledbox"].Transparency = module.Visual.slayersnpc.FilledOpacity
                         esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
 
                         --Box
-                        esp.Box["Outline"].Visible = module.Visual.Box
+                        esp.Box["Outline"].Visible = module.Visual.slayersnpc.Box
                         esp.Box["Outline"].Size = size
                         esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
-                        esp.Box["Main"].Visible = module.Visual.Box
+                        esp.Box["Main"].Visible = module.Visual.slayersnpc.Box
                         esp.Box["Main"].Size = size
                         esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
 
                         --Healthbox
-                        esp.Box["HealthboxOutline"].Visible = module.Visual.Healthbox
+                        esp.Box["HealthboxOutline"].Visible = module.Visual.slayersnpc.Healthbox
                         esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
                         esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
-                        esp.Box["Healthbox"].Visible = module.Visual.Healthbox
+                        esp.Box["Healthbox"].Visible = module.Visual.slayersnpc.Healthbox
                         esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
                         esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
 
                         --Nameds
-                        esp.Text["Name"].Visible = module.Visual.Name
+                        esp.Text["Name"].Visible = module.Visual.slayersnpc.Name
                         esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
                         esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Humanoid.Health).."/"..math.floor(v.Humanoid.MaxHealth)
 
                         --Distance
-                        esp.Text["Distance"].Visible = module.Visual.Distance
+                        esp.Text["Distance"].Visible = module.Visual.slayersnpc.Distance
                         esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
                         esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
 
-                        --NewText
-                        esp.Text["NewText"].Visible = module.Visual.NewText
-                        esp.Text["NewText"].Position = esp.Text["Distance"].Position + Vector2.new(0, 12) -- it copies the distance pos and the vector2 is me adding pos so it can be either under or above
-                        esp.Text["NewText"].Text = "Clan: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Clan.Value.."\nDemon Art: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name]["Demon_Art"].Value.."\nPower: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Power.Value.."\nYen/Money: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].Yen.Value.."\nWinstreak: "..game:GetService("ReplicatedStorage")["Player_Data"][v.Name].winstreak.Value.."\nSlot: "..game:GetService("Players")[v.Name].Slot.Value
-
                         --Snapline
-                        esp.Line["Snapline"].Visible = module.Visual.Snaplines
+                        esp.Line["Snapline"].Visible = module.Visual.slayersnpc.Snaplines
                         esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
                         esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
-                        changedrawingcolor(module.Visual.EnemyColor)
+                        changedrawingcolor(module.Visual.slayersnpc.EnemyColor)
                     end
                 else
                     toggledrawing(false)
