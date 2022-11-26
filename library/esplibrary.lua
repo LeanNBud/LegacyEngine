@@ -51,6 +51,19 @@ local module = {
             ShowDistance = 1500,
             EnemyColor = Color3.new(255, 0, 0),
         };
+        aottitanesp = {
+            Enabled = false,
+            Box = false,
+            Filledbox = false,
+            Info = false,
+            Snaplines = true,
+            Name = false,
+            Distance = false,
+            Healthbox = false,
+            FilledOpacity = 1,
+            ShowDistance = 1500,
+            EnemyColor = Color3.new(255, 0, 0),
+        };
     },
 };
 
@@ -578,6 +591,154 @@ function module.demonslayernpc(v)
                     esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
                     esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
                     changedrawingcolor(module.Visual.slayersnpc.EnemyColor)
+                else
+                    toggledrawing(false)
+                end
+            else
+                toggledrawing(false)
+                if module.playerexists(v, "universal") == false then
+                    --break
+                end
+            end
+        end
+    end)
+end
+
+function module.aotesp(v)
+    local esp = {
+        Box = {Filledbox = Drawing.new("Square"), Outline = Drawing.new("Square"), Main = Drawing.new("Square"), HealthboxOutline = Drawing.new("Square"), Healthbox = Drawing.new("Square")},
+        Text = {Distance = Drawing.new("Text"), Name = Drawing.new("Text"), titaninfo = Drawing.new("Text")},
+        Line = {Snapline = Drawing.new("Line")}
+    };
+
+    for index, v in pairs(esp.Box) do
+        v.Visible = false
+        v.Position = Vector2.new(20, 20);
+        v.Size = Vector2.new(20, 20); -- pixels offset from .Position
+        v.Color = Color3.fromRGB(0, 0, 0);
+        v.Filled = false;
+        v.Transparency = 0.9;
+        v.Thickness = 1
+    end
+
+    for index, v in pairs(esp.Line) do
+        v.From = Vector2.new(20, 20); -- origin
+        v.To = Vector2.new(50, 50); -- destination
+        v.Color = Color3.new(0,0,0);
+        v.Thickness = 1;
+        v.Transparency = 0.9;
+        v.Visible = false
+    end
+
+    esp.Box.HealthboxOutline.Thickness = 2
+    esp.Box.Outline.Thickness = 2
+    esp.Box.Healthbox.Filled = true
+    esp.Box.HealthboxOutline.Filled = true
+
+    for index, v in pairs(esp.Text) do
+        v.Text = ""
+        v.Color = Color3.new(1, 1, 1)
+        v.OutlineColor = Color3.new(0, 0, 0)
+        v.Center = true
+        v.Outline = true
+        v.Position = Vector2.new(100, 100)
+        v.Size = 15
+        v.Font = 1 -- 'UI', 'System', 'Plex', 'Monospace'
+        v.Transparency = 0.9
+        v.Visible = false
+    end
+
+    local function toggledrawing(value)
+        for index, v in pairs(esp.Box) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Text) do
+            v.Visible = value
+        end
+        for index, v in pairs(esp.Line) do
+            v.Visible = value
+        end
+    end
+
+    local function changedrawingcolor(color)
+        esp.Box["Main"].Color = color
+        esp.Box["Healthbox"].Color = color
+        for i,v in pairs(esp.Text) do
+            v.Color = color
+        end
+        for i,v in pairs(esp.Line) do
+            v.Color = color
+        end
+    end
+
+    task.spawn(function()
+        while task.wait() do
+            if v ~= nil and v:FindFirstChild("Humanoid") ~= nil and v:FindFirstChild("Head") ~= nil and v:FindFirstChild("HumanoidRootPart") ~= nil and v.Humanoid.Health > 0 then --  and v.Humanoid.RigType == Enum.HumanoidRigType.R6
+                local displayEsp = v
+                if displayEsp then
+                    local _,onscreen = dwCamera:WorldToScreenPoint(v.HumanoidRootPart.Position)
+                    displayEsp = onscreen
+                end
+
+                local orientation, sizee = v:GetBoundingBox()
+                local width = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new((math.clamp(sizee.X, 1, 10) + 0.5) / 2, 0, 0)
+                local height = (dwCamera.CFrame - dwCamera.CFrame.p) * Vector3.new(0, (math.clamp(sizee.X, 1, 10) + 2) / 2, 0)
+                width = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + width).X - dwCamera:WorldToViewportPoint(orientation.Position - width).X)
+                height = math.abs(dwCamera:WorldToViewportPoint(orientation.Position + height).Y - dwCamera:WorldToViewportPoint(orientation.Position - height).Y)
+                local size = Vector2.new(math.floor(width), math.floor(height))
+                size = Vector2.new(size.X % 2 == 0 and size.X or size.X + 1, size.Y % 2 == 0 and size.Y or size.Y + 1)
+                local rootPos = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.Position)
+                local magnitude = (v.HumanoidRootPart.Position - dwCamera.CFrame.p).Magnitude
+
+                local TL = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.CFrame * CFrame.new(-3,3,0).p)
+                local TR = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.CFrame * CFrame.new(3,3,0).p)
+                local BL = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.CFrame * CFrame.new(-3,-3,0).p)
+                local BR = dwCamera:WorldToViewportPoint(v.HumanoidRootPart.CFrame * CFrame.new(3,-3,0).p)
+
+                if module.Visual.aottitanesp.Enabled and displayEsp and magnitude < module.Visual.aottitanesp.ShowDistance then
+                    --Filledbox
+                    esp.Box["Filledbox"].Visible = module.Visual.aottitanesp.Filledbox and module.Visual.aottitanesp.Box
+                    esp.Box["Filledbox"].Size = size
+                    esp.Box["Filledbox"].Filled = module.Visual.aottitanesp.Filledbox
+                    esp.Box["Filledbox"].Transparency = module.Visual.aottitanesp.FilledOpacity
+                    esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                    --Box
+                    esp.Box["Outline"].Visible = module.Visual.aottitanesp.Box
+                    esp.Box["Outline"].Size = size
+                    esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
+                    esp.Box["Main"].Visible = module.Visual.aottitanesp.Box
+                    esp.Box["Main"].Size = size
+                    esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
+
+                    --Healthbox
+                    esp.Box["HealthboxOutline"].Visible = module.Visual.aottitanesp.Healthbox
+                    esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
+                    esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
+                    esp.Box["Healthbox"].Visible = module.Visual.aottitanesp.Healthbox
+                    esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
+                    esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
+
+                    --Nameds
+                    esp.Text["Name"].Visible = module.Visual.aottitanesp.Name
+                    esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                    esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Humanoid.Health).."/"..math.floor(v.Humanoid.MaxHealth)
+
+                    --titaninfo
+                    esp.Text["titaninfo"].Visible = module.Visual.titaninfo and module.Visual.ShowTeam
+                    esp.Text["titaninfo"].Position = esp.Text["Distance"].Position + Vector2.new(0, 12) -- it copies the distance pos and the vector2 is me adding pos so it can be either under or above
+                    esp.Text["titaninfo"].Text = "Titan Size: "..v.Sizev.Value.."\nEnergy: "..v.Energy.Value
+
+                    --Distance
+                    esp.Text["Distance"].Visible = module.Visual.aottitanesp.Distance
+                    esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
+                    esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
+
+                    --Snapline
+                    esp.Line["Snapline"].Visible = module.Visual.aottitanesp.Snaplines
+                    esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
+                    esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
+                    changedrawingcolor(module.Visual.aottitanesp.EnemyColor)
                 else
                     toggledrawing(false)
                 end
