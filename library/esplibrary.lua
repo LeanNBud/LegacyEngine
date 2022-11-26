@@ -725,7 +725,7 @@ function module.aotesp(v)
                     esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Titan.Health).."/"..math.floor(v.Titan.MaxHealth)
 
                     --titaninfo
-                    esp.Text["titaninfo"].Visible = module.Visual.aottitanesp and module.Visual.ShowTeam
+                    esp.Text["titaninfo"].Visible = module.Visual.titaninfo and module.Visual.ShowTeam
                     esp.Text["titaninfo"].Position = esp.Text["Distance"].Position + Vector2.new(0, 12) -- it copies the distance pos and the vector2 is me adding pos so it can be either under or above
                     esp.Text["titaninfo"].Text = "Titan Size: "..v.Sizev.Value.."\nEnergy: "..v.Energy.Value
 
