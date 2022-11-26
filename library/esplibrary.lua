@@ -63,6 +63,7 @@ local module = {
             FilledOpacity = 1,
             ShowDistance = 1500,
             EnemyColor = Color3.new(255, 0, 0),
+            titaninfo = false
         };
     },
 };
