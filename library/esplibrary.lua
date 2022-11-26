@@ -673,7 +673,7 @@ function module.aotesp(v)
 
     task.spawn(function()
         while task.wait() do
-            if v ~= nil and v:FindFirstChild("Humanoid") ~= nil and v:FindFirstChild("Head") ~= nil and v:FindFirstChild("HumanoidRootPart") ~= nil and v.Humanoid.Health > 0 then --  and v.Humanoid.RigType == Enum.HumanoidRigType.R6
+            if v ~= nil and v:FindFirstChild("Titan") ~= nil and v:FindFirstChild("Head") ~= nil and v:FindFirstChild("HumanoidRootPart") ~= nil and v.Titan.Health > 0 then --  and v.Titan.RigType == Enum.HumanoidRigType.R6
                 local displayEsp = v
                 if displayEsp then
                     local _,onscreen = dwCamera:WorldToScreenPoint(v.HumanoidRootPart.Position)
@@ -713,16 +713,16 @@ function module.aotesp(v)
 
                     --Healthbox
                     esp.Box["HealthboxOutline"].Visible = module.Visual.aottitanesp.Healthbox
-                    esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
+                    esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Titan.MaxHealth - v.Titan.Health) / v.Titan.MaxHealth)))
                     esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
                     esp.Box["Healthbox"].Visible = module.Visual.aottitanesp.Healthbox
-                    esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Humanoid.MaxHealth - v.Humanoid.Health) / v.Humanoid.MaxHealth)))
+                    esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Titan.MaxHealth - v.Titan.Health) / v.Titan.MaxHealth)))
                     esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
 
                     --Nameds
                     esp.Text["Name"].Visible = module.Visual.aottitanesp.Name
                     esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
-                    esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Humanoid.Health).."/"..math.floor(v.Humanoid.MaxHealth)
+                    esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Titan.Health).."/"..math.floor(v.Titan.MaxHealth)
 
                     --titaninfo
                     esp.Text["titaninfo"].Visible = module.Visual.titaninfo and module.Visual.ShowTeam
