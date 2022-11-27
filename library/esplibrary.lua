@@ -1045,7 +1045,7 @@ function module.aotevoplrs(v)
                         esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Character.Humanoid.Health).."/"..math.floor(v.Character.Humanoid.MaxHealth)
     
                         --extra plr info
-                        esp.Text["plrinfo"].Visible = module.Visual.aotevoplresp.aotevoplresp.plrinfo
+                        esp.Text["plrinfo"].Visible = module.Visual.aotevoplresp.plrinfo
                         esp.Text["plrinfo"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
                         esp.Text["plrinfo"].Text = "Level: "..v.Progression.Level.Value.." | ".."Prestige: "..v.Progression.Prestige.Value
 
