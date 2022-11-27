@@ -1039,12 +1039,12 @@ function module.aotevoplrs(v)
                     --Nameds
                     esp.Text["Name"].Visible = module.Visual.aotevoplresp.Name
                     esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
-                    esp.Text["Name"].Text = v.Name.." | ".."Level: "..v.Progression.Level.Value.." | Prestige: "..v.Progression.Prestige.Value
+                    esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Humanoid.Health).."/"..math.floor(v.Humanoid.MaxHealth)
 
                     --extra plr info
                     esp.Text["plrinfo"].Visible = module.Visual.aotevoplresp.plrinfo
                     esp.Text["plrinfo"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
-                    esp.Text["plrinfo"].Text = "Level: "..v.Progression.Level.Value.."\n"
+                    esp.Text["plrinfo"].Text = "Level: "..v.Progression.Level.Value.." | ".."Prestige: "..v.Progression.Prestige.Value
 
                     --Distance
                     esp.Text["Distance"].Visible = module.Visual.aotevoplresp.Distance
