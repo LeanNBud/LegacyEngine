@@ -1032,7 +1032,7 @@ function module.aotevoplrs(v)
     
                         --extra plr info
                         esp.Text["plrinfo"].Visible = module.Visual.plrinfo
-                        esp.Text["plrinfo"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                        esp.Text["plrinfo"].Position = esp.Text["Distance"].Position + Vector2.new(0, 12)
                         esp.Text["plrinfo"].Text = "Level: "..v.Progression.Level.Value.." | ".."Prestige: "..v.Progression.Prestige.Value
 
                         --Distance
@@ -1077,7 +1077,7 @@ function module.aotevoplrs(v)
     
                         --extra plr info
                         esp.Text["plrinfo"].Visible = module.Visual.plrinfo
-                        esp.Text["plrinfo"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
+                        esp.Text["plrinfo"].Position = esp.Text["Distance"].Position + Vector2.new(0, 12)
                         esp.Text["plrinfo"].Text = "Level: "..v.Progression.Level.Value.." | ".."Prestige: "..v.Progression.Prestige.Value
 
                         --Distance
