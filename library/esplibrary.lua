@@ -1014,78 +1014,78 @@ function module.aotevoplrs(v)
                 local BL = dwCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.CFrame * CFrame.new(-3,-3,0).p)
                 local BR = dwCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.CFrame * CFrame.new(3,-3,0).p)
 
-                if module.Visual.Enabled and displayEsp and magnitude < module.Visual.ShowDistance then
+                if module.Visual.aotevoplresp.Enabled and displayEsp and magnitude < module.Visual.aotevoplresp.ShowDistance then
                     if teamcheck(v) == false then
                         --Filledbox
-                        esp.Box["Filledbox"].Visible = module.Visual.Filledbox and module.Visual.ShowTeam and module.Visual.Box
+                        esp.Box["Filledbox"].Visible = module.Visual.aotevoplresp.Filledbox and module.Visual.aotevoplresp.ShowTeam and module.Visual.aotevoplresp.Box
                         esp.Box["Filledbox"].Size = size
-                        esp.Box["Filledbox"].Filled = module.Visual.Filledbox
-                        esp.Box["Filledbox"].Transparency = module.Visual.FilledOpacity
+                        esp.Box["Filledbox"].Filled = module.Visual.aotevoplresp.Filledbox
+                        esp.Box["Filledbox"].Transparency = module.Visual.aotevoplresp.FilledOpacity
                         esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
 
                         --Box
-                        esp.Box["Outline"].Visible = module.Visual.Box and module.Visual.ShowTeam
+                        esp.Box["Outline"].Visible = module.Visual.aotevoplresp.Box and module.Visual.aotevoplresp.ShowTeam
                         esp.Box["Outline"].Size = size
                         esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
-                        esp.Box["Main"].Visible = module.Visual.Box and module.Visual.ShowTeam
+                        esp.Box["Main"].Visible = module.Visual.aotevoplresp.Box and module.Visual.aotevoplresp.ShowTeam
                         esp.Box["Main"].Size = size
                         esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
 
                         --Healthbox
-                        esp.Box["HealthboxOutline"].Visible = module.Visual.Healthbox and module.Visual.ShowTeam
+                        esp.Box["HealthboxOutline"].Visible = module.Visual.aotevoplresp.Healthbox and module.Visual.aotevoplresp.ShowTeam
                         esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Character.Humanoid.MaxHealth - v.Character.Humanoid.Health) / v.Character.Humanoid.MaxHealth)))
                         esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
-                        esp.Box["Healthbox"].Visible = module.Visual.Healthbox and module.Visual.ShowTeam
+                        esp.Box["Healthbox"].Visible = module.Visual.aotevoplresp.Healthbox and module.Visual.aotevoplresp.ShowTeam
                         esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Character.Humanoid.MaxHealth - v.Character.Humanoid.Health) / v.Character.Humanoid.MaxHealth)))
                         esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
 
                         --Nameds
-                        esp.Text["Name"].Visible = module.Visual.Name and module.Visual.ShowTeam
+                        esp.Text["Name"].Visible = module.Visual.aotevoplresp.Name and module.Visual.aotevoplresp.ShowTeam
                         esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
                         esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Character.Humanoid.Health).."/"..math.floor(v.Character.Humanoid.MaxHealth)
     
                         --extra plr info
-                        esp.Text["plrinfo"].Visible = module.Visual.aotevoplresp.plrinfo
+                        esp.Text["plrinfo"].Visible = module.Visual.aotevoplresp.aotevoplresp.plrinfo
                         esp.Text["plrinfo"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
                         esp.Text["plrinfo"].Text = "Level: "..v.Progression.Level.Value.." | ".."Prestige: "..v.Progression.Prestige.Value
 
                         --Distance
-                        esp.Text["Distance"].Visible = module.Visual.Distance and module.Visual.ShowTeam
+                        esp.Text["Distance"].Visible = module.Visual.aotevoplresp.Distance and module.Visual.aotevoplresp.ShowTeam
                         esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
                         esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
 
                         --its fine since your gonna replace it each time u update.
                         --Snapline
-                        esp.Line["Snapline"].Visible = module.Visual.Snaplines and module.Visual.ShowTeam
+                        esp.Line["Snapline"].Visible = module.Visual.aotevoplresp.Snaplines and module.Visual.aotevoplresp.ShowTeam
                         esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
                         esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
-                        changedrawingcolor(module.Visual.TeamColor)
+                        changedrawingcolor(module.Visual.aotevoplresp.TeamColor)
                     else
                         --Filledbox
-                        esp.Box["Filledbox"].Visible = module.Visual.Filledbox and module.Visual.Box
+                        esp.Box["Filledbox"].Visible = module.Visual.aotevoplresp.Filledbox and module.Visual.aotevoplresp.Box
                         esp.Box["Filledbox"].Size = size
-                        esp.Box["Filledbox"].Filled = module.Visual.Filledbox
-                        esp.Box["Filledbox"].Transparency = module.Visual.FilledOpacity
+                        esp.Box["Filledbox"].Filled = module.Visual.aotevoplresp.Filledbox
+                        esp.Box["Filledbox"].Transparency = module.Visual.aotevoplresp.FilledOpacity
                         esp.Box["Filledbox"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
 
                         --Box
-                        esp.Box["Outline"].Visible = module.Visual.Box
+                        esp.Box["Outline"].Visible = module.Visual.aotevoplresp.Box
                         esp.Box["Outline"].Size = size
                         esp.Box["Outline"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Outline"].Size / 2)
-                        esp.Box["Main"].Visible = module.Visual.Box
+                        esp.Box["Main"].Visible = module.Visual.aotevoplresp.Box
                         esp.Box["Main"].Size = size
                         esp.Box["Main"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y)) - (esp.Box["Main"].Size / 2)
 
                         --Healthbox
-                        esp.Box["HealthboxOutline"].Visible = module.Visual.Healthbox
+                        esp.Box["HealthboxOutline"].Visible = module.Visual.aotevoplresp.Healthbox
                         esp.Box["HealthboxOutline"].Size = Vector2.new(1, size.Y * (1-((v.Character.Humanoid.MaxHealth - v.Character.Humanoid.Health) / v.Character.Humanoid.MaxHealth)))
                         esp.Box["HealthboxOutline"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["HealthboxOutline"].Size.Y))) - size / 2
-                        esp.Box["Healthbox"].Visible = module.Visual.Healthbox
+                        esp.Box["Healthbox"].Visible = module.Visual.aotevoplresp.Healthbox
                         esp.Box["Healthbox"].Size = Vector2.new(1, size.Y * (1-((v.Character.Humanoid.MaxHealth - v.Character.Humanoid.Health) / v.Character.Humanoid.MaxHealth)))
                         esp.Box["Healthbox"].Position = Vector2.new(math.floor(rootPos.X) - 5, math.floor(rootPos.Y) + (size.Y - math.floor(esp.Box["Healthbox"].Size.Y))) - size / 2
 
                         --Nameds
-                        esp.Text["Name"].Visible = module.Visual.Name
+                        esp.Text["Name"].Visible = module.Visual.aotevoplresp.Name
                         esp.Text["Name"].Position = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y) - size.Y / 2 - 16)
                         esp.Text["Name"].Text = v.Name.." | "..math.floor(v.Character.Humanoid.Health).."/"..math.floor(v.Character.Humanoid.MaxHealth)
     
@@ -1095,15 +1095,15 @@ function module.aotevoplrs(v)
                         esp.Text["plrinfo"].Text = "Level: "..v.Progression.Level.Value.." | ".."Prestige: "..v.Progression.Prestige.Value
 
                         --Distance
-                        esp.Text["Distance"].Visible = module.Visual.Distance
+                        esp.Text["Distance"].Visible = module.Visual.aotevoplresp.Distance
                         esp.Text["Distance"].Position = Vector2.new(math.floor(rootPos.X),math.floor(rootPos.Y + height * 0.5))
                         esp.Text["Distance"].Text = tostring(math.ceil(magnitude)).." studs"
 
                         --Snapline
-                        esp.Line["Snapline"].Visible = module.Visual.Snaplines
+                        esp.Line["Snapline"].Visible = module.Visual.aotevoplresp.Snaplines
                         esp.Line["Snapline"].From = Vector2.new(dwCamera.ViewportSize.X/2, 120)
                         esp.Line["Snapline"].To = Vector2.new(math.floor(rootPos.X), math.floor(rootPos.Y))
-                        changedrawingcolor(module.Visual.EnemyColor)
+                        changedrawingcolor(module.Visual.aotevoplresp.EnemyColor)
                     end
                 else
                     toggledrawing(false)
