@@ -24,15 +24,6 @@ local module = {
     Target = nil
 }
 
-function module.aimteamcheck(player)
-    if module.Aimbot.Teamcheck then
-        if game.Players.LocalPlayer.TeamColor == player.TeamColor then return false
-        else return true end
-    else
-        return true
-    end
-end
-
 function module.aimvisibilitycheck(target, ignore)
     if module.Aimbot.Wallcheck then
         local Origin = dwCamera.CFrame.p
@@ -65,24 +56,6 @@ function module.GetClosestPlayer(fov)
     end
     return Target, Closest
 end
-
---[[
-function module.GetClosestPart(player)
-    local Target
-    if player ~= nil then
-        for index, v in pairs(player.Character:GetChildren()) do
-            if v:IsA("Part") or v:IsA("MeshPart") then
-                local Position, OnScreen = dwCamera:WorldToScreenPoint(v.Position)
-                if (Vector2.new(Position.X, Position.Y)).Magnitude < (Vector2.new(dwMouse.X, dwMouse.Y)).Magnitude then
-                    --Closest = Distance
-                    Target = v
-                end
-            end
-        end
-    end
-    return Target
-end
---]]
 
 function module.AimbotInit()
     local fovcircle = Drawing.new('Circle');
