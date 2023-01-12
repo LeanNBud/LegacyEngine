@@ -66,6 +66,7 @@ function module.GetClosestPlayer(fov)
     return Target, Closest
 end
 
+--[[
 function module.GetClosestPart(player)
     local Target
     if player ~= nil then
@@ -81,6 +82,7 @@ function module.GetClosestPart(player)
     end
     return Target
 end
+--]]
 
 function module.AimbotInit()
     local fovcircle = Drawing.new('Circle');
@@ -110,7 +112,7 @@ function module.AimbotInit()
                 module.Target = closest
             end
             if closest ~= nil and module.Aimbot.Enabled and module.Aimbot.ButtonPressed then
-                module.moveCursor(closest.Character[module.Aimbot.TargetPart], module.Aimbot.Smoothness)
+                module.moveCursor(closest[module.Aimbot.TargetPart], module.Aimbot.Smoothness)
             end
         end)
     end)
