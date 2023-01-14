@@ -57,21 +57,6 @@ function module.GetClosestZombieTWR(fov)
     return Target, Closest
 end
 
-function module.GetClosestZombieMsZ(fov)
-    local Target, Closest = nil, fov or math.huge
-    for i,v in pairs(workspace.Ignore.Zombies:GetChildren()) do
-        if v ~= nil and v ~= nil and v:FindFirstChild("Head") ~= nil and module.aimvisibilitycheck(v:FindFirstChild(module.Aimbot.TargetPart).Position or v:FindFirstChild("Head").Position ,{dwLocalPlayer.Character, v}) and v ~= dwLocalPlayer then
-            local Position, OnScreen = dwCamera:WorldToScreenPoint(v:FindFirstChild(module.Aimbot.TargetPart).Position)
-            local Distance = (Vector2.new(Position.X, Position.Y) - Vector2.new(dwMouse.X, dwMouse.Y)).Magnitude
-            if (Distance < Closest) then
-                Closest = Distance
-                Target = v
-            end
-        end
-    end
-    return Target, Closest
-end
-
 function module.AimbotInit()
     local fovcircle = Drawing.new('Circle');
     local closest
@@ -94,11 +79,9 @@ function module.AimbotInit()
 
             if module.Aimbot.IgnoreFOV then
                 closest = module.GetClosestZombieTWR(math.huge)
-                closest = module.GetClosestZombieMsZ(math.huge)
                 module.Target = closest
             else
                 closest = module.GetClosestZombieTWR(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1))
-                closest = module.GetClosestZombieMsZ(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1))
                 module.Target = closest
             end
             if closest ~= nil and module.Aimbot.Enabled and module.Aimbot.ButtonPressed then
