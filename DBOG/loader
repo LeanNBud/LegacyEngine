@@ -25,6 +25,7 @@ local budokaiunderworld = 10026736652
 local budokaiyardrat = 8787295526
 local twr = 8287862132
 local obes = 11800876530
+local arcanereborn = 3099893649
 
 if game.PlaceId == Earth then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/1Earth.lua', true))()
@@ -86,6 +87,8 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/ThoseWhoRemain.lua', true))()
    elseif game.PlaceId == obes then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/%2B1%20Blocks%20Every%20Second.lua', true))()
-   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or MoonCity or SuperDarts or bigPaintball or Lizardcuh or twr or obes or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
+   elseif game.PlaceId == arcanereborn then
+      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/ArcaneReborn.lua', true))()
+   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or MoonCity or SuperDarts or bigPaintball or Lizardcuh or twr or obes or arcanereborn or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
       loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/6Others.lua', true))()
 end
