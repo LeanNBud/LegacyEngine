@@ -1,94 +1,37 @@
-local Earth = 4638110048
-local Namek = 4195906474
-local FutureEarth = 5832703855
-local Space = 4195907096
-local OtherWorld = 4195906883
-local MoonCity = 679737281
-local SuperDarts = 4914988106
-local bigPaintball = 3527629287
-local ProjectLazarus = 443406476
-local budokai = 7815205056
-local budokaiearth = 7816839626
-local budokainamek = 7816705112
-local budokaimajin = 7816705320
-local budokaimythria = 8501745948
-local budokaihtc = 8192887089
-local budokainetfiss = 7816071872
-local budokaiolbus = 7816704887
-local budokaioverworld = 7816733560
-local budokaipolaris = 7816735404
-local budokaisadala = 7816704682
-local budokaisnakeway = 7816733969
-local budokaispace = 7816907523
-local budokaitournament = 9775057825
-local budokaiunderworld = 10026736652
-local budokaiyardrat = 8787295526
-local twr = 8287862132
-local obes = 11800876530
-local arcanereborn = 3099893649
+local Stuff = {
+   github = "https://raw.githubusercontent.com/LeanNBud/LegacyEngine/main",
+};
+local Games = {
+    --DBOG
+    ["4638110048"] = "DBOG/PublicWorlds/1Earth",
+    ["4195906474"] = "DBOG/PublicWorlds/2Namek",
+    ["5832703855"] = "DBOG/PublicWorlds/3Future",
+    ["4195907096"] = "DBOG/PublicWorlds/4Space",
+    ["4195906883"] = "DBOG/PublicWorlds/5OtherWorld",
+    ["Other"] = "DBOG/PublicWorlds/6Others",
+    --Normal Games
+    ["8287862132"] = "Games/ThoseWhoRemain",
+    [""] = "Games/DBZ[DEMO]",
+    [""] = "Games/Left2Die",
+    ["679737281"] = "Games/MoonCity",
+    ["11800876530"] = "Games/+1 Blocks Every Second",
+    ["3099893649"] = "Games/ArcaneReborn",
+    ["443406476"] = "Games/ProjectLazarus"
+};
 
-if game.PlaceId == Earth then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/1Earth.lua', true))()
-   elseif game.PlaceId == Namek then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/2Namek.lua', true))()
-   elseif game.PlaceId == FutureEarth then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/3FutureEarth.lua', true))()
-   elseif game.PlaceId == Space then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/4Space.lua', true))()
-   elseif game.PlaceId == OtherWorld then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/5OtherWorld.lua', true))()
-   elseif game.PlaceId == MoonCity then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/MoonCity.lua', true))()
-   elseif game.PlaceId == SuperDarts then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/SuperDarts.lua', true))()
-   elseif game.PlaceId == bigPaintball then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/blob/main/Games/BigPaintball.lua', true))()
-   elseif game.PlaceId == ProjectLazarus then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/ProjectLazarus.lua', true))()
-   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Left2Die.lua', true))()
-   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/DBZ%5BDEMO%5D.lua', true))()
-   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "avatar") then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Avatar-The-New-Awakening-2.lua', true))()
-   elseif game.PlaceId == budokai then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaiearth then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokainamek then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaimajin then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaimythria then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaihtc then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokainetfiss then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaiolbus then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaioverworld then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaipolaris then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaisadala then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaisnakeway then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaispace then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaitournament then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaiunderworld then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == budokaiyardrat then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Budokai.lua', true))()
-   elseif game.PlaceId == twr then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/ThoseWhoRemain.lua', true))()
-   elseif game.PlaceId == obes then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/%2B1%20Blocks%20Every%20Second.lua', true))()
-   elseif game.PlaceId == arcanereborn then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/ArcaneReborn.lua', true))()
-   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or MoonCity or SuperDarts or bigPaintball or Lizardcuh or twr or obes or arcanereborn or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
-      loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/PublicWorlds/6Others.lua', true))()
+local function LoadScript(script)
+  loadstring(game:HttpGet(Stuff["github"]..'/'..script..'.lua', true))()
+end
+
+local function loaduniversal()
+   if string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbog") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dragon ball online generations") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "grouproto") then
+      --print("found game")
+      LoadScript(Games["Other"])
+   end
+end
+
+if Games[tostring(game.PlaceId)] then
+   LoadScript(Games[tostring(game.PlaceId)])
+else
+   loaduniversal()
 end
