@@ -24,6 +24,15 @@ local module = {
     Target = nil
 }
 
+function module.aimteamcheck(player)
+    if module.Aimbot.Teamcheck then
+        if game.Players.LocalPlayer.TeamColor == player.TeamColor then return false
+        else return true end
+    else
+        return true
+    end
+end
+
 function module.aimvisibilitycheck(target, ignore)
     if module.Aimbot.Wallcheck then
         local Origin = dwCamera.CFrame.p
@@ -42,11 +51,11 @@ function module.moveCursor(Part, smoothing)
     end
 end
 
-function module.GetClosestZombieTWR(fov)
+function module.GetClosestPlayer(fov)
     local Target, Closest = nil, fov or math.huge
-    for i,v in pairs(workspace.Entities.Infected:GetChildren()) do
-        if v ~= nil and v ~= nil and v:FindFirstChild("Head") ~= nil and module.aimvisibilitycheck(v:FindFirstChild(module.Aimbot.TargetPart).Position or v:FindFirstChild("Head").Position ,{dwLocalPlayer.Character, v}) and v ~= dwLocalPlayer then
-            local Position, OnScreen = dwCamera:WorldToScreenPoint(v:FindFirstChild(module.Aimbot.TargetPart).Position)
+    for i,v in pairs(dwPlayers:GetPlayers()) do
+        if v ~= nil and v.Character ~= nil and v.Character:FindFirstChild("Head") ~= nil and module.aimvisibilitycheck(v.Character:FindFirstChild(module.Aimbot.TargetPart).Position or v.Character:FindFirstChild("Head").Position ,{dwLocalPlayer.Character, v.Character}) and v ~= dwLocalPlayer and module.aimteamcheck(v) and v.Character.Humanoid.Health ~= 0 then
+            local Position, OnScreen = dwCamera:WorldToScreenPoint(v.Character:FindFirstChild(module.Aimbot.TargetPart).Position)
             local Distance = (Vector2.new(Position.X, Position.Y) - Vector2.new(dwMouse.X, dwMouse.Y)).Magnitude
             if (Distance < Closest) then
                 Closest = Distance
@@ -55,6 +64,22 @@ function module.GetClosestZombieTWR(fov)
         end
     end
     return Target, Closest
+end
+
+function module.GetClosestPart(player)
+    local Target
+    if player ~= nil then
+        for index, v in pairs(player.Character:GetChildren()) do
+            if v:IsA("Part") or v:IsA("MeshPart") then
+                local Position, OnScreen = dwCamera:WorldToScreenPoint(v.Position)
+                if (Vector2.new(Position.X, Position.Y)).Magnitude < (Vector2.new(dwMouse.X, dwMouse.Y)).Magnitude then
+                    --Closest = Distance
+                    Target = v
+                end
+            end
+        end
+    end
+    return Target
 end
 
 function module.AimbotInit()
@@ -78,14 +103,14 @@ function module.AimbotInit()
             fovcircle.Transparency = module.Aimbot.FovOpacity;
 
             if module.Aimbot.IgnoreFOV then
-                closest = module.GetClosestZombieTWR(math.huge)
+                closest = module.GetClosestPlayer(math.huge)
                 module.Target = closest
             else
-                closest = module.GetClosestZombieTWR(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1))
+                closest = module.GetClosestPlayer(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1))
                 module.Target = closest
             end
             if closest ~= nil and module.Aimbot.Enabled and module.Aimbot.ButtonPressed then
-                module.moveCursor(closest[module.Aimbot.TargetPart], module.Aimbot.Smoothness)
+                module.moveCursor(closest.Character[module.Aimbot.TargetPart], module.Aimbot.Smoothness)
             end
         end)
     end)
