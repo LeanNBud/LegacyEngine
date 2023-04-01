@@ -5,7 +5,7 @@ local Games = {
     --DBOG
     ["4638110048"] = "DBOG/PublicWorlds/1Earth",
     ["4195906474"] = "DBOG/PublicWorlds/2Namek",
-    ["5832703855"] = "DBOG/PublicWorlds/3Future",
+    ["5832703855"] = "DBOG/PublicWorlds/3FutureEarth",
     ["4195907096"] = "DBOG/PublicWorlds/4Space",
     ["4195906883"] = "DBOG/PublicWorlds/5OtherWorld",
     ["Other"] = "DBOG/PublicWorlds/6Others",
