@@ -21,6 +21,7 @@ local Games = {
     ["10223461928"] = "Games/RaiseAPochita",
     ["9544666096"] = "Games/MichaelZombies",
     ["9544666096"] = "Games/MichaelZombies",
+    ["9399205659"] = "Games/DragonBall-Ultimate-Clash-2"
 };
 
 local function LoadScript(script)
