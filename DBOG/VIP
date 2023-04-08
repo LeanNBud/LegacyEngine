@@ -1,48 +1,60 @@
-local psworld1 = 6152116144
-local psmugentrain = 11468034852
-local psouwigahara = 11468075017
-local ps2ndworld = 11468159863
+local Stuff = {
+   github = "https://raw.githubusercontent.com/LeanNBud/LegacyEngine/main",
+};
+local Games = {
+    --DBOG
+    ["4638110048"] = "DBOG/VIPWorlds/1Earth",
+    ["4195906474"] = "DBOG/VIPWorlds/2Namek",
+    ["5832703855"] = "DBOG/VIPWorlds/3FutureEarth",
+    ["4195907096"] = "DBOG/VIPWorlds/4Space",
+    ["4195906883"] = "DBOG/VIPWorlds/5OtherWorld",
+    ["Other"] = "DBOG/VIPWorlds/6Others",
+    --Normal Games
+    ["679737281"] = "Games/VIP/MoonCity",
+    ["443406476"] = "Games/VIP/ProjectLazarus",
+    ["8287862132"] = "Games/ThoseWhoRemain",
+    ["679737281"] = "Games/MoonCity",
+    ["11800876530"] = "Games/+1 Blocks Every Second",
+    ["3099893649"] = "Games/ArcaneReborn",
+    ["12697333256"] = "Games/RaiseAPochita",
+    ["10223461928"] = "Games/RaiseAPochita",
+    ["9544666096"] = "Games/MichaelZombies",
+    ["9544666096"] = "Games/MichaelZombies",
+    ["9399205659"] = "Games/DragonBall-Ultimate-Clash-2"
+    ["9725967657"] = "Games/VIP/DBXM",
+    ["4147411085"] = "Games/VIP/DBXM",
+    ["6116023427"] = "Games/VIP/DeltaRing",
+    ["9071342818"] = "Games/VIP/TitanWarfare",
+    ["9857547990"] = "Games/VIP/TitanWarfare",
+    ["7386589547"] = "Games/VIP/TitanWarfare",
+    ["6725802681"] = "Games/VIP/TitanWarfare",
+    ["7399911165"] = "Games/VIP/TitanWarfare",
+    ["8975757665"] = "Games/VIP/TitanWarfare",
+    ["9857548948"] = "Games/VIP/TitanWarfare",
+    ["6423048711"] = "Games/VIP/TitanWarfare",
+    ["7429957809"] = "Games/VIP/TitanWarfare",
+    ["9065967251"] = "Games/VIP/TitanWarfare",
+    ["8683805831"] = "Games/VIP/TitanWarfare",
+    ["8651959899"] = "Games/VIP/TitanWarfare",
+    ["6152116144"] = "Games/VIP/ProjectSlayers",
+    ["11468034852"] = "Games/VIP/ProjectSlayers",
+    ["11468075017"] = "Games/VIP/ProjectSlayers",
+    ["11468159863"] = "Games/VIP/ProjectSlayers",
+};
 
-if game.PlaceId == 4638110048 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/1Earth.lua', true))()
-elseif game.PlaceId == 4195906474 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/2Namek.lua', true))()
-elseif game.PlaceId == 5832703855 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/3Future.lua', true))()
-elseif game.PlaceId == 4195907096 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/4Space.lua', true))()
-elseif game.PlaceId == 4195906883 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/5OtherWorld.lua', true))()
-elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "moon") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/MoonCity.lua', true))()
-elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "lazarus") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/ProjectLazarus.lua', true))()
-elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "super darts") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/SuperDarts', true))()
-elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "big paintball") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/blob/main/Games/BigPaintball.lua', true))()
-elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Left2Die.lua', true))()
-elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DBZdemo.lua', true))()
-elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "avatar") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/Avatar-The-New-Awakening-2.lua', true))()
-elseif game.PlaceId == 4147411085 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DBXM.lua', true))()
-elseif game.PlaceId == 9725967657 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DBXM.lua', true))()
-elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbxm") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DBXM.lua', true))()
-elseif game.PlaceId == 6116023427 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/DeltaRing.lua', true))()
-elseif game.PlaceId == 142823291 then
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/LeanNBud/LegacyEngine/main/Games/VIP/Murder%20Mystery%202', true))()
-elseif game.PlaceId == 3978370137 then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/GPO.lua', true))()
-elseif game.PlaceId == 9071342818 or game.PlaceId == 9857547990 or game.PlaceId == 7386589547 or game.PlaceId == 6725802681 or game.PlaceId == 7399911165 or game.PlaceId == 8975757665 or game.PlaceId == 9857548948 or game.PlaceId == 6423048711 or game.PlaceId == 7429957809 or game.PlaceId == 9065967251 or game.PlaceId == 8683805831 or game.PlaceId == 8651959899 then
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/LeanNBud/LegacyEngine/main/Games/VIP/TitanWarfare.lua', true))()
-elseif game.PlaceId == psworld1 or psmugentrain or psouwigahara or ps2ndworld then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/Games/VIP/ProjectSlayers.lua', true))()
-elseif game.PlaceId ~= 9071342818 or 9857547990 or 7386589547 or 6725802681 or 7399911165 or 8975757665 or 9857548948 or 6423048711 or 8651959899 or 8683805831 or 9065967251 or 7429957809 or 4638110048 or 4195906474 or 5832703855 or 4195907096 or 4195906883 or 4147411085 or 9725967657 or 6116023427 or 142823291 or 3978370137 or psworld1 or psmugentrain or psouwigahara or ps2ndworld or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "moon") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "lazarus") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "super darts") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "big paintball") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "avatar") then
-   loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/VIPWorlds/6Others.lua', true))()
+local function LoadScript(script)
+  loadstring(game:HttpGet(Stuff["github"]..'/'..script..'.lua', true))()
+end
+
+local function loaduniversal()
+   if string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbog") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dragon ball online generations") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "grouproto") then
+      --print("found game")
+      LoadScript(Games["Other"])
+   end
+end
+
+if Games[tostring(game.PlaceId)] then
+   LoadScript(Games[tostring(game.PlaceId)])
+else
+   loaduniversal()
 end
