@@ -67,9 +67,9 @@ local function LoadScript(script)
   loadstring(game:HttpGet(Stuff["github"]..'/'..script..'.lua', true))()
 end
 
---[[local function loaduniversal()
+local function loaduniversal()
    LoadScript(Games["Universal"])
-end]]
+end
 
 if Games[tostring(game.PlaceId)] then
    LoadScript(Games[tostring(game.PlaceId)])
