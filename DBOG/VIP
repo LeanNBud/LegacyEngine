@@ -60,18 +60,16 @@ local Games = {
    ["4178935231"] = "Games/VIP/DBFR",
    ["5798060869"] = "Games/VIP/DBFR",
    ["6034613976"] = "Games/VIP/DBFR",
+   ["Universal"] = "Games/VIP/Universal"
 };
 
 local function LoadScript(script)
   loadstring(game:HttpGet(Stuff["github"]..'/'..script..'.lua', true))()
 end
 
-local function loaduniversal()
-   if string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbog") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dragon ball online generations") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "grouproto") then
-      --print("found game")
-      LoadScript(Games["Other"])
-   end
-end
+--[[local function loaduniversal()
+   LoadScript(Games["Universal"])
+end]]
 
 if Games[tostring(game.PlaceId)] then
    LoadScript(Games[tostring(game.PlaceId)])
