@@ -1,78 +1,52 @@
-local Stuff = {
-   github = "https://raw.githubusercontent.com/LeanNBud/LegacyEngine/main",
-};
-local Games = {
-   --DBOG
-   ["4638110048"] = "DBOG/VIPWorlds/1Earth",
-   ["4195906474"] = "DBOG/VIPWorlds/2Namek",
-   ["5832703855"] = "DBOG/VIPWorlds/3FutureEarth",
-   ["4195907096"] = "DBOG/VIPWorlds/4Space",
-   ["4195906883"] = "DBOG/VIPWorlds/5OtherWorld",
-   ["4679166669"] = "DBOG/VIPWorlds/6Others",
-   ["4647323270"] = "DBOG/VIPWorlds/6Others",
-   ["8199186227"] = "DBOG/VIPWorlds/6Others",
-   ["5899251286"] = "DBOG/VIPWorlds/6Others",
-   ["4836894930"] = "DBOG/VIPWorlds/6Others",
-   ["5825015210"] = "DBOG/VIPWorlds/6Others",
-   ["5818953827"] = "DBOG/VIPWorlds/6Others",
-   ["6978550807"] = "DBOG/VIPWorlds/6Others",
-   ["4846678133"] = "DBOG/VIPWorlds/6Others",
-   ["6960767556"] = "DBOG/VIPWorlds/6Others",
-   ["6960781275"] = "DBOG/VIPWorlds/6Others",
-   ["6960716653"] = "DBOG/VIPWorlds/6Others",
-   ["5910108331"] = "DBOG/VIPWorlds/6Others",
-   ["4800653601"] = "DBOG/VIPWorlds/6Others",
-   --Normal Games
-   ["679737281"] = "Games/VIP/MoonCity",
-   ["443406476"] = "Games/VIP/ProjectLazarus",
-   ["8287862132"] = "Games/ThoseWhoRemain",
-   ["11800876530"] = "Games/+1 Blocks Every Second",
-   ["3099893649"] = "Games/ArcaneReborn",
-   ["12697333256"] = "Games/RaiseAPochita",
-   ["10223461928"] = "Games/RaiseAPochita",
-   ["9544666096"] = "Games/MichaelZombies",
-   ["9544666096"] = "Games/MichaelZombies",
-   ["9399205659"] = "Games/DragonBall-Ultimate-Clash-2",
-   ["9725967657"] = "Games/VIP/DBXM",
-   ["4147411085"] = "Games/VIP/DBXM",
-   ["6116023427"] = "Games/VIP/DeltaRing",
-   ["9071342818"] = "Games/VIP/TitanWarfare",
-   ["9857547990"] = "Games/VIP/TitanWarfare",
-   ["7386589547"] = "Games/VIP/TitanWarfare",
-   ["6725802681"] = "Games/VIP/TitanWarfare",
-   ["7399911165"] = "Games/VIP/TitanWarfare",
-   ["8975757665"] = "Games/VIP/TitanWarfare",
-   ["9857548948"] = "Games/VIP/TitanWarfare",
-   ["6423048711"] = "Games/VIP/TitanWarfare",
-   ["7429957809"] = "Games/VIP/TitanWarfare",
-   ["9065967251"] = "Games/VIP/TitanWarfare",
-   ["8683805831"] = "Games/VIP/TitanWarfare",
-   ["8651959899"] = "Games/VIP/TitanWarfare",
-   ["6152116144"] = "Games/VIP/ProjectSlayers",
-   ["11468034852"] = "Games/VIP/ProjectSlayers",
-   ["11468075017"] = "Games/VIP/ProjectSlayers",
-   ["11468159863"] = "Games/VIP/ProjectSlayers",
-   ["5956785391"] = "Games/VIP/PreGame_ProjectSlayers",
-   ["298400657"] = "Games/VIP/DBFR",
-   ["4761949056"] = "Games/VIP/DBFR",
-   ["4263492467"] = "Games/VIP/DBFR",
-   ["4427383374"] = "Games/VIP/DBFR",
-   ["4178935231"] = "Games/VIP/DBFR",
-   ["5798060869"] = "Games/VIP/DBFR",
-   ["6034613976"] = "Games/VIP/DBFR",
-   ["Universal"] = "Games/VIP/Universal"
-};
+local github = "https://github.com/LeanNBud/LegacyEngine/raw/main"
+local Earth = 4638110048
+local Namek = 4195906474
+local FutureEarth = 5832703855
+local Space = 4195907096
+local OtherWorld = 4195906883
+local MoonCity = 679737281
+local SuperDarts = 4914988106
+local ProjectLazarus = 443406476
+local twr = 8287862132
+local obes = 11800876530
+local arcanereborn = 3099893649
 
-local function LoadScript(script)
-  loadstring(game:HttpGet(Stuff["github"]..'/'..script..'.lua', true))()
-end
-
-local function loaduniversal()
-   LoadScript(Games["Universal"])
-end
-
-if Games[tostring(game.PlaceId)] then
-   LoadScript(Games[tostring(game.PlaceId)])
-else
-   loaduniversal()
+if game.PlaceId == Earth then
+      loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/1Earth.lua', true))()
+   elseif game.PlaceId == Namek then
+      loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/2Namek.lua', true))()
+   elseif game.PlaceId == FutureEarth then
+      loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/3FutureEarth.lua', true))()
+   elseif game.PlaceId == Space then
+      loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/4Space.lua', true))()
+   elseif game.PlaceId == OtherWorld then
+      loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/5OtherWorld.lua', true))()
+   elseif game.PlaceId == MoonCity then
+      loadstring(game:HttpGet(github..'/Games/VIP/MoonCity.lua', true))()
+   elseif game.PlaceId == SuperDarts then
+      loadstring(game:HttpGet(github..'/Games/SuperDarts.lua', true))()
+   elseif game.PlaceId == ProjectLazarus then
+      loadstring(game:HttpGet(github..'/Games/VIP/ProjectLazarus.lua', true))()
+   elseif game.PlaceId == 9071342818 or 9857547990 or 7386589547 or 6725802681 or 7399911165 or 8975757665 or 9857548948 or 6423048711 or 7429957809 or 9065967251 or 8683805831 or 8651959899 then
+      loadstring(game:HttpGet(github..'/Games/VIP/TitanWarfare.lua', true))()
+   elseif game.PlaceId == 6152116144 or 11468034852 or 11468075017 or 11468159863 then
+      loadstring(game:HttpGet(github..'/Games/VIP/ProjectSlayers.lua', true))()
+   elseif game.PlaceId == 5956785391 then
+      loadstring(game:HttpGet(github..'/Games/VIP/PreGame_ProjectSlayers.lua', true))()
+   elseif game.PlaceId == 298400657 or 4761949056 or 4263492467 or 4427383374 or 4178935231 or 5798060869 or 6034613976 then
+      loadstring(game:HttpGet(github..'/Games/VIP/DBFR.lua', true))()
+   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
+      loadstring(game:HttpGet(github..'/Games/Left2Die.lua', true))()
+   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
+      loadstring(game:HttpGet(github..'/Games/DBZ%5BDEMO%5D.lua', true))()
+   elseif game.PlaceId == twr then
+      loadstring(game:HttpGet(github..'/Games/ThoseWhoRemain.lua', true))()
+   elseif game.PlaceId == 12697333256 or 10223461928 then
+      loadstring(game:HttpGet(github..'/Games/RaiseAPochita.lua', true))()
+   elseif game.PlaceId == obes then
+      loadstring(game:HttpGet(github..'/Games/%2B1%20Blocks%20Every%20Second.lua', true))()
+   elseif game.PlaceId == arcanereborn then
+      loadstring(game:HttpGet(github..'/Games/ArcaneReborn.lua', true))()
+   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or 5956785391 or 6152116144 or 11468034852 or 11468075017 or 11468159863 or 9071342818 or 9857547990 or 7386589547 or 6725802681 or 7399911165 or 8975757665 or 9857548948 or 6423048711 or 7429957809 or 9065967251 or 8683805831 or 8651959899 or 4761949056 or 4263492467 or 4427383374 or 4178935231 or 5798060869 or 6034613976 or 298400657 or 12697333256 or 10223461928 or MoonCity or SuperDarts or Lizardcuh or twr or obes or arcanereborn or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
+      loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/6Others.lua', true))()
 end
