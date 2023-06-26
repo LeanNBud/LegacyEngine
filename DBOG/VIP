@@ -9,7 +9,6 @@ local SuperDarts = 4914988106
 local ProjectLazarus = 443406476
 local twr = 8287862132
 local obes = 11800876530
-local arcanereborn = 3099893649
 
 if game.PlaceId == Earth then
       loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/1Earth.lua', true))()
@@ -37,16 +36,12 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet(github..'/Games/VIP/DBFR.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
       loadstring(game:HttpGet(github..'/Games/Left2Die.lua', true))()
-   elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
-      loadstring(game:HttpGet(github..'/Games/DBZ%5BDEMO%5D.lua', true))()
    elseif game.PlaceId == twr then
       loadstring(game:HttpGet(github..'/Games/ThoseWhoRemain.lua', true))()
    elseif game.PlaceId == 12697333256 or 10223461928 then
       loadstring(game:HttpGet(github..'/Games/RaiseAPochita.lua', true))()
    elseif game.PlaceId == obes then
       loadstring(game:HttpGet(github..'/Games/%2B1%20Blocks%20Every%20Second.lua', true))()
-   elseif game.PlaceId == arcanereborn then
-      loadstring(game:HttpGet(github..'/Games/ArcaneReborn.lua', true))()
-   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or 5956785391 or 6152116144 or 11468034852 or 11468075017 or 11468159863 or 9071342818 or 9857547990 or 7386589547 or 6725802681 or 7399911165 or 8975757665 or 9857548948 or 6423048711 or 7429957809 or 9065967251 or 8683805831 or 8651959899 or 4761949056 or 4263492467 or 4427383374 or 4178935231 or 5798060869 or 6034613976 or 298400657 or 12697333256 or 10223461928 or MoonCity or SuperDarts or Lizardcuh or twr or obes or arcanereborn or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "dbz") then
+   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or ProjectLazarus or 5956785391 or 6152116144 or 11468034852 or 11468075017 or 11468159863 or 9071342818 or 9857547990 or 7386589547 or 6725802681 or 7399911165 or 8975757665 or 9857548948 or 6423048711 or 7429957809 or 9065967251 or 8683805831 or 8651959899 or 4761949056 or 4263492467 or 4427383374 or 4178935231 or 5798060869 or 6034613976 or 298400657 or 12697333256 or 10223461928 or MoonCity or SuperDarts or twr or obes or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
       loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/6Others.lua', true))()
 end
