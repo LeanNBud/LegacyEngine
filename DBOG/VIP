@@ -45,6 +45,6 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet(github..'/Games/RaiseAPochita.lua', true))()
    elseif game.PlaceId == obes then
       loadstring(game:HttpGet(github..'/Games/%2B1%20Blocks%20Every%20Second.lua', true))()
-   elseif game.PlaceId ~= Earth or Namek or FutureEarth or Space or OtherWorld or DBOGMM or ProjectLazarus or 5956785391 or 6152116144 or 11468034852 or 11468075017 or 11468159863 or 9071342818 or 9857547990 or 7386589547 or 6725802681 or 7399911165 or 8975757665 or 9857548948 or 6423048711 or 7429957809 or 9065967251 or 8683805831 or 8651959899 or 4761949056 or 4263492467 or 4427383374 or 4178935231 or 5798060869 or 6034613976 or 298400657 or 12697333256 or 10223461928 or MoonCity or SuperDarts or twr or obes or string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
+   elseif game.PlaceId == 4679166669 or game.PlaceId == 4647323270 or game.PlaceId == 8199186227 or game.PlaceId == 5899251286 or game.PlaceId == 4836894930 or game.PlaceId == 5825015210 or game.PlaceId == 5818953827 or game.PlaceId == 6978550807 or game.PlaceId == 4846678133 or game.PlaceId == 6960767556 or game.PlaceId == 6960781275 or game.PlaceId == 6960716653 or game.PlaceId == 5910108331 or game.PlaceId == 4800653601 then
       loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/6Others.lua', true))()
 end
