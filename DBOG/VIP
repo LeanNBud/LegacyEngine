@@ -31,7 +31,7 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet(github..'/Games/VIP/ProjectLazarus.lua', true))()
    elseif game.PlaceId == 9071342818 or game.PlaceId == 9857547990 or game.PlaceId == 7386589547 or game.PlaceId == 6725802681 or game.PlaceId == 7399911165 or game.PlaceId == 8975757665 or game.PlaceId == 9857548948 or game.PlaceId == 6423048711 or game.PlaceId == 7429957809 or game.PlaceId == 9065967251 or game.PlaceId == 8683805831 or game.PlaceId == 8651959899 then
       loadstring(game:HttpGet(github..'/Games/VIP/TitanWarfare.lua', true))()
-   elseif game.PlaceId == 6152116144 or game.PlaceId == 11468034852 or game.PlaceId == 11468075017 or game.PlaceId == 11468159863 then
+   elseif game.PlaceId == 6152116144 or game.PlaceId == 11468034852 or game.PlaceId == 11468075017 or game.PlaceId == 13881804983 then
       loadstring(game:HttpGet(github..'/Games/VIP/ProjectSlayers.lua', true))()
    elseif game.PlaceId == 5956785391 then
       loadstring(game:HttpGet(github..'/Games/VIP/PreGame_ProjectSlayers.lua', true))()
