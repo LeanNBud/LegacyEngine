@@ -29,19 +29,19 @@ if game.PlaceId == Earth then
       loadstring(game:HttpGet(github..'/Games/SuperDarts.lua', true))()
    elseif game.PlaceId == ProjectLazarus then
       loadstring(game:HttpGet(github..'/Games/VIP/ProjectLazarus.lua', true))()
-   elseif game.PlaceId == 9071342818 or 9857547990 or 7386589547 or 6725802681 or 7399911165 or 8975757665 or 9857548948 or 6423048711 or 7429957809 or 9065967251 or 8683805831 or 8651959899 then
+   elseif game.PlaceId == 9071342818 or game.PlaceId == 9857547990 or game.PlaceId == 7386589547 or game.PlaceId == 6725802681 or game.PlaceId == 7399911165 or game.PlaceId == 8975757665 or game.PlaceId == 9857548948 or game.PlaceId == 6423048711 or game.PlaceId == 7429957809 or game.PlaceId == 9065967251 or game.PlaceId == 8683805831 or game.PlaceId == 8651959899 then
       loadstring(game:HttpGet(github..'/Games/VIP/TitanWarfare.lua', true))()
-   elseif game.PlaceId == 6152116144 or 11468034852 or 11468075017 or 11468159863 then
+   elseif game.PlaceId == 6152116144 or game.PlaceId == 11468034852 or game.PlaceId == 11468075017 or game.PlaceId == 11468159863 then
       loadstring(game:HttpGet(github..'/Games/VIP/ProjectSlayers.lua', true))()
    elseif game.PlaceId == 5956785391 then
       loadstring(game:HttpGet(github..'/Games/VIP/PreGame_ProjectSlayers.lua', true))()
-   elseif game.PlaceId == 298400657 or 4761949056 or 4263492467 or 4427383374 or 4178935231 or 5798060869 or 6034613976 then
+   elseif game.PlaceId == 298400657 or game.PlaceId == 4761949056 or game.PlaceId == 4263492467 or game.PlaceId == 4427383374 or game.PlaceId == 4178935231 or game.PlaceId == 5798060869 or game.PlaceId == 6034613976 then
       loadstring(game:HttpGet(github..'/Games/VIP/DBFR.lua', true))()
    elseif string.match(string.lower(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name), "left") then
       loadstring(game:HttpGet(github..'/Games/Left2Die.lua', true))()
    elseif game.PlaceId == twr then
       loadstring(game:HttpGet(github..'/Games/ThoseWhoRemain.lua', true))()
-   elseif game.PlaceId == 12697333256 or 10223461928 then
+   elseif game.PlaceId == 12697333256 or game.PlaceId == 10223461928 then
       loadstring(game:HttpGet(github..'/Games/RaiseAPochita.lua', true))()
    elseif game.PlaceId == obes then
       loadstring(game:HttpGet(github..'/Games/%2B1%20Blocks%20Every%20Second.lua', true))()
