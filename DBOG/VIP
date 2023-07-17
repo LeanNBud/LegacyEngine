@@ -13,7 +13,7 @@ if game.PlaceId == Earth then
    elseif game.PlaceId == Namek then
       loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/2Namek.lua', true))()
    elseif game.PlaceId == FutureEarth then
-      loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/3FutureEarth.lua', true))()
+      loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/3Future.lua', true))()
    elseif game.PlaceId == Space then
       loadstring(game:HttpGet(github..'/DBOG/VIPWorlds/4Space.lua', true))()
    elseif game.PlaceId == OtherWorld then
