@@ -7,7 +7,7 @@ local OtherWorld = 4195906883
 local DBOGMM = 4195834406
 local MoonCity = 679737281
 local ProjectLazarus = 443406476
-local dragonsoul = 8246874626
+local dragonsoul = 14230662527
 local MZ = 9544666096
 
 if game.PlaceId == Earth then
