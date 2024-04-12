@@ -19,8 +19,8 @@ local module = {
         TargetPart = "Head",
         Smoothness = 3,
         FovOpacity = .5,
-        Color = Color3.fromRGB(0,0,0),
         AutoShoot = false,
+        Color = Color3.fromRGB(0,0,0)
     },
     Target = nil
 }
@@ -88,7 +88,7 @@ function module.AimbotInit()
             if closest ~= nil and module.Aimbot.Enabled and module.Aimbot.ButtonPressed then
                 module.moveCursor(closest[module.Aimbot.TargetPart], module.Aimbot.Smoothness)
             end
-            if AutoShoot and module.GetClosestZombieTWR(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1)) then
+            if AutoShoot and module.Aimbot.ButtonPressed and module.GetClosestZombieTWR(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1)) then
                 keypress(0x45)
                 wait(0.1)
                 keyrelease(0x45)
