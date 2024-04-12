@@ -88,7 +88,7 @@ function module.AimbotInit()
             if closest ~= nil and module.Aimbot.Enabled and module.Aimbot.ButtonPressed and game.Players.LocalPlayer.Character ~= nil and game.Players.LocalPlayer:FindFirstChild("TempStats").Spawned.Value ~= false then
                 module.moveCursor(closest[module.Aimbot.TargetPart], module.Aimbot.Smoothness)
             end
-            if AutoShoot and module.Aimbot.Enabled and module.Aimbot.ButtonPressed and module.GetClosestZombieTWR(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1)) then
+            if AutoShoot and module.Aimbot.Enabled and module.Aimbot.ButtonPressed then
                 keypress(0x01)
                 wait(0.1)
                 keyrelease(0x01)
