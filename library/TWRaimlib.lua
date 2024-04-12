@@ -85,7 +85,7 @@ function module.AimbotInit()
                 closest = module.GetClosestZombieTWR(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1))
                 module.Target = closest
             end
-            if closest ~= nil and module.Aimbot.Enabled and module.Aimbot.ButtonPressed then
+            if closest ~= nil and module.Aimbot.Enabled and module.Aimbot.ButtonPressed and game.Players.LocalPlayer.Character ~= nil and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
                 module.moveCursor(closest[module.Aimbot.TargetPart], module.Aimbot.Smoothness)
             end
             if AutoShoot and module.Aimbot.ButtonPressed and module.GetClosestZombieTWR(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1)) then
