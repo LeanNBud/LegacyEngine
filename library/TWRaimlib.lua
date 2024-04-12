@@ -89,9 +89,9 @@ function module.AimbotInit()
                 module.moveCursor(closest[module.Aimbot.TargetPart], module.Aimbot.Smoothness)
             end
             if AutoShoot and module.Aimbot.ButtonPressed and module.GetClosestZombieTWR(module.Aimbot.FovSize * ((80 - dwCamera.FieldOfView )/100 + 1)) then
-                keypress(0x45)
+                keypress(0x01)
                 wait(0.1)
-                keyrelease(0x45)
+                keyrelease(0x01)
             end
         end)
     end)
