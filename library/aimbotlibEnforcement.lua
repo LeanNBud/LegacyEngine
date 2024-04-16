@@ -26,7 +26,7 @@ local module = {
 
 function module.aimteamcheck(player)
     if module.Aimbot.Teamcheck then
-        if game.Players.LocalPlayer.Character:GetAttribute("TeamColor") == p:GetAttribute("TeamColor") then return false
+        if game.Players.LocalPlayer.Character:GetAttribute("TeamColor") == player.Character:GetAttribute("TeamColor") then return false
         else return true end
     else
         return true
