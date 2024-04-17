@@ -54,14 +54,16 @@ end
 function module.GetClosestPlayer(fov)
     local Target, Closest = nil, fov or math.huge
     for i,v in pairs(dwPlayers:GetPlayers()) do
-        if v ~= nil and v.Character ~= nil and v.Character:FindFirstChild("Head") ~= nil and module.aimvisibilitycheck(v.Character:FindFirstChild(module.Aimbot.TargetPart).Position or v.Character:FindFirstChild("Head").Position ,{dwLocalPlayer.Character, v.Character}) and v ~= dwLocalPlayer and module.aimteamcheck(v) and v.Character:GetAttribute("Health") ~= 0 then
-            local Position, OnScreen = dwCamera:WorldToScreenPoint(v.Character:FindFirstChild(module.Aimbot.TargetPart).Position)
-            local Distance = (Vector2.new(Position.X, Position.Y) - Vector2.new(dwMouse.X, dwMouse.Y)).Magnitude
-            if (Distance < Closest) then
-                Closest = Distance
-                Target = v
+        pcall(function()
+            if v ~= nil and v.Character ~= nil and v.Character:FindFirstChild("Head") ~= nil and module.aimvisibilitycheck(v.Character:FindFirstChild(module.Aimbot.TargetPart).Position or v.Character:FindFirstChild("Head").Position ,{dwLocalPlayer.Character, v.Character}) and v ~= dwLocalPlayer and module.aimteamcheck(v) and v.Character:GetAttribute("Health") ~= 0 then
+                local Position, OnScreen = dwCamera:WorldToScreenPoint(v.Character:FindFirstChild(module.Aimbot.TargetPart).Position)
+                local Distance = (Vector2.new(Position.X, Position.Y) - Vector2.new(dwMouse.X, dwMouse.Y)).Magnitude
+                if (Distance < Closest) then
+                    Closest = Distance
+                    Target = v
+                end
             end
-        end
+        end)
     end
     return Target, Closest
 end
