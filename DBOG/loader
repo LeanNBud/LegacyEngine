@@ -10,7 +10,7 @@ local MZ = 9544666096
 ]]
 
 if game.GameId == 1374118848 then
-   loadstring(game:HttpGet(github..'/DBOG/PublicWorlds/1Earth.lua', true))()
+   loadstring(game:HttpGet(github..'/DBOG/PublicWorlds/DBOG.lua', true))()
 elseif game.PlaceId == MoonCity then
    loadstring(game:HttpGet(github..'/Games/MoonCity.lua', true))()
 elseif game.PlaceId == MZ then
