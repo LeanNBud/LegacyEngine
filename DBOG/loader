@@ -29,4 +29,6 @@ elseif game.PlaceId == 8287862132 then
    loadstring(game:HttpGet(github..'/Games/ThoseWhoRemain.lua', true))()
 elseif game.PlaceId == 3099893649 then
    loadstring(game:HttpGet(github..'/Games/ArcaneReborn.lua', true))()
+elseif game.GameId == 4658598196 then
+   loadstring(game:HttpGet(github..'/Games/notatitangame.lua', true))()
 end
