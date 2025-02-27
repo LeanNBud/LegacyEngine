@@ -44,13 +44,15 @@ end
 
 function module.GetClosestZombieTWR(fov)
     local Target, Closest = nil, fov or math.huge
-    for i,v in pairs(workspace.Zombies:GetChildren()) do
-        if v ~= nil and v ~= nil and v:FindFirstChild("Head") ~= nil and module.aimvisibilitycheck(v:FindFirstChild(module.Aimbot.TargetPart).Position or v:FindFirstChild("Head").Position ,{dwLocalPlayer.Character, v}) then
-            local Position, OnScreen = dwCamera:WorldToScreenPoint(v:FindFirstChild(module.Aimbot.TargetPart).Position)
-            local Distance = (Vector2.new(Position.X, Position.Y) - Vector2.new(dwMouse.X, dwMouse.Y)).Magnitude
-            if (Distance < Closest) then
-                Closest = Distance
-                Target = v
+    if workspace:FindFirstChild("Zombies") then
+        for i,v in pairs(workspace.Zombies:GetChildren()) do
+            if v ~= nil and v ~= nil and v:FindFirstChild("Head") ~= nil and module.aimvisibilitycheck(v:FindFirstChild(module.Aimbot.TargetPart).Position or v:FindFirstChild("Head").Position ,{dwLocalPlayer.Character, v}) then
+                local Position, OnScreen = dwCamera:WorldToScreenPoint(v:FindFirstChild(module.Aimbot.TargetPart).Position)
+                local Distance = (Vector2.new(Position.X, Position.Y) - Vector2.new(dwMouse.X, dwMouse.Y)).Magnitude
+                if (Distance < Closest) then
+                    Closest = Distance
+                    Target = v
+                end
             end
         end
     end
